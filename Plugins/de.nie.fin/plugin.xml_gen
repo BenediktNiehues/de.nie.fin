@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.nie.de/fin/Fin" 
+       class = "de.nie.fin.fin.FinPackage"
+       genModel = "de/nie/fin/Fin.genmodel" /> 
+	
+  </extension>
+
+
+
+
+
+</plugin>

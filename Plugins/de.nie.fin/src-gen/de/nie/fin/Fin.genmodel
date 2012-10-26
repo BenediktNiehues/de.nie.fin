@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.nie.fin/src-gen" editDirectory="/de.nie.fin.edit/src"
+    editorDirectory="/de.nie.fin.editor/src" modelPluginID="de.nie.fin" forceOverwrite="true"
+    modelName="Fin" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="de.nie.fin.edit" editorPluginID="de.nie.fin.editor"
+    runtimeVersion="2.8">
+  <genPackages prefix="Fin" basePackage="de.nie.fin" disposableProviderFactory="true"
+      ecorePackage="Fin.ecore#/">
+    <genClasses ecoreClass="Fin.ecore#//FinModelFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//FinModelFile/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//FinModelFile/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//FinModelFile/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Import/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Element/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Konto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/ktoNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/blz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/bank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/verwendung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/inhaber"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Buchungsintervall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchungsintervall/monate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchungsintervall/tag"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Kategorie">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kategorie/beschreibung"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Buchung">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/konto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchung/betrag"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/empfaenger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/von"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/intervall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/kategorie"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Empfaenger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/strasse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/plz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/ort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/bemerkung"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,71 @@
+grammar de.nie.fin.Fin with org.eclipse.xtext.xbase.Xbase
+
+generate fin "http://www.nie.de/fin/Fin"
+
+FinModelFile:
+	('package' name=QualifiedName)?
+	
+	imports+=Import*
+	
+	elements+=Element*
+	
+	;
+	
+Import:
+	'import' importedNamespace=QualifiedName
+;
+
+Element:
+	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie
+;
+
+Konto:
+	'Konto' name=ValidID '{'
+		'KtoNr' ktoNr=INT
+		'Blz' blz=INT
+		'Bank' bank=STRING
+		'Verwendung' verwendung=STRING
+		'Inhaber' inhaber=STRING
+	'}'
+	
+;
+
+Tag:
+	'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31'
+;
+Monat:
+	'Januar'| 'Februar'| 'M‰rz'| 'April'| 'Mai'| 'Juni'| 'Juli'| 'August'| 'September'| 'Oktober'| 'November'| 'Dezember'
+;
+
+Buchungsintervall:
+	'Buchungsintervall' name=ValidID '{'
+		'Monat' monate+= Monat
+		'Tag' tag=Tag
+	'}'
+;
+
+Kategorie:
+	"Kategorie" name=ValidID ('{'
+		beschreibung=STRING	
+	'}')?
+;
+
+
+Buchung:
+	'Buchung' name=ValidID '{'
+		'Konto' konto=[Konto]
+		'Betrag' betrag=INT
+		('Empf‰nger' empfaenger=[Empfaenger] | "von" von=[Empfaenger])
+		'Intervall' intervall=[Buchungsintervall]
+		'Kategorie' kategorie+=[Kategorie]
+	'}'
+;
+
+Empfaenger:
+	'Empf‰nger' name=ValidID ('{'
+		'Straﬂe' strasse=STRING
+		'PLZ' plz = STRING
+		'Ort' ort = STRING
+		'Bemerkung' bemerkung=STRING
+	'}')?
+;
