@@ -2,7 +2,6 @@
  */
 package de.nie.fin.fin;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.nie.fin.fin.Buchungsintervall#getMonate <em>Monate</em>}</li>
- *   <li>{@link de.nie.fin.fin.Buchungsintervall#getTag <em>Tag</em>}</li>
+ *   <li>{@link de.nie.fin.fin.Buchungsintervall#getIntervall <em>Intervall</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,45 +22,29 @@ import org.eclipse.emf.common.util.EList;
 public interface Buchungsintervall extends Element
 {
   /**
-   * Returns the value of the '<em><b>Monate</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Intervall</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Monate</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Intervall</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Monate</em>' attribute list.
-   * @see de.nie.fin.fin.FinPackage#getBuchungsintervall_Monate()
-   * @model unique="false"
+   * @return the value of the '<em>Intervall</em>' containment reference.
+   * @see #setIntervall(Intervall)
+   * @see de.nie.fin.fin.FinPackage#getBuchungsintervall_Intervall()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getMonate();
+  Intervall getIntervall();
 
   /**
-   * Returns the value of the '<em><b>Tag</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tag</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tag</em>' attribute.
-   * @see #setTag(String)
-   * @see de.nie.fin.fin.FinPackage#getBuchungsintervall_Tag()
-   * @model
-   * @generated
-   */
-  String getTag();
-
-  /**
-   * Sets the value of the '{@link de.nie.fin.fin.Buchungsintervall#getTag <em>Tag</em>}' attribute.
+   * Sets the value of the '{@link de.nie.fin.fin.Buchungsintervall#getIntervall <em>Intervall</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tag</em>' attribute.
-   * @see #getTag()
+   * @param value the new value of the '<em>Intervall</em>' containment reference.
+   * @see #getIntervall()
    * @generated
    */
-  void setTag(String value);
+  void setIntervall(Intervall value);
 
 } // Buchungsintervall

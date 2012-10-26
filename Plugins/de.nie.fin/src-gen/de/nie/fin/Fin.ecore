@@ -22,9 +22,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inhaber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Buchungsintervall" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intervall" eType="#//Intervall"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Intervall" eSuperTypes="#//Buchung">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="monate" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kategorie" unique="false"
+        upperBound="-1" eType="#//Kategorie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Kategorie" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -35,8 +41,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="empfaenger" eType="#//Empfaenger"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="von" eType="#//Empfaenger"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervall" eType="#//Buchungsintervall"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kategorie" unique="false"
-        upperBound="-1" eType="#//Kategorie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Empfaenger" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="strasse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -100,6 +100,11 @@ public class FinAdapterFactory extends AdapterFactoryImpl
         return createBuchungsintervallAdapter();
       }
       @Override
+      public Adapter caseIntervall(Intervall object)
+      {
+        return createIntervallAdapter();
+      }
+      @Override
       public Adapter caseKategorie(Kategorie object)
       {
         return createKategorieAdapter();
@@ -207,6 +212,21 @@ public class FinAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBuchungsintervallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Intervall <em>Intervall</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.nie.fin.fin.Intervall
+   * @generated
+   */
+  public Adapter createIntervallAdapter()
   {
     return null;
   }

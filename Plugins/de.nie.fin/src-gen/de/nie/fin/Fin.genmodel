@@ -26,8 +26,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/inhaber"/>
     </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Buchungsintervall">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchungsintervall/monate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchungsintervall/tag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchungsintervall/intervall"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Intervall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Intervall/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Intervall/monate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Intervall/kategorie"/>
     </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Kategorie">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kategorie/beschreibung"/>
@@ -38,7 +42,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/empfaenger"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/von"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/intervall"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/kategorie"/>
     </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Empfaenger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/strasse"/>

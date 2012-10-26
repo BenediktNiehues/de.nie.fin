@@ -416,347 +416,6 @@ ruleKonto returns [EObject current=null]
 
 
 
-// Entry rule entryRuleTag
-entryRuleTag returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTagRule()); } 
-	 iv_ruleTag=ruleTag 
-	 { $current=$iv_ruleTag.current.getText(); }  
-	 EOF 
-;
-
-// Rule Tag
-ruleTag returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-	kw='1' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneKeyword_0()); 
-    }
-
-    |
-	kw='2' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoKeyword_1()); 
-    }
-
-    |
-	kw='3' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitThreeKeyword_2()); 
-    }
-
-    |
-	kw='4' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitFourKeyword_3()); 
-    }
-
-    |
-	kw='5' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitFiveKeyword_4()); 
-    }
-
-    |
-	kw='6' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitSixKeyword_5()); 
-    }
-
-    |
-	kw='7' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitSevenKeyword_6()); 
-    }
-
-    |
-	kw='8' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitEightKeyword_7()); 
-    }
-
-    |
-	kw='9' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitNineKeyword_8()); 
-    }
-
-    |
-	kw='10' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitZeroKeyword_9()); 
-    }
-
-    |
-	kw='11' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitOneKeyword_10()); 
-    }
-
-    |
-	kw='12' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitTwoKeyword_11()); 
-    }
-
-    |
-	kw='13' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitThreeKeyword_12()); 
-    }
-
-    |
-	kw='14' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitFourKeyword_13()); 
-    }
-
-    |
-	kw='15' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitFiveKeyword_14()); 
-    }
-
-    |
-	kw='16' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitSixKeyword_15()); 
-    }
-
-    |
-	kw='17' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitSevenKeyword_16()); 
-    }
-
-    |
-	kw='18' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitEightKeyword_17()); 
-    }
-
-    |
-	kw='19' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitOneDigitNineKeyword_18()); 
-    }
-
-    |
-	kw='20' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitZeroKeyword_19()); 
-    }
-
-    |
-	kw='21' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitOneKeyword_20()); 
-    }
-
-    |
-	kw='22' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitTwoKeyword_21()); 
-    }
-
-    |
-	kw='23' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitThreeKeyword_22()); 
-    }
-
-    |
-	kw='24' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitFourKeyword_23()); 
-    }
-
-    |
-	kw='25' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitFiveKeyword_24()); 
-    }
-
-    |
-	kw='26' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitSixKeyword_25()); 
-    }
-
-    |
-	kw='27' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitSevenKeyword_26()); 
-    }
-
-    |
-	kw='28' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitEightKeyword_27()); 
-    }
-
-    |
-	kw='29' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitTwoDigitNineKeyword_28()); 
-    }
-
-    |
-	kw='30' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitThreeDigitZeroKeyword_29()); 
-    }
-
-    |
-	kw='31' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTagAccess().getDigitThreeDigitOneKeyword_30()); 
-    }
-)
-    ;
-
-
-
-
-
-// Entry rule entryRuleMonat
-entryRuleMonat returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getMonatRule()); } 
-	 iv_ruleMonat=ruleMonat 
-	 { $current=$iv_ruleMonat.current.getText(); }  
-	 EOF 
-;
-
-// Rule Monat
-ruleMonat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-	kw='Januar' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getJanuarKeyword_0()); 
-    }
-
-    |
-	kw='Februar' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getFebruarKeyword_1()); 
-    }
-
-    |
-	kw='M\u00E4rz' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getMärzKeyword_2()); 
-    }
-
-    |
-	kw='April' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getAprilKeyword_3()); 
-    }
-
-    |
-	kw='Mai' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getMaiKeyword_4()); 
-    }
-
-    |
-	kw='Juni' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getJuniKeyword_5()); 
-    }
-
-    |
-	kw='Juli' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getJuliKeyword_6()); 
-    }
-
-    |
-	kw='August' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getAugustKeyword_7()); 
-    }
-
-    |
-	kw='September' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getSeptemberKeyword_8()); 
-    }
-
-    |
-	kw='Oktober' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getOktoberKeyword_9()); 
-    }
-
-    |
-	kw='November' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getNovemberKeyword_10()); 
-    }
-
-    |
-	kw='Dezember' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMonatAccess().getDezemberKeyword_11()); 
-    }
-)
-    ;
-
-
-
-
-
 // Entry rule entryRuleBuchungsintervall
 entryRuleBuchungsintervall returns [EObject current=null] 
 	:
@@ -797,55 +456,116 @@ ruleBuchungsintervall returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getBuchungsintervallAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='Monat' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getBuchungsintervallAccess().getMonatKeyword_3());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBuchungsintervallAccess().getMonateMonatParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getBuchungsintervallAccess().getIntervallIntervallParserRuleCall_3_0()); 
 	    }
-		lv_monate_4_0=ruleMonat		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBuchungsintervallRule());
-	        }
-       		add(
-       			$current, 
-       			"monate",
-        		lv_monate_4_0, 
-        		"Monat");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_5='Tag' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getBuchungsintervallAccess().getTagKeyword_5());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBuchungsintervallAccess().getTagTagParserRuleCall_6_0()); 
-	    }
-		lv_tag_6_0=ruleTag		{
+		lv_intervall_3_0=ruleIntervall		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getBuchungsintervallRule());
 	        }
        		set(
        			$current, 
-       			"tag",
-        		lv_tag_6_0, 
-        		"Tag");
+       			"intervall",
+        		lv_intervall_3_0, 
+        		"Intervall");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_7='}' 
+)	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getBuchungsintervallAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_4, grammarAccess.getBuchungsintervallAccess().getRightCurlyBracketKeyword_4());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleIntervall
+entryRuleIntervall returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getIntervallRule()); }
+	 iv_ruleIntervall=ruleIntervall 
+	 { $current=$iv_ruleIntervall.current; } 
+	 EOF 
+;
+
+// Rule Intervall
+ruleIntervall returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Zum' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getIntervallAccess().getZumKeyword_0());
+    }
+(
+(
+		lv_tag_1_0=RULE_TAG
+		{
+			newLeafNode(lv_tag_1_0, grammarAccess.getIntervallAccess().getTagTAGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getIntervallRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"tag",
+        		lv_tag_1_0, 
+        		"TAG");
+	    }
+
+)
+)	otherlv_2='der Monate' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getIntervallAccess().getDerMonateKeyword_2());
+    }
+(
+(
+		lv_monate_3_0=RULE_MONAT
+		{
+			newLeafNode(lv_monate_3_0, grammarAccess.getIntervallAccess().getMonateMONATTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getIntervallRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"monate",
+        		lv_monate_3_0, 
+        		"MONAT");
+	    }
+
+)
+)(	otherlv_4=',' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getIntervallAccess().getCommaKeyword_4_0());
+    }
+(
+(
+		lv_monate_5_0=RULE_MONAT
+		{
+			newLeafNode(lv_monate_5_0, grammarAccess.getIntervallAccess().getMonateMONATTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getIntervallRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"monate",
+        		lv_monate_5_0, 
+        		"MONAT");
+	    }
+
+)
+))*)
 ;
 
 
@@ -935,14 +655,14 @@ ruleBuchung returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Buchung' 
+((	otherlv_0='Buchung' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getBuchungAccess().getBuchungKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getBuchungAccess().getBuchungKeyword_0_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBuchungAccess().getNameValidIDParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getBuchungAccess().getNameValidIDParserRuleCall_0_1_0()); 
 	    }
 		lv_name_1_0=ruleValidID		{
 	        if ($current==null) {
@@ -959,11 +679,11 @@ ruleBuchung returns [EObject current=null]
 )
 )	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getBuchungAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getBuchungAccess().getLeftCurlyBracketKeyword_0_2());
     }
 	otherlv_3='Konto' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getBuchungAccess().getKontoKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getBuchungAccess().getKontoKeyword_0_3());
     }
 (
 (
@@ -974,19 +694,19 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getBuchungAccess().getKontoKontoCrossReference_4_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getBuchungAccess().getKontoKontoCrossReference_0_4_0()); 
 	}
 
 )
 )	otherlv_5='Betrag' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getBuchungAccess().getBetragKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getBuchungAccess().getBetragKeyword_0_5());
     }
 (
 (
 		lv_betrag_6_0=RULE_INT
 		{
-			newLeafNode(lv_betrag_6_0, grammarAccess.getBuchungAccess().getBetragINTTerminalRuleCall_6_0()); 
+			newLeafNode(lv_betrag_6_0, grammarAccess.getBuchungAccess().getBetragINTTerminalRuleCall_0_6_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1002,7 +722,7 @@ ruleBuchung returns [EObject current=null]
 )
 )((	otherlv_7='Empf\u00E4nger' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getBuchungAccess().getEmpfängerKeyword_7_0_0());
+    	newLeafNode(otherlv_7, grammarAccess.getBuchungAccess().getEmpfängerKeyword_0_7_0_0());
     }
 (
 (
@@ -1013,14 +733,14 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_8=RULE_ID
 	{
-		newLeafNode(otherlv_8, grammarAccess.getBuchungAccess().getEmpfaengerEmpfaengerCrossReference_7_0_1_0()); 
+		newLeafNode(otherlv_8, grammarAccess.getBuchungAccess().getEmpfaengerEmpfaengerCrossReference_0_7_0_1_0()); 
 	}
 
 )
 ))
     |(	otherlv_9='von' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getBuchungAccess().getVonKeyword_7_1_0());
+    	newLeafNode(otherlv_9, grammarAccess.getBuchungAccess().getVonKeyword_0_7_1_0());
     }
 (
 (
@@ -1031,13 +751,13 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_10=RULE_ID
 	{
-		newLeafNode(otherlv_10, grammarAccess.getBuchungAccess().getVonEmpfaengerCrossReference_7_1_1_0()); 
+		newLeafNode(otherlv_10, grammarAccess.getBuchungAccess().getVonEmpfaengerCrossReference_0_7_1_1_0()); 
 	}
 
 )
 )))	otherlv_11='Intervall' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getBuchungAccess().getIntervallKeyword_8());
+    	newLeafNode(otherlv_11, grammarAccess.getBuchungAccess().getIntervallKeyword_0_8());
     }
 (
 (
@@ -1048,13 +768,23 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_12=RULE_ID
 	{
-		newLeafNode(otherlv_12, grammarAccess.getBuchungAccess().getIntervallBuchungsintervallCrossReference_9_0()); 
+		newLeafNode(otherlv_12, grammarAccess.getBuchungAccess().getIntervallBuchungsintervallCrossReference_0_9_0()); 
 	}
 
 )
-)	otherlv_13='Kategorie' 
+))
+    |(
+    { 
+        newCompositeNode(grammarAccess.getBuchungAccess().getIntervallParserRuleCall_1_0()); 
+    }
+    this_Intervall_13=ruleIntervall
+    { 
+        $current = $this_Intervall_13.current; 
+        afterParserOrEnumRuleCall();
+    }
+	otherlv_14='Kategorie' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getBuchungAccess().getKategorieKeyword_10());
+    	newLeafNode(otherlv_14, grammarAccess.getBuchungAccess().getKategorieKeyword_1_1());
     }
 (
 (
@@ -1063,17 +793,17 @@ ruleBuchung returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getBuchungRule());
 	        }
         }
-	otherlv_14=RULE_ID
+	otherlv_15=RULE_ID
 	{
-		newLeafNode(otherlv_14, grammarAccess.getBuchungAccess().getKategorieKategorieCrossReference_11_0()); 
+		newLeafNode(otherlv_15, grammarAccess.getBuchungAccess().getKategorieKategorieCrossReference_1_2_0()); 
 	}
 
 )
-)	otherlv_15='}' 
+)	otherlv_16='}' 
     {
-    	newLeafNode(otherlv_15, grammarAccess.getBuchungAccess().getRightCurlyBracketKeyword_12());
+    	newLeafNode(otherlv_16, grammarAccess.getBuchungAccess().getRightCurlyBracketKeyword_1_3());
     }
-)
+))
 ;
 
 
@@ -5966,6 +5696,10 @@ ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 
 
 
+
+RULE_TAG : ('1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31');
+
+RULE_MONAT : ('Januar'|'Februar'|'M\u00E4rz'|'April'|'Mai'|'Juni'|'Juli'|'August'|'September'|'Oktober'|'November'|'Dezember');
 
 RULE_HEX : ('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F'|'_')+ ('#' (('b'|'B') ('i'|'I')|('l'|'L')))?;
 

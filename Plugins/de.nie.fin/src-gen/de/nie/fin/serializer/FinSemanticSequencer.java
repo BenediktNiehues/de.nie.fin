@@ -8,6 +8,7 @@ import de.nie.fin.fin.Empfaenger;
 import de.nie.fin.fin.FinModelFile;
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Import;
+import de.nie.fin.fin.Intervall;
 import de.nie.fin.fin.Kategorie;
 import de.nie.fin.fin.Konto;
 import de.nie.fin.services.FinGrammarAccess;
@@ -98,6 +99,17 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 			case FinPackage.IMPORT:
 				if(context == grammarAccess.getImportRule()) {
 					sequence_Import(context, (Import) semanticObject); 
+					return; 
+				}
+				else break;
+			case FinPackage.INTERVALL:
+				if(context == grammarAccess.getBuchungRule() ||
+				   context == grammarAccess.getElementRule()) {
+					sequence_Buchung_Intervall(context, (Intervall) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getIntervallRule()) {
+					sequence_Intervall(context, (Intervall) semanticObject); 
 					return; 
 				}
 				else break;
@@ -977,14 +989,7 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         name=ValidID 
-	 *         konto=[Konto|ID] 
-	 *         betrag=INT 
-	 *         (empfaenger=[Empfaenger|ID] | von=[Empfaenger|ID]) 
-	 *         intervall=[Buchungsintervall|ID] 
-	 *         kategorie+=[Kategorie|ID]
-	 *     )
+	 *     (name=ValidID konto=[Konto|ID] betrag=INT (empfaenger=[Empfaenger|ID] | von=[Empfaenger|ID]) intervall=[Buchungsintervall|ID])
 	 */
 	protected void sequence_Buchung(EObject context, Buchung semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -993,10 +998,29 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID monate+=Monat tag=Tag)
+	 *     (tag=TAG monate+=MONAT monate+=MONAT* kategorie+=[Kategorie|ID])
+	 */
+	protected void sequence_Buchung_Intervall(EObject context, Intervall semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ValidID intervall=Intervall)
 	 */
 	protected void sequence_Buchungsintervall(EObject context, Buchungsintervall semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.ELEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__INTERVALL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__INTERVALL));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBuchungsintervallAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getBuchungsintervallAccess().getIntervallIntervallParserRuleCall_3_0(), semanticObject.getIntervall());
+		feeder.finish();
 	}
 	
 	
@@ -1031,6 +1055,15 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameParserRuleCall_1_0(), semanticObject.getImportedNamespace());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (tag=TAG monate+=MONAT monate+=MONAT*)
+	 */
+	protected void sequence_Intervall(EObject context, Intervall semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

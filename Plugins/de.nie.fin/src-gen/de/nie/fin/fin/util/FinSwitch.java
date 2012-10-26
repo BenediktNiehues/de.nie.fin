@@ -109,6 +109,15 @@ public class FinSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FinPackage.INTERVALL:
+      {
+        Intervall intervall = (Intervall)theEObject;
+        T result = caseIntervall(intervall);
+        if (result == null) result = caseBuchung(intervall);
+        if (result == null) result = caseElement(intervall);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FinPackage.KATEGORIE:
       {
         Kategorie kategorie = (Kategorie)theEObject;
@@ -213,6 +222,22 @@ public class FinSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBuchungsintervall(Buchungsintervall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Intervall</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Intervall</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntervall(Intervall object)
   {
     return null;
   }

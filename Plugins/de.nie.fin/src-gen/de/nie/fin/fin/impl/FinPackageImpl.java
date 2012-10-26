@@ -10,6 +10,7 @@ import de.nie.fin.fin.FinFactory;
 import de.nie.fin.fin.FinModelFile;
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Import;
+import de.nie.fin.fin.Intervall;
 import de.nie.fin.fin.Kategorie;
 import de.nie.fin.fin.Konto;
 
@@ -62,6 +63,13 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * @generated
    */
   private EClass buchungsintervallEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intervallEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -302,9 +310,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBuchungsintervall_Monate()
+  public EReference getBuchungsintervall_Intervall()
   {
-    return (EAttribute)buchungsintervallEClass.getEStructuralFeatures().get(0);
+    return (EReference)buchungsintervallEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -312,9 +320,39 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBuchungsintervall_Tag()
+  public EClass getIntervall()
   {
-    return (EAttribute)buchungsintervallEClass.getEStructuralFeatures().get(1);
+    return intervallEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntervall_Tag()
+  {
+    return (EAttribute)intervallEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntervall_Monate()
+  {
+    return (EAttribute)intervallEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIntervall_Kategorie()
+  {
+    return (EReference)intervallEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -395,16 +433,6 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
   public EReference getBuchung_Intervall()
   {
     return (EReference)buchungEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBuchung_Kategorie()
-  {
-    return (EReference)buchungEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -506,8 +534,12 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     createEAttribute(kontoEClass, KONTO__INHABER);
 
     buchungsintervallEClass = createEClass(BUCHUNGSINTERVALL);
-    createEAttribute(buchungsintervallEClass, BUCHUNGSINTERVALL__MONATE);
-    createEAttribute(buchungsintervallEClass, BUCHUNGSINTERVALL__TAG);
+    createEReference(buchungsintervallEClass, BUCHUNGSINTERVALL__INTERVALL);
+
+    intervallEClass = createEClass(INTERVALL);
+    createEAttribute(intervallEClass, INTERVALL__TAG);
+    createEAttribute(intervallEClass, INTERVALL__MONATE);
+    createEReference(intervallEClass, INTERVALL__KATEGORIE);
 
     kategorieEClass = createEClass(KATEGORIE);
     createEAttribute(kategorieEClass, KATEGORIE__BESCHREIBUNG);
@@ -518,7 +550,6 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     createEReference(buchungEClass, BUCHUNG__EMPFAENGER);
     createEReference(buchungEClass, BUCHUNG__VON);
     createEReference(buchungEClass, BUCHUNG__INTERVALL);
-    createEReference(buchungEClass, BUCHUNG__KATEGORIE);
 
     empfaengerEClass = createEClass(EMPFAENGER);
     createEAttribute(empfaengerEClass, EMPFAENGER__STRASSE);
@@ -558,6 +589,7 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     // Add supertypes to classes
     kontoEClass.getESuperTypes().add(this.getElement());
     buchungsintervallEClass.getESuperTypes().add(this.getElement());
+    intervallEClass.getESuperTypes().add(this.getBuchung());
     kategorieEClass.getESuperTypes().add(this.getElement());
     buchungEClass.getESuperTypes().add(this.getElement());
     empfaengerEClass.getESuperTypes().add(this.getElement());
@@ -582,8 +614,12 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     initEAttribute(getKonto_Inhaber(), ecorePackage.getEString(), "inhaber", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buchungsintervallEClass, Buchungsintervall.class, "Buchungsintervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBuchungsintervall_Monate(), ecorePackage.getEString(), "monate", null, 0, -1, Buchungsintervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBuchungsintervall_Tag(), ecorePackage.getEString(), "tag", null, 0, 1, Buchungsintervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchungsintervall_Intervall(), this.getIntervall(), null, "intervall", null, 0, 1, Buchungsintervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntervall_Tag(), ecorePackage.getEString(), "tag", null, 0, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIntervall_Monate(), ecorePackage.getEString(), "monate", null, 0, -1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIntervall_Kategorie(), this.getKategorie(), null, "kategorie", null, 0, -1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kategorieEClass, Kategorie.class, "Kategorie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getKategorie_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1, Kategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -594,7 +630,6 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     initEReference(getBuchung_Empfaenger(), this.getEmpfaenger(), null, "empfaenger", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchung_Von(), this.getEmpfaenger(), null, "von", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBuchung_Intervall(), this.getBuchungsintervall(), null, "intervall", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBuchung_Kategorie(), this.getKategorie(), null, "kategorie", null, 0, -1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(empfaengerEClass, Empfaenger.class, "Empfaenger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEmpfaenger_Strasse(), ecorePackage.getEString(), "strasse", null, 0, 1, Empfaenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

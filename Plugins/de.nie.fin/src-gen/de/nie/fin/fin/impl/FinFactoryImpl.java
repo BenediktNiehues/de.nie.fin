@@ -69,6 +69,7 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
       case FinPackage.ELEMENT: return createElement();
       case FinPackage.KONTO: return createKonto();
       case FinPackage.BUCHUNGSINTERVALL: return createBuchungsintervall();
+      case FinPackage.INTERVALL: return createIntervall();
       case FinPackage.KATEGORIE: return createKategorie();
       case FinPackage.BUCHUNG: return createBuchung();
       case FinPackage.EMPFAENGER: return createEmpfaenger();
@@ -130,6 +131,17 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
   {
     BuchungsintervallImpl buchungsintervall = new BuchungsintervallImpl();
     return buchungsintervall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Intervall createIntervall()
+  {
+    IntervallImpl intervall = new IntervallImpl();
+    return intervall;
   }
 
   /**

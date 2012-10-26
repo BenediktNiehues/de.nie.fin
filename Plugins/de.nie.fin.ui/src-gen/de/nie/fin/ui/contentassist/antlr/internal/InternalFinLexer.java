@@ -21,7 +21,7 @@ public class InternalFinLexer extends Lexer {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_ANY_OTHER=14;
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int EOF=-1;
@@ -29,57 +29,41 @@ public class InternalFinLexer extends Lexer {
     public static final int T__19=19;
     public static final int T__94=94;
     public static final int T__91=91;
-    public static final int T__92=92;
     public static final int RULE_HEX=5;
+    public static final int T__92=92;
     public static final int T__16=16;
     public static final int T__90=90;
     public static final int T__15=15;
     public static final int T__18=18;
     public static final int T__17=17;
-    public static final int T__14=14;
-    public static final int T__13=13;
     public static final int RULE_DECIMAL=7;
-    public static final int T__99=99;
     public static final int T__98=98;
     public static final int T__97=97;
     public static final int T__96=96;
     public static final int T__95=95;
-    public static final int T__139=139;
-    public static final int T__138=138;
-    public static final int T__137=137;
-    public static final int T__136=136;
     public static final int T__80=80;
     public static final int T__81=81;
     public static final int T__82=82;
     public static final int T__83=83;
+    public static final int RULE_TAG=9;
     public static final int T__85=85;
     public static final int T__84=84;
     public static final int T__87=87;
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__126=126;
-    public static final int T__125=125;
-    public static final int T__128=128;
+    public static final int RULE_ML_COMMENT=11;
     public static final int RULE_STRING=8;
-    public static final int T__127=127;
     public static final int T__71=71;
-    public static final int T__129=129;
     public static final int T__72=72;
     public static final int T__70=70;
+    public static final int RULE_MONAT=10;
     public static final int T__76=76;
     public static final int T__75=75;
-    public static final int T__130=130;
     public static final int T__74=74;
-    public static final int T__131=131;
     public static final int T__73=73;
-    public static final int T__132=132;
-    public static final int T__133=133;
     public static final int T__79=79;
-    public static final int T__134=134;
     public static final int T__78=78;
-    public static final int T__135=135;
     public static final int T__77=77;
     public static final int T__68=68;
     public static final int T__69=69;
@@ -89,17 +73,6 @@ public class InternalFinLexer extends Lexer {
     public static final int T__65=65;
     public static final int T__62=62;
     public static final int T__63=63;
-    public static final int T__118=118;
-    public static final int T__119=119;
-    public static final int T__116=116;
-    public static final int T__117=117;
-    public static final int T__114=114;
-    public static final int T__115=115;
-    public static final int T__124=124;
-    public static final int T__123=123;
-    public static final int T__122=122;
-    public static final int T__121=121;
-    public static final int T__120=120;
     public static final int T__61=61;
     public static final int T__60=60;
     public static final int T__55=55;
@@ -110,19 +83,8 @@ public class InternalFinLexer extends Lexer {
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__107=107;
-    public static final int T__108=108;
-    public static final int T__109=109;
     public static final int T__59=59;
-    public static final int T__103=103;
-    public static final int T__104=104;
-    public static final int T__105=105;
-    public static final int T__106=106;
-    public static final int T__111=111;
-    public static final int T__110=110;
-    public static final int T__113=113;
     public static final int RULE_INT=6;
-    public static final int T__112=112;
     public static final int T__50=50;
     public static final int T__42=42;
     public static final int T__43=43;
@@ -134,10 +96,7 @@ public class InternalFinLexer extends Lexer {
     public static final int T__45=45;
     public static final int T__48=48;
     public static final int T__49=49;
-    public static final int T__102=102;
-    public static final int T__101=101;
-    public static final int T__100=100;
-    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_SL_COMMENT=12;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
@@ -148,7 +107,7 @@ public class InternalFinLexer extends Lexer {
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int RULE_WS=11;
+    public static final int RULE_WS=13;
 
     // delegates
     // delegators
@@ -163,57 +122,15 @@ public class InternalFinLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g"; }
 
-    // $ANTLR start "T__13"
-    public final void mT__13() throws RecognitionException {
-        try {
-            int _type = T__13;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:11:7: ( '=' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:11:9: '='
-            {
-            match('='); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__13"
-
-    // $ANTLR start "T__14"
-    public final void mT__14() throws RecognitionException {
-        try {
-            int _type = T__14;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:12:7: ( '+=' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:12:9: '+='
-            {
-            match("+="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__14"
-
     // $ANTLR start "T__15"
     public final void mT__15() throws RecognitionException {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:13:7: ( '||' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:13:9: '||'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:11:7: ( '=' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:11:9: '='
             {
-            match("||"); 
-
+            match('='); 
 
             }
 
@@ -230,10 +147,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:14:7: ( '&&' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:14:9: '&&'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:12:7: ( '+=' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:12:9: '+='
             {
-            match("&&"); 
+            match("+="); 
 
 
             }
@@ -251,10 +168,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:15:7: ( '1' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:15:9: '1'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:13:7: ( '||' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:13:9: '||'
             {
-            match('1'); 
+            match("||"); 
+
 
             }
 
@@ -271,10 +189,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:16:7: ( '2' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:16:9: '2'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:14:7: ( '&&' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:14:9: '&&'
             {
-            match('2'); 
+            match("&&"); 
+
 
             }
 
@@ -291,10 +210,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:17:7: ( '3' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:17:9: '3'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:15:7: ( '==' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:15:9: '=='
             {
-            match('3'); 
+            match("=="); 
+
 
             }
 
@@ -311,10 +231,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18:7: ( '4' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18:9: '4'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:16:7: ( '!=' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:16:9: '!='
             {
-            match('4'); 
+            match("!="); 
+
 
             }
 
@@ -331,10 +252,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:19:7: ( '5' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:19:9: '5'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:17:7: ( '>=' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:17:9: '>='
             {
-            match('5'); 
+            match(">="); 
+
 
             }
 
@@ -351,10 +273,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:20:7: ( '6' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:20:9: '6'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18:7: ( '<=' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18:9: '<='
             {
-            match('6'); 
+            match("<="); 
+
 
             }
 
@@ -371,10 +294,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:21:7: ( '7' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:21:9: '7'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:19:7: ( '>' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:19:9: '>'
             {
-            match('7'); 
+            match('>'); 
 
             }
 
@@ -391,10 +314,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:22:7: ( '8' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:22:9: '8'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:20:7: ( '<' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:20:9: '<'
             {
-            match('8'); 
+            match('<'); 
 
             }
 
@@ -411,10 +334,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:23:7: ( '9' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:23:9: '9'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:21:7: ( '->' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:21:9: '->'
             {
-            match('9'); 
+            match("->"); 
+
 
             }
 
@@ -431,10 +355,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:24:7: ( '10' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:24:9: '10'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:22:7: ( '..' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:22:9: '..'
             {
-            match("10"); 
+            match(".."); 
 
 
             }
@@ -452,10 +376,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:25:7: ( '11' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:25:9: '11'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:23:7: ( '=>' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:23:9: '=>'
             {
-            match("11"); 
+            match("=>"); 
 
 
             }
@@ -473,10 +397,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:26:7: ( '12' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:26:9: '12'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:24:7: ( '<>' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:24:9: '<>'
             {
-            match("12"); 
+            match("<>"); 
 
 
             }
@@ -494,10 +418,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:27:7: ( '13' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:27:9: '13'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:25:7: ( '?:' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:25:9: '?:'
             {
-            match("13"); 
+            match("?:"); 
 
 
             }
@@ -515,10 +439,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:28:7: ( '14' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:28:9: '14'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:26:7: ( '<=>' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:26:9: '<=>'
             {
-            match("14"); 
+            match("<=>"); 
 
 
             }
@@ -536,11 +460,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:29:7: ( '15' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:29:9: '15'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:27:7: ( '+' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:27:9: '+'
             {
-            match("15"); 
-
+            match('+'); 
 
             }
 
@@ -557,11 +480,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:30:7: ( '16' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:30:9: '16'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:28:7: ( '-' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:28:9: '-'
             {
-            match("16"); 
-
+            match('-'); 
 
             }
 
@@ -578,11 +500,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:31:7: ( '17' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:31:9: '17'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:29:7: ( '*' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:29:9: '*'
             {
-            match("17"); 
-
+            match('*'); 
 
             }
 
@@ -599,10 +520,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:32:7: ( '18' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:32:9: '18'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:30:7: ( '**' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:30:9: '**'
             {
-            match("18"); 
+            match("**"); 
 
 
             }
@@ -620,11 +541,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:33:7: ( '19' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:33:9: '19'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:31:7: ( '/' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:31:9: '/'
             {
-            match("19"); 
-
+            match('/'); 
 
             }
 
@@ -641,11 +561,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:34:7: ( '20' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:34:9: '20'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:32:7: ( '%' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:32:9: '%'
             {
-            match("20"); 
-
+            match('%'); 
 
             }
 
@@ -662,11 +581,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:35:7: ( '21' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:35:9: '21'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:33:7: ( '!' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:33:9: '!'
             {
-            match("21"); 
-
+            match('!'); 
 
             }
 
@@ -683,11 +601,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:36:7: ( '22' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:36:9: '22'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:34:7: ( '.' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:34:9: '.'
             {
-            match("22"); 
-
+            match('.'); 
 
             }
 
@@ -704,10 +621,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:37:7: ( '23' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:37:9: '23'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:35:7: ( 'val' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:35:9: 'val'
             {
-            match("23"); 
+            match("val"); 
 
 
             }
@@ -725,10 +642,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:38:7: ( '24' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:38:9: '24'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:36:7: ( 'super' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:36:9: 'super'
             {
-            match("24"); 
+            match("super"); 
 
 
             }
@@ -746,10 +663,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:39:7: ( '25' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:39:9: '25'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:37:7: ( 'false' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:37:9: 'false'
             {
-            match("25"); 
+            match("false"); 
 
 
             }
@@ -767,10 +684,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:40:7: ( '26' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:40:9: '26'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:38:7: ( 'package' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:38:9: 'package'
             {
-            match("26"); 
+            match("package"); 
 
 
             }
@@ -788,10 +705,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:41:7: ( '27' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:41:9: '27'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:39:7: ( 'import' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:39:9: 'import'
             {
-            match("27"); 
+            match("import"); 
 
 
             }
@@ -809,10 +726,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:42:7: ( '28' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:42:9: '28'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:40:7: ( 'Konto' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:40:9: 'Konto'
             {
-            match("28"); 
+            match("Konto"); 
 
 
             }
@@ -830,11 +747,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:43:7: ( '29' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:43:9: '29'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:41:7: ( '{' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:41:9: '{'
             {
-            match("29"); 
-
+            match('{'); 
 
             }
 
@@ -851,10 +767,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:44:7: ( '30' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:44:9: '30'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:42:7: ( 'KtoNr' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:42:9: 'KtoNr'
             {
-            match("30"); 
+            match("KtoNr"); 
 
 
             }
@@ -872,10 +788,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:45:7: ( '31' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:45:9: '31'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:43:7: ( 'Blz' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:43:9: 'Blz'
             {
-            match("31"); 
+            match("Blz"); 
 
 
             }
@@ -893,10 +809,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:46:7: ( 'Januar' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:46:9: 'Januar'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:44:7: ( 'Bank' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:44:9: 'Bank'
             {
-            match("Januar"); 
+            match("Bank"); 
 
 
             }
@@ -914,10 +830,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:47:7: ( 'Februar' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:47:9: 'Februar'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:45:7: ( 'Verwendung' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:45:9: 'Verwendung'
             {
-            match("Februar"); 
+            match("Verwendung"); 
 
 
             }
@@ -935,10 +851,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:48:7: ( 'M\\u00E4rz' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:48:9: 'M\\u00E4rz'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:46:7: ( 'Inhaber' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:46:9: 'Inhaber'
             {
-            match("M\u00E4rz"); 
+            match("Inhaber"); 
 
 
             }
@@ -956,11 +872,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:49:7: ( 'April' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:49:9: 'April'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:47:7: ( '}' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:47:9: '}'
             {
-            match("April"); 
-
+            match('}'); 
 
             }
 
@@ -977,10 +892,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:50:7: ( 'Mai' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:50:9: 'Mai'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:48:7: ( 'Buchungsintervall' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:48:9: 'Buchungsintervall'
             {
-            match("Mai"); 
+            match("Buchungsintervall"); 
 
 
             }
@@ -998,10 +913,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:51:7: ( 'Juni' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:51:9: 'Juni'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:49:7: ( 'Zum' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:49:9: 'Zum'
             {
-            match("Juni"); 
+            match("Zum"); 
 
 
             }
@@ -1019,10 +934,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:52:7: ( 'Juli' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:52:9: 'Juli'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:50:7: ( 'der Monate' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:50:9: 'der Monate'
             {
-            match("Juli"); 
+            match("der Monate"); 
 
 
             }
@@ -1040,11 +955,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:53:7: ( 'August' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:53:9: 'August'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:51:7: ( ',' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:51:9: ','
             {
-            match("August"); 
-
+            match(','); 
 
             }
 
@@ -1061,10 +975,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:54:7: ( 'September' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:54:9: 'September'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:52:7: ( 'Kategorie' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:52:9: 'Kategorie'
             {
-            match("September"); 
+            match("Kategorie"); 
 
 
             }
@@ -1082,10 +996,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:55:7: ( 'Oktober' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:55:9: 'Oktober'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:53:7: ( 'Buchung' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:53:9: 'Buchung'
             {
-            match("Oktober"); 
+            match("Buchung"); 
 
 
             }
@@ -1103,10 +1017,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:56:7: ( 'November' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:56:9: 'November'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:54:7: ( 'Betrag' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:54:9: 'Betrag'
             {
-            match("November"); 
+            match("Betrag"); 
 
 
             }
@@ -1124,10 +1038,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:57:7: ( 'Dezember' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:57:9: 'Dezember'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:55:7: ( 'Intervall' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:55:9: 'Intervall'
             {
-            match("Dezember"); 
+            match("Intervall"); 
 
 
             }
@@ -1145,10 +1059,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:58:7: ( '==' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:58:9: '=='
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:56:7: ( 'Empf\\u00E4nger' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:56:9: 'Empf\\u00E4nger'
             {
-            match("=="); 
+            match("Empf\u00E4nger"); 
 
 
             }
@@ -1166,10 +1080,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:59:7: ( '!=' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:59:9: '!='
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:57:7: ( 'von' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:57:9: 'von'
             {
-            match("!="); 
+            match("von"); 
 
 
             }
@@ -1187,10 +1101,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:60:7: ( '>=' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:60:9: '>='
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:58:7: ( 'Stra\\u00DFe' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:58:9: 'Stra\\u00DFe'
             {
-            match(">="); 
+            match("Stra\u00DFe"); 
 
 
             }
@@ -1208,10 +1122,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:61:7: ( '<=' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:61:9: '<='
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:59:7: ( 'PLZ' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:59:9: 'PLZ'
             {
-            match("<="); 
+            match("PLZ"); 
 
 
             }
@@ -1229,10 +1143,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:62:7: ( '>' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:62:9: '>'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:60:7: ( 'Ort' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:60:9: 'Ort'
             {
-            match('>'); 
+            match("Ort"); 
+
 
             }
 
@@ -1249,10 +1164,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:63:7: ( '<' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:63:9: '<'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:61:7: ( 'Bemerkung' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:61:9: 'Bemerkung'
             {
-            match('<'); 
+            match("Bemerkung"); 
+
 
             }
 
@@ -1269,10 +1185,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:64:7: ( '->' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:64:9: '->'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:62:7: ( 'instanceof' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:62:9: 'instanceof'
             {
-            match("->"); 
+            match("instanceof"); 
 
 
             }
@@ -1290,10 +1206,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:65:7: ( '..' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:65:9: '..'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:63:7: ( 'as' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:63:9: 'as'
             {
-            match(".."); 
+            match("as"); 
 
 
             }
@@ -1311,11 +1227,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:66:7: ( '=>' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:66:9: '=>'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:64:7: ( ')' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:64:9: ')'
             {
-            match("=>"); 
-
+            match(')'); 
 
             }
 
@@ -1332,11 +1247,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:67:7: ( '<>' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:67:9: '<>'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:65:7: ( ']' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:65:9: ']'
             {
-            match("<>"); 
-
+            match(']'); 
 
             }
 
@@ -1353,11 +1267,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:68:7: ( '?:' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:68:9: '?:'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:66:7: ( '[' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:66:9: '['
             {
-            match("?:"); 
-
+            match('['); 
 
             }
 
@@ -1374,11 +1287,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:69:7: ( '<=>' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:69:9: '<=>'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:67:7: ( ';' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:67:9: ';'
             {
-            match("<=>"); 
-
+            match(';'); 
 
             }
 
@@ -1395,10 +1307,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:70:7: ( '+' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:70:9: '+'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:68:7: ( '(' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:68:9: '('
             {
-            match('+'); 
+            match('('); 
 
             }
 
@@ -1415,10 +1327,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:71:7: ( '-' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:71:9: '-'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:69:7: ( 'if' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:69:9: 'if'
             {
-            match('-'); 
+            match("if"); 
+
 
             }
 
@@ -1435,10 +1348,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:72:7: ( '*' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:72:9: '*'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:70:7: ( 'else' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:70:9: 'else'
             {
-            match('*'); 
+            match("else"); 
+
 
             }
 
@@ -1455,10 +1369,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:73:7: ( '**' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:73:9: '**'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:71:7: ( 'switch' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:71:9: 'switch'
             {
-            match("**"); 
+            match("switch"); 
 
 
             }
@@ -1476,10 +1390,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:74:7: ( '/' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:74:9: '/'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:72:7: ( ':' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:72:9: ':'
             {
-            match('/'); 
+            match(':'); 
 
             }
 
@@ -1496,10 +1410,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:75:7: ( '%' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:75:9: '%'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:73:7: ( 'default' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:73:9: 'default'
             {
-            match('%'); 
+            match("default"); 
+
 
             }
 
@@ -1516,10 +1431,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:76:7: ( '!' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:76:9: '!'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:74:7: ( 'case' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:74:9: 'case'
             {
-            match('!'); 
+            match("case"); 
+
 
             }
 
@@ -1536,10 +1452,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:77:7: ( '.' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:77:9: '.'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:75:7: ( 'for' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:75:9: 'for'
             {
-            match('.'); 
+            match("for"); 
+
 
             }
 
@@ -1556,10 +1473,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:78:7: ( 'val' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:78:9: 'val'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:76:7: ( 'while' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:76:9: 'while'
             {
-            match("val"); 
+            match("while"); 
 
 
             }
@@ -1577,10 +1494,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:79:7: ( 'super' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:79:9: 'super'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:77:7: ( 'do' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:77:9: 'do'
             {
-            match("super"); 
+            match("do"); 
 
 
             }
@@ -1598,10 +1515,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:80:7: ( 'false' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:80:9: 'false'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:78:7: ( '::' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:78:9: '::'
             {
-            match("false"); 
+            match("::"); 
 
 
             }
@@ -1619,10 +1536,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:81:7: ( 'package' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:81:9: 'package'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:79:7: ( 'new' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:79:9: 'new'
             {
-            match("package"); 
+            match("new"); 
 
 
             }
@@ -1640,10 +1557,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:82:7: ( 'import' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:82:9: 'import'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:80:7: ( 'null' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:80:9: 'null'
             {
-            match("import"); 
+            match("null"); 
 
 
             }
@@ -1661,10 +1578,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:83:7: ( 'Konto' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:83:9: 'Konto'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:81:7: ( 'typeof' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:81:9: 'typeof'
             {
-            match("Konto"); 
+            match("typeof"); 
 
 
             }
@@ -1682,10 +1599,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:84:7: ( '{' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:84:9: '{'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:82:7: ( 'throw' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:82:9: 'throw'
             {
-            match('{'); 
+            match("throw"); 
+
 
             }
 
@@ -1702,10 +1620,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:85:7: ( 'KtoNr' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:85:9: 'KtoNr'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:83:7: ( 'return' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:83:9: 'return'
             {
-            match("KtoNr"); 
+            match("return"); 
 
 
             }
@@ -1723,10 +1641,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:86:7: ( 'Blz' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:86:9: 'Blz'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:84:7: ( 'try' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:84:9: 'try'
             {
-            match("Blz"); 
+            match("try"); 
 
 
             }
@@ -1744,10 +1662,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:87:7: ( 'Bank' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:87:9: 'Bank'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:85:7: ( 'finally' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:85:9: 'finally'
             {
-            match("Bank"); 
+            match("finally"); 
 
 
             }
@@ -1765,10 +1683,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:88:7: ( 'Verwendung' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:88:9: 'Verwendung'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:86:7: ( 'catch' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:86:9: 'catch'
             {
-            match("Verwendung"); 
+            match("catch"); 
 
 
             }
@@ -1786,11 +1704,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:89:7: ( 'Inhaber' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:89:9: 'Inhaber'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:87:7: ( '?' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:87:9: '?'
             {
-            match("Inhaber"); 
-
+            match('?'); 
 
             }
 
@@ -1807,10 +1724,11 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:90:7: ( '}' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:90:9: '}'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:88:7: ( 'extends' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:88:9: 'extends'
             {
-            match('}'); 
+            match("extends"); 
+
 
             }
 
@@ -1827,11 +1745,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:91:7: ( 'Buchungsintervall' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:91:9: 'Buchungsintervall'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:89:7: ( '&' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:89:9: '&'
             {
-            match("Buchungsintervall"); 
-
+            match('&'); 
 
             }
 
@@ -1848,10 +1765,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:92:7: ( 'Monat' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:92:9: 'Monat'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:90:7: ( '?.' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:90:9: '?.'
             {
-            match("Monat"); 
+            match("?."); 
 
 
             }
@@ -1869,10 +1786,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:93:7: ( 'Tag' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:93:9: 'Tag'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:91:7: ( '*.' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:91:9: '*.'
             {
-            match("Tag"); 
+            match("*."); 
 
 
             }
@@ -1890,11 +1807,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:94:7: ( 'Kategorie' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:94:9: 'Kategorie'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:92:7: ( '|' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:92:9: '|'
             {
-            match("Kategorie"); 
-
+            match('|'); 
 
             }
 
@@ -1911,10 +1827,10 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:95:7: ( 'Buchung' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:95:9: 'Buchung'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:93:7: ( 'var' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:93:9: 'var'
             {
-            match("Buchung"); 
+            match("var"); 
 
 
             }
@@ -1932,859 +1848,8 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:96:7: ( 'Betrag' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:96:9: 'Betrag'
-            {
-            match("Betrag"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__98"
-
-    // $ANTLR start "T__99"
-    public final void mT__99() throws RecognitionException {
-        try {
-            int _type = T__99;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:97:7: ( 'Intervall' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:97:9: 'Intervall'
-            {
-            match("Intervall"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__99"
-
-    // $ANTLR start "T__100"
-    public final void mT__100() throws RecognitionException {
-        try {
-            int _type = T__100;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:98:8: ( 'Empf\\u00E4nger' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:98:10: 'Empf\\u00E4nger'
-            {
-            match("Empf\u00E4nger"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__100"
-
-    // $ANTLR start "T__101"
-    public final void mT__101() throws RecognitionException {
-        try {
-            int _type = T__101;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:99:8: ( 'von' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:99:10: 'von'
-            {
-            match("von"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__101"
-
-    // $ANTLR start "T__102"
-    public final void mT__102() throws RecognitionException {
-        try {
-            int _type = T__102;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:100:8: ( 'Stra\\u00DFe' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:100:10: 'Stra\\u00DFe'
-            {
-            match("Stra\u00DFe"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__102"
-
-    // $ANTLR start "T__103"
-    public final void mT__103() throws RecognitionException {
-        try {
-            int _type = T__103;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:101:8: ( 'PLZ' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:101:10: 'PLZ'
-            {
-            match("PLZ"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__103"
-
-    // $ANTLR start "T__104"
-    public final void mT__104() throws RecognitionException {
-        try {
-            int _type = T__104;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:102:8: ( 'Ort' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:102:10: 'Ort'
-            {
-            match("Ort"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__104"
-
-    // $ANTLR start "T__105"
-    public final void mT__105() throws RecognitionException {
-        try {
-            int _type = T__105;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:103:8: ( 'Bemerkung' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:103:10: 'Bemerkung'
-            {
-            match("Bemerkung"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__105"
-
-    // $ANTLR start "T__106"
-    public final void mT__106() throws RecognitionException {
-        try {
-            int _type = T__106;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:104:8: ( 'instanceof' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:104:10: 'instanceof'
-            {
-            match("instanceof"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__106"
-
-    // $ANTLR start "T__107"
-    public final void mT__107() throws RecognitionException {
-        try {
-            int _type = T__107;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:105:8: ( 'as' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:105:10: 'as'
-            {
-            match("as"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__107"
-
-    // $ANTLR start "T__108"
-    public final void mT__108() throws RecognitionException {
-        try {
-            int _type = T__108;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:106:8: ( ',' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:106:10: ','
-            {
-            match(','); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__108"
-
-    // $ANTLR start "T__109"
-    public final void mT__109() throws RecognitionException {
-        try {
-            int _type = T__109;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:107:8: ( ')' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:107:10: ')'
-            {
-            match(')'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__109"
-
-    // $ANTLR start "T__110"
-    public final void mT__110() throws RecognitionException {
-        try {
-            int _type = T__110;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:108:8: ( ']' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:108:10: ']'
-            {
-            match(']'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__110"
-
-    // $ANTLR start "T__111"
-    public final void mT__111() throws RecognitionException {
-        try {
-            int _type = T__111;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:109:8: ( '[' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:109:10: '['
-            {
-            match('['); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__111"
-
-    // $ANTLR start "T__112"
-    public final void mT__112() throws RecognitionException {
-        try {
-            int _type = T__112;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:110:8: ( ';' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:110:10: ';'
-            {
-            match(';'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__112"
-
-    // $ANTLR start "T__113"
-    public final void mT__113() throws RecognitionException {
-        try {
-            int _type = T__113;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:111:8: ( '(' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:111:10: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__113"
-
-    // $ANTLR start "T__114"
-    public final void mT__114() throws RecognitionException {
-        try {
-            int _type = T__114;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:112:8: ( 'if' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:112:10: 'if'
-            {
-            match("if"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__114"
-
-    // $ANTLR start "T__115"
-    public final void mT__115() throws RecognitionException {
-        try {
-            int _type = T__115;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:113:8: ( 'else' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:113:10: 'else'
-            {
-            match("else"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__115"
-
-    // $ANTLR start "T__116"
-    public final void mT__116() throws RecognitionException {
-        try {
-            int _type = T__116;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:114:8: ( 'switch' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:114:10: 'switch'
-            {
-            match("switch"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__116"
-
-    // $ANTLR start "T__117"
-    public final void mT__117() throws RecognitionException {
-        try {
-            int _type = T__117;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:115:8: ( ':' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:115:10: ':'
-            {
-            match(':'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__117"
-
-    // $ANTLR start "T__118"
-    public final void mT__118() throws RecognitionException {
-        try {
-            int _type = T__118;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:116:8: ( 'default' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:116:10: 'default'
-            {
-            match("default"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__118"
-
-    // $ANTLR start "T__119"
-    public final void mT__119() throws RecognitionException {
-        try {
-            int _type = T__119;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:117:8: ( 'case' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:117:10: 'case'
-            {
-            match("case"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__119"
-
-    // $ANTLR start "T__120"
-    public final void mT__120() throws RecognitionException {
-        try {
-            int _type = T__120;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:118:8: ( 'for' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:118:10: 'for'
-            {
-            match("for"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__120"
-
-    // $ANTLR start "T__121"
-    public final void mT__121() throws RecognitionException {
-        try {
-            int _type = T__121;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:119:8: ( 'while' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:119:10: 'while'
-            {
-            match("while"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__121"
-
-    // $ANTLR start "T__122"
-    public final void mT__122() throws RecognitionException {
-        try {
-            int _type = T__122;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:120:8: ( 'do' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:120:10: 'do'
-            {
-            match("do"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__122"
-
-    // $ANTLR start "T__123"
-    public final void mT__123() throws RecognitionException {
-        try {
-            int _type = T__123;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:121:8: ( '::' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:121:10: '::'
-            {
-            match("::"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__123"
-
-    // $ANTLR start "T__124"
-    public final void mT__124() throws RecognitionException {
-        try {
-            int _type = T__124;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:122:8: ( 'new' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:122:10: 'new'
-            {
-            match("new"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__124"
-
-    // $ANTLR start "T__125"
-    public final void mT__125() throws RecognitionException {
-        try {
-            int _type = T__125;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:123:8: ( 'null' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:123:10: 'null'
-            {
-            match("null"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__125"
-
-    // $ANTLR start "T__126"
-    public final void mT__126() throws RecognitionException {
-        try {
-            int _type = T__126;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:124:8: ( 'typeof' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:124:10: 'typeof'
-            {
-            match("typeof"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__126"
-
-    // $ANTLR start "T__127"
-    public final void mT__127() throws RecognitionException {
-        try {
-            int _type = T__127;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:125:8: ( 'throw' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:125:10: 'throw'
-            {
-            match("throw"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__127"
-
-    // $ANTLR start "T__128"
-    public final void mT__128() throws RecognitionException {
-        try {
-            int _type = T__128;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:126:8: ( 'return' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:126:10: 'return'
-            {
-            match("return"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__128"
-
-    // $ANTLR start "T__129"
-    public final void mT__129() throws RecognitionException {
-        try {
-            int _type = T__129;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:127:8: ( 'try' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:127:10: 'try'
-            {
-            match("try"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__129"
-
-    // $ANTLR start "T__130"
-    public final void mT__130() throws RecognitionException {
-        try {
-            int _type = T__130;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:128:8: ( 'finally' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:128:10: 'finally'
-            {
-            match("finally"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__130"
-
-    // $ANTLR start "T__131"
-    public final void mT__131() throws RecognitionException {
-        try {
-            int _type = T__131;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:129:8: ( 'catch' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:129:10: 'catch'
-            {
-            match("catch"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__131"
-
-    // $ANTLR start "T__132"
-    public final void mT__132() throws RecognitionException {
-        try {
-            int _type = T__132;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:130:8: ( '?' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:130:10: '?'
-            {
-            match('?'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__132"
-
-    // $ANTLR start "T__133"
-    public final void mT__133() throws RecognitionException {
-        try {
-            int _type = T__133;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:131:8: ( 'extends' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:131:10: 'extends'
-            {
-            match("extends"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__133"
-
-    // $ANTLR start "T__134"
-    public final void mT__134() throws RecognitionException {
-        try {
-            int _type = T__134;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:132:8: ( '&' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:132:10: '&'
-            {
-            match('&'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__134"
-
-    // $ANTLR start "T__135"
-    public final void mT__135() throws RecognitionException {
-        try {
-            int _type = T__135;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:133:8: ( '?.' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:133:10: '?.'
-            {
-            match("?."); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__135"
-
-    // $ANTLR start "T__136"
-    public final void mT__136() throws RecognitionException {
-        try {
-            int _type = T__136;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:134:8: ( '*.' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:134:10: '*.'
-            {
-            match("*."); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__136"
-
-    // $ANTLR start "T__137"
-    public final void mT__137() throws RecognitionException {
-        try {
-            int _type = T__137;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:135:8: ( '|' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:135:10: '|'
-            {
-            match('|'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__137"
-
-    // $ANTLR start "T__138"
-    public final void mT__138() throws RecognitionException {
-        try {
-            int _type = T__138;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:136:8: ( 'var' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:136:10: 'var'
-            {
-            match("var"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__138"
-
-    // $ANTLR start "T__139"
-    public final void mT__139() throws RecognitionException {
-        try {
-            int _type = T__139;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:137:8: ( 'true' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:137:10: 'true'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:94:7: ( 'true' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:94:9: 'true'
             {
             match("true"); 
 
@@ -2797,45 +1862,432 @@ public class InternalFinLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__139"
+    // $ANTLR end "T__98"
+
+    // $ANTLR start "RULE_TAG"
+    public final void mRULE_TAG() throws RecognitionException {
+        try {
+            int _type = RULE_TAG;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:10: ( ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20' | '21' | '22' | '23' | '24' | '25' | '26' | '27' | '28' | '29' | '30' | '31' ) )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:12: ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20' | '21' | '22' | '23' | '24' | '25' | '26' | '27' | '28' | '29' | '30' | '31' )
+            {
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:12: ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20' | '21' | '22' | '23' | '24' | '25' | '26' | '27' | '28' | '29' | '30' | '31' )
+            int alt1=31;
+            alt1 = dfa1.predict(input);
+            switch (alt1) {
+                case 1 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:13: '1'
+                    {
+                    match('1'); 
+
+                    }
+                    break;
+                case 2 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:17: '2'
+                    {
+                    match('2'); 
+
+                    }
+                    break;
+                case 3 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:21: '3'
+                    {
+                    match('3'); 
+
+                    }
+                    break;
+                case 4 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:25: '4'
+                    {
+                    match('4'); 
+
+                    }
+                    break;
+                case 5 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:29: '5'
+                    {
+                    match('5'); 
+
+                    }
+                    break;
+                case 6 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:33: '6'
+                    {
+                    match('6'); 
+
+                    }
+                    break;
+                case 7 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:37: '7'
+                    {
+                    match('7'); 
+
+                    }
+                    break;
+                case 8 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:41: '8'
+                    {
+                    match('8'); 
+
+                    }
+                    break;
+                case 9 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:45: '9'
+                    {
+                    match('9'); 
+
+                    }
+                    break;
+                case 10 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:49: '10'
+                    {
+                    match("10"); 
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:54: '11'
+                    {
+                    match("11"); 
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:59: '12'
+                    {
+                    match("12"); 
+
+
+                    }
+                    break;
+                case 13 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:64: '13'
+                    {
+                    match("13"); 
+
+
+                    }
+                    break;
+                case 14 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:69: '14'
+                    {
+                    match("14"); 
+
+
+                    }
+                    break;
+                case 15 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:74: '15'
+                    {
+                    match("15"); 
+
+
+                    }
+                    break;
+                case 16 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:79: '16'
+                    {
+                    match("16"); 
+
+
+                    }
+                    break;
+                case 17 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:84: '17'
+                    {
+                    match("17"); 
+
+
+                    }
+                    break;
+                case 18 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:89: '18'
+                    {
+                    match("18"); 
+
+
+                    }
+                    break;
+                case 19 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:94: '19'
+                    {
+                    match("19"); 
+
+
+                    }
+                    break;
+                case 20 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:99: '20'
+                    {
+                    match("20"); 
+
+
+                    }
+                    break;
+                case 21 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:104: '21'
+                    {
+                    match("21"); 
+
+
+                    }
+                    break;
+                case 22 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:109: '22'
+                    {
+                    match("22"); 
+
+
+                    }
+                    break;
+                case 23 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:114: '23'
+                    {
+                    match("23"); 
+
+
+                    }
+                    break;
+                case 24 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:119: '24'
+                    {
+                    match("24"); 
+
+
+                    }
+                    break;
+                case 25 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:124: '25'
+                    {
+                    match("25"); 
+
+
+                    }
+                    break;
+                case 26 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:129: '26'
+                    {
+                    match("26"); 
+
+
+                    }
+                    break;
+                case 27 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:134: '27'
+                    {
+                    match("27"); 
+
+
+                    }
+                    break;
+                case 28 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:139: '28'
+                    {
+                    match("28"); 
+
+
+                    }
+                    break;
+                case 29 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:144: '29'
+                    {
+                    match("29"); 
+
+
+                    }
+                    break;
+                case 30 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:149: '30'
+                    {
+                    match("30"); 
+
+
+                    }
+                    break;
+                case 31 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18178:154: '31'
+                    {
+                    match("31"); 
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_TAG"
+
+    // $ANTLR start "RULE_MONAT"
+    public final void mRULE_MONAT() throws RecognitionException {
+        try {
+            int _type = RULE_MONAT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:12: ( ( 'Januar' | 'Februar' | 'M\\u00E4rz' | 'April' | 'Mai' | 'Juni' | 'Juli' | 'August' | 'September' | 'Oktober' | 'November' | 'Dezember' ) )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:14: ( 'Januar' | 'Februar' | 'M\\u00E4rz' | 'April' | 'Mai' | 'Juni' | 'Juli' | 'August' | 'September' | 'Oktober' | 'November' | 'Dezember' )
+            {
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:14: ( 'Januar' | 'Februar' | 'M\\u00E4rz' | 'April' | 'Mai' | 'Juni' | 'Juli' | 'August' | 'September' | 'Oktober' | 'November' | 'Dezember' )
+            int alt2=12;
+            alt2 = dfa2.predict(input);
+            switch (alt2) {
+                case 1 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:15: 'Januar'
+                    {
+                    match("Januar"); 
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:24: 'Februar'
+                    {
+                    match("Februar"); 
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:34: 'M\\u00E4rz'
+                    {
+                    match("M\u00E4rz"); 
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:46: 'April'
+                    {
+                    match("April"); 
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:54: 'Mai'
+                    {
+                    match("Mai"); 
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:60: 'Juni'
+                    {
+                    match("Juni"); 
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:67: 'Juli'
+                    {
+                    match("Juli"); 
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:74: 'August'
+                    {
+                    match("August"); 
+
+
+                    }
+                    break;
+                case 9 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:83: 'September'
+                    {
+                    match("September"); 
+
+
+                    }
+                    break;
+                case 10 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:95: 'Oktober'
+                    {
+                    match("Oktober"); 
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:105: 'November'
+                    {
+                    match("November"); 
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18180:116: 'Dezember'
+                    {
+                    match("Dezember"); 
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_MONAT"
 
     // $ANTLR start "RULE_HEX"
     public final void mRULE_HEX() throws RecognitionException {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             {
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:12: ( '0x' | '0X' )
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:12: ( '0x' | '0X' )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA1_0=='0') ) {
-                int LA1_1 = input.LA(2);
+            if ( (LA3_0=='0') ) {
+                int LA3_1 = input.LA(2);
 
-                if ( (LA1_1=='x') ) {
-                    alt1=1;
+                if ( (LA3_1=='x') ) {
+                    alt3=1;
                 }
-                else if ( (LA1_1=='X') ) {
-                    alt1=2;
+                else if ( (LA3_1=='X') ) {
+                    alt3=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 1, 1, input);
+                        new NoViableAltException("", 3, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt1) {
+            switch (alt3) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:13: '0x'
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:13: '0x'
                     {
                     match("0x"); 
 
@@ -2843,7 +2295,7 @@ public class InternalFinLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:18: '0X'
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:18: '0X'
                     {
                     match("0X"); 
 
@@ -2853,19 +2305,19 @@ public class InternalFinLexer extends Lexer {
 
             }
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
-            int cnt2=0;
-            loop2:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
+            int cnt4=0;
+            loop4:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='F')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='f')) ) {
-                    alt2=1;
+                if ( ((LA4_0>='0' && LA4_0<='9')||(LA4_0>='A' && LA4_0<='F')||LA4_0=='_'||(LA4_0>='a' && LA4_0<='f')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt4) {
             	case 1 :
             	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:
             	    {
@@ -2883,45 +2335,45 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt2 >= 1 ) break loop2;
+            	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
-                            new EarlyExitException(2, input);
+                            new EarlyExitException(4, input);
                         throw eee;
                 }
-                cnt2++;
+                cnt4++;
             } while (true);
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA4_0=='#') ) {
-                alt4=1;
+            if ( (LA6_0=='#') ) {
+                alt6=1;
             }
-            switch (alt4) {
+            switch (alt6) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     {
                     match('#'); 
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
-                    int alt3=2;
-                    int LA3_0 = input.LA(1);
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    int alt5=2;
+                    int LA5_0 = input.LA(1);
 
-                    if ( (LA3_0=='B'||LA3_0=='b') ) {
-                        alt3=1;
+                    if ( (LA5_0=='B'||LA5_0=='b') ) {
+                        alt5=1;
                     }
-                    else if ( (LA3_0=='L'||LA3_0=='l') ) {
-                        alt3=2;
+                    else if ( (LA5_0=='L'||LA5_0=='l') ) {
+                        alt5=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 3, 0, input);
+                            new NoViableAltException("", 5, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt3) {
+                    switch (alt5) {
                         case 1 :
-                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:64: ( 'b' | 'B' ) ( 'i' | 'I' )
+                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:64: ( 'b' | 'B' ) ( 'i' | 'I' )
                             {
                             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                                 input.consume();
@@ -2945,7 +2397,7 @@ public class InternalFinLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18364:84: ( 'l' | 'L' )
+                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18182:84: ( 'l' | 'L' )
                             {
                             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                                 input.consume();
@@ -2984,22 +2436,22 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18366:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18366:12: '0' .. '9' ( '0' .. '9' | '_' )*
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18184:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18184:12: '0' .. '9' ( '0' .. '9' | '_' )*
             {
             matchRange('0','9'); 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18366:21: ( '0' .. '9' | '_' )*
-            loop5:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18184:21: ( '0' .. '9' | '_' )*
+            loop7:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( ((LA5_0>='0' && LA5_0<='9')||LA5_0=='_') ) {
-                    alt5=1;
+                if ( ((LA7_0>='0' && LA7_0<='9')||LA7_0=='_') ) {
+                    alt7=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt7) {
             	case 1 :
             	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:
             	    {
@@ -3017,7 +2469,7 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop7;
                 }
             } while (true);
 
@@ -3037,20 +2489,20 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             {
             mRULE_INT(); 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA7_0=='E'||LA7_0=='e') ) {
-                alt7=1;
+            if ( (LA9_0=='E'||LA9_0=='e') ) {
+                alt9=1;
             }
-            switch (alt7) {
+            switch (alt9) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -3061,14 +2513,14 @@ public class InternalFinLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:36: ( '+' | '-' )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:36: ( '+' | '-' )?
+                    int alt8=2;
+                    int LA8_0 = input.LA(1);
 
-                    if ( (LA6_0=='+'||LA6_0=='-') ) {
-                        alt6=1;
+                    if ( (LA8_0=='+'||LA8_0=='-') ) {
+                        alt8=1;
                     }
-                    switch (alt6) {
+                    switch (alt8) {
                         case 1 :
                             // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:
                             {
@@ -3094,19 +2546,19 @@ public class InternalFinLexer extends Lexer {
 
             }
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
-            int alt8=3;
-            int LA8_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            int alt10=3;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA8_0=='B'||LA8_0=='b') ) {
-                alt8=1;
+            if ( (LA10_0=='B'||LA10_0=='b') ) {
+                alt10=1;
             }
-            else if ( (LA8_0=='D'||LA8_0=='F'||LA8_0=='L'||LA8_0=='d'||LA8_0=='f'||LA8_0=='l') ) {
-                alt8=2;
+            else if ( (LA10_0=='D'||LA10_0=='F'||LA10_0=='L'||LA10_0=='d'||LA10_0=='f'||LA10_0=='l') ) {
+                alt10=2;
             }
-            switch (alt8) {
+            switch (alt10) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
                     {
                     if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                         input.consume();
@@ -3130,7 +2582,7 @@ public class InternalFinLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18368:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18186:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
                     {
                     if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='d'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                         input.consume();
@@ -3163,19 +2615,19 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18370:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18370:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18188:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18188:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             {
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18370:11: ( '^' )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18188:11: ( '^' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA9_0=='^') ) {
-                alt9=1;
+            if ( (LA11_0=='^') ) {
+                alt11=1;
             }
-            switch (alt9) {
+            switch (alt11) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18370:11: '^'
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18188:11: '^'
                     {
                     match('^'); 
 
@@ -3193,18 +2645,18 @@ public class InternalFinLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18370:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
-            loop10:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18188:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            loop12:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA10_0=='$'||(LA10_0>='0' && LA10_0<='9')||(LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||(LA10_0>='a' && LA10_0<='z')) ) {
-                    alt10=1;
+                if ( (LA12_0=='$'||(LA12_0>='0' && LA12_0<='9')||(LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt12) {
             	case 1 :
             	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:
             	    {
@@ -3222,7 +2674,7 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop12;
                 }
             } while (true);
 
@@ -3242,47 +2694,47 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA13_0=='\"') ) {
-                alt13=1;
+            if ( (LA15_0=='\"') ) {
+                alt15=1;
             }
-            else if ( (LA13_0=='\'') ) {
-                alt13=2;
+            else if ( (LA15_0=='\'') ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop11:
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop13:
                     do {
-                        int alt11=3;
-                        int LA11_0 = input.LA(1);
+                        int alt13=3;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA11_0=='\\') ) {
-                            alt11=1;
+                        if ( (LA13_0=='\\') ) {
+                            alt13=1;
                         }
-                        else if ( ((LA11_0>='\u0000' && LA11_0<='!')||(LA11_0>='#' && LA11_0<='[')||(LA11_0>=']' && LA11_0<='\uFFFF')) ) {
-                            alt11=2;
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='!')||(LA13_0>='#' && LA13_0<='[')||(LA13_0>=']' && LA13_0<='\uFFFF')) ) {
+                            alt13=2;
                         }
 
 
-                        switch (alt11) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -3298,7 +2750,7 @@ public class InternalFinLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3314,7 +2766,7 @@ public class InternalFinLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop11;
+                    	    break loop13;
                         }
                     } while (true);
 
@@ -3323,26 +2775,26 @@ public class InternalFinLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop12:
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop14:
                     do {
-                        int alt12=3;
-                        int LA12_0 = input.LA(1);
+                        int alt14=3;
+                        int LA14_0 = input.LA(1);
 
-                        if ( (LA12_0=='\\') ) {
-                            alt12=1;
+                        if ( (LA14_0=='\\') ) {
+                            alt14=1;
                         }
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='[')||(LA12_0>=']' && LA12_0<='\uFFFF')) ) {
-                            alt12=2;
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='[')||(LA14_0>=']' && LA14_0<='\uFFFF')) ) {
+                            alt14=2;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt14) {
                     	case 1 :
-                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -3358,7 +2810,7 @@ public class InternalFinLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18372:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18190:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3374,7 +2826,7 @@ public class InternalFinLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop12;
+                    	    break loop14;
                         }
                     } while (true);
 
@@ -3401,37 +2853,37 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18374:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18374:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18192:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18192:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18374:24: ( options {greedy=false; } : . )*
-            loop14:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18192:24: ( options {greedy=false; } : . )*
+            loop16:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA14_0=='*') ) {
-                    int LA14_1 = input.LA(2);
+                if ( (LA16_0=='*') ) {
+                    int LA16_1 = input.LA(2);
 
-                    if ( (LA14_1=='/') ) {
-                        alt14=2;
+                    if ( (LA16_1=='/') ) {
+                        alt16=2;
                     }
-                    else if ( ((LA14_1>='\u0000' && LA14_1<='.')||(LA14_1>='0' && LA14_1<='\uFFFF')) ) {
-                        alt14=1;
+                    else if ( ((LA16_1>='\u0000' && LA16_1<='.')||(LA16_1>='0' && LA16_1<='\uFFFF')) ) {
+                        alt16=1;
                     }
 
 
                 }
-                else if ( ((LA14_0>='\u0000' && LA14_0<=')')||(LA14_0>='+' && LA14_0<='\uFFFF')) ) {
-                    alt14=1;
+                else if ( ((LA16_0>='\u0000' && LA16_0<=')')||(LA16_0>='+' && LA16_0<='\uFFFF')) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt16) {
             	case 1 :
-            	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18374:52: .
+            	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18192:52: .
             	    {
             	    matchAny(); 
 
@@ -3439,7 +2891,7 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop16;
                 }
             } while (true);
 
@@ -3461,25 +2913,25 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop15:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop17:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( ((LA15_0>='\u0000' && LA15_0<='\t')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\uFFFF')) ) {
-                    alt15=1;
+                if ( ((LA17_0>='\u0000' && LA17_0<='\t')||(LA17_0>='\u000B' && LA17_0<='\f')||(LA17_0>='\u000E' && LA17_0<='\uFFFF')) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt17) {
             	case 1 :
-            	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3495,31 +2947,31 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop17;
                 }
             } while (true);
 
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:40: ( ( '\\r' )? '\\n' )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:40: ( ( '\\r' )? '\\n' )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA17_0=='\n'||LA17_0=='\r') ) {
-                alt17=1;
+            if ( (LA19_0=='\n'||LA19_0=='\r') ) {
+                alt19=1;
             }
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:41: ( '\\r' )? '\\n'
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:41: ( '\\r' )?
-                    int alt16=2;
-                    int LA16_0 = input.LA(1);
+                    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:41: ( '\\r' )?
+                    int alt18=2;
+                    int LA18_0 = input.LA(1);
 
-                    if ( (LA16_0=='\r') ) {
-                        alt16=1;
+                    if ( (LA18_0=='\r') ) {
+                        alt18=1;
                     }
-                    switch (alt16) {
+                    switch (alt18) {
                         case 1 :
-                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18376:41: '\\r'
+                            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18194:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3551,22 +3003,22 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18378:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18378:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18196:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18196:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18378:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt18=0;
-            loop18:
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18196:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt20=0;
+            loop20:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( ((LA18_0>='\t' && LA18_0<='\n')||LA18_0=='\r'||LA18_0==' ') ) {
-                    alt18=1;
+                if ( ((LA20_0>='\t' && LA20_0<='\n')||LA20_0=='\r'||LA20_0==' ') ) {
+                    alt20=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt20) {
             	case 1 :
             	    // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:
             	    {
@@ -3584,12 +3036,12 @@ public class InternalFinLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt18 >= 1 ) break loop18;
+            	    if ( cnt20 >= 1 ) break loop20;
                         EarlyExitException eee =
-                            new EarlyExitException(18, input);
+                            new EarlyExitException(20, input);
                         throw eee;
                 }
-                cnt18++;
+                cnt20++;
             } while (true);
 
 
@@ -3608,8 +3060,8 @@ public class InternalFinLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18380:16: ( . )
-            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18380:18: .
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18198:16: ( . )
+            // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:18198:18: .
             {
             matchAny(); 
 
@@ -3624,957 +3076,670 @@ public class InternalFinLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt19=136;
-        alt19 = dfa19.predict(input);
-        switch (alt19) {
+        // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | RULE_TAG | RULE_MONAT | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt21=95;
+        alt21 = dfa21.predict(input);
+        switch (alt21) {
             case 1 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:10: T__13
-                {
-                mT__13(); 
-
-                }
-                break;
-            case 2 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:16: T__14
-                {
-                mT__14(); 
-
-                }
-                break;
-            case 3 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:22: T__15
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:10: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
-            case 4 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:28: T__16
+            case 2 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:16: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
-            case 5 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:34: T__17
+            case 3 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:22: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
-            case 6 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:40: T__18
+            case 4 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:28: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
-            case 7 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:46: T__19
+            case 5 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:34: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
-            case 8 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:52: T__20
+            case 6 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:40: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
-            case 9 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:58: T__21
+            case 7 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:46: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
-            case 10 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:64: T__22
+            case 8 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:52: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 11 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:70: T__23
+            case 9 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:58: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 12 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:76: T__24
+            case 10 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:64: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 13 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:82: T__25
+            case 11 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:70: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 14 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:88: T__26
+            case 12 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:76: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 15 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:94: T__27
+            case 13 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:82: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 16 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:100: T__28
+            case 14 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:88: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 17 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:106: T__29
+            case 15 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:94: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 18 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:112: T__30
+            case 16 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:100: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 19 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:118: T__31
+            case 17 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:106: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 20 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:124: T__32
+            case 18 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:112: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 21 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:130: T__33
+            case 19 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:118: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 22 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:136: T__34
+            case 20 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:124: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 23 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:142: T__35
+            case 21 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:130: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 24 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:148: T__36
+            case 22 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:136: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 25 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:154: T__37
+            case 23 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:142: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 26 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:160: T__38
+            case 24 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:148: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 27 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:166: T__39
+            case 25 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:154: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 28 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:172: T__40
+            case 26 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:160: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 29 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:178: T__41
+            case 27 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:166: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 30 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:184: T__42
+            case 28 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:172: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 31 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:190: T__43
+            case 29 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:178: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 32 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:196: T__44
+            case 30 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:184: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 33 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:202: T__45
+            case 31 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:190: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 34 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:208: T__46
+            case 32 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:196: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 35 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:214: T__47
+            case 33 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:202: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 36 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:220: T__48
+            case 34 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:208: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 37 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:226: T__49
+            case 35 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:214: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 38 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:232: T__50
+            case 36 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:220: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
-            case 39 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:238: T__51
+            case 37 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:226: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
-            case 40 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:244: T__52
+            case 38 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:232: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
-            case 41 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:250: T__53
+            case 39 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:238: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
-            case 42 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:256: T__54
+            case 40 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:244: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
-            case 43 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:262: T__55
+            case 41 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:250: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
-            case 44 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:268: T__56
+            case 42 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:256: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
-            case 45 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:274: T__57
+            case 43 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:262: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
-            case 46 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:280: T__58
+            case 44 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:268: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
-            case 47 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:286: T__59
+            case 45 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:274: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
-            case 48 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:292: T__60
+            case 46 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:280: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
-            case 49 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:298: T__61
+            case 47 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:286: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
-            case 50 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:304: T__62
+            case 48 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:292: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
-            case 51 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:310: T__63
+            case 49 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:298: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
-            case 52 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:316: T__64
+            case 50 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:304: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
-            case 53 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:322: T__65
+            case 51 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:310: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
-            case 54 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:328: T__66
+            case 52 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:316: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
-            case 55 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:334: T__67
+            case 53 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:322: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
-            case 56 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:340: T__68
+            case 54 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:328: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
-            case 57 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:346: T__69
+            case 55 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:334: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
-            case 58 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:352: T__70
+            case 56 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:340: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
-            case 59 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:358: T__71
+            case 57 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:346: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
-            case 60 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:364: T__72
+            case 58 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:352: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
-            case 61 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:370: T__73
+            case 59 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:358: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
-            case 62 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:376: T__74
+            case 60 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:364: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
-            case 63 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:382: T__75
+            case 61 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:370: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
-            case 64 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:388: T__76
+            case 62 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:376: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
-            case 65 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:394: T__77
+            case 63 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:382: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
-            case 66 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:400: T__78
+            case 64 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:388: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
-            case 67 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:406: T__79
+            case 65 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:394: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
-            case 68 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:412: T__80
+            case 66 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:400: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
-            case 69 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:418: T__81
+            case 67 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:406: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
-            case 70 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:424: T__82
+            case 68 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:412: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
-            case 71 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:430: T__83
+            case 69 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:418: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
-            case 72 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:436: T__84
+            case 70 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:424: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
-            case 73 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:442: T__85
+            case 71 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:430: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
-            case 74 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:448: T__86
+            case 72 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:436: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
-            case 75 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:454: T__87
+            case 73 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:442: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
-            case 76 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:460: T__88
+            case 74 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:448: T__88
                 {
                 mT__88(); 
 
                 }
                 break;
-            case 77 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:466: T__89
+            case 75 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:454: T__89
                 {
                 mT__89(); 
 
                 }
                 break;
-            case 78 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:472: T__90
+            case 76 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:460: T__90
                 {
                 mT__90(); 
 
                 }
                 break;
-            case 79 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:478: T__91
+            case 77 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:466: T__91
                 {
                 mT__91(); 
 
                 }
                 break;
-            case 80 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:484: T__92
+            case 78 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:472: T__92
                 {
                 mT__92(); 
 
                 }
                 break;
-            case 81 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:490: T__93
+            case 79 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:478: T__93
                 {
                 mT__93(); 
 
                 }
                 break;
-            case 82 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:496: T__94
+            case 80 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:484: T__94
                 {
                 mT__94(); 
 
                 }
                 break;
-            case 83 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:502: T__95
+            case 81 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:490: T__95
                 {
                 mT__95(); 
 
                 }
                 break;
-            case 84 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:508: T__96
+            case 82 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:496: T__96
                 {
                 mT__96(); 
 
                 }
                 break;
-            case 85 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:514: T__97
+            case 83 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:502: T__97
                 {
                 mT__97(); 
 
                 }
                 break;
-            case 86 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:520: T__98
+            case 84 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:508: T__98
                 {
                 mT__98(); 
 
                 }
                 break;
+            case 85 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:514: RULE_TAG
+                {
+                mRULE_TAG(); 
+
+                }
+                break;
+            case 86 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:523: RULE_MONAT
+                {
+                mRULE_MONAT(); 
+
+                }
+                break;
             case 87 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:526: T__99
-                {
-                mT__99(); 
-
-                }
-                break;
-            case 88 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:532: T__100
-                {
-                mT__100(); 
-
-                }
-                break;
-            case 89 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:539: T__101
-                {
-                mT__101(); 
-
-                }
-                break;
-            case 90 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:546: T__102
-                {
-                mT__102(); 
-
-                }
-                break;
-            case 91 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:553: T__103
-                {
-                mT__103(); 
-
-                }
-                break;
-            case 92 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:560: T__104
-                {
-                mT__104(); 
-
-                }
-                break;
-            case 93 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:567: T__105
-                {
-                mT__105(); 
-
-                }
-                break;
-            case 94 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:574: T__106
-                {
-                mT__106(); 
-
-                }
-                break;
-            case 95 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:581: T__107
-                {
-                mT__107(); 
-
-                }
-                break;
-            case 96 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:588: T__108
-                {
-                mT__108(); 
-
-                }
-                break;
-            case 97 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:595: T__109
-                {
-                mT__109(); 
-
-                }
-                break;
-            case 98 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:602: T__110
-                {
-                mT__110(); 
-
-                }
-                break;
-            case 99 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:609: T__111
-                {
-                mT__111(); 
-
-                }
-                break;
-            case 100 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:616: T__112
-                {
-                mT__112(); 
-
-                }
-                break;
-            case 101 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:623: T__113
-                {
-                mT__113(); 
-
-                }
-                break;
-            case 102 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:630: T__114
-                {
-                mT__114(); 
-
-                }
-                break;
-            case 103 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:637: T__115
-                {
-                mT__115(); 
-
-                }
-                break;
-            case 104 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:644: T__116
-                {
-                mT__116(); 
-
-                }
-                break;
-            case 105 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:651: T__117
-                {
-                mT__117(); 
-
-                }
-                break;
-            case 106 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:658: T__118
-                {
-                mT__118(); 
-
-                }
-                break;
-            case 107 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:665: T__119
-                {
-                mT__119(); 
-
-                }
-                break;
-            case 108 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:672: T__120
-                {
-                mT__120(); 
-
-                }
-                break;
-            case 109 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:679: T__121
-                {
-                mT__121(); 
-
-                }
-                break;
-            case 110 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:686: T__122
-                {
-                mT__122(); 
-
-                }
-                break;
-            case 111 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:693: T__123
-                {
-                mT__123(); 
-
-                }
-                break;
-            case 112 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:700: T__124
-                {
-                mT__124(); 
-
-                }
-                break;
-            case 113 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:707: T__125
-                {
-                mT__125(); 
-
-                }
-                break;
-            case 114 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:714: T__126
-                {
-                mT__126(); 
-
-                }
-                break;
-            case 115 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:721: T__127
-                {
-                mT__127(); 
-
-                }
-                break;
-            case 116 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:728: T__128
-                {
-                mT__128(); 
-
-                }
-                break;
-            case 117 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:735: T__129
-                {
-                mT__129(); 
-
-                }
-                break;
-            case 118 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:742: T__130
-                {
-                mT__130(); 
-
-                }
-                break;
-            case 119 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:749: T__131
-                {
-                mT__131(); 
-
-                }
-                break;
-            case 120 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:756: T__132
-                {
-                mT__132(); 
-
-                }
-                break;
-            case 121 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:763: T__133
-                {
-                mT__133(); 
-
-                }
-                break;
-            case 122 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:770: T__134
-                {
-                mT__134(); 
-
-                }
-                break;
-            case 123 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:777: T__135
-                {
-                mT__135(); 
-
-                }
-                break;
-            case 124 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:784: T__136
-                {
-                mT__136(); 
-
-                }
-                break;
-            case 125 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:791: T__137
-                {
-                mT__137(); 
-
-                }
-                break;
-            case 126 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:798: T__138
-                {
-                mT__138(); 
-
-                }
-                break;
-            case 127 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:805: T__139
-                {
-                mT__139(); 
-
-                }
-                break;
-            case 128 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:812: RULE_HEX
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:534: RULE_HEX
                 {
                 mRULE_HEX(); 
 
                 }
                 break;
-            case 129 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:821: RULE_INT
+            case 88 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:543: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 130 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:830: RULE_DECIMAL
+            case 89 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:552: RULE_DECIMAL
                 {
                 mRULE_DECIMAL(); 
 
                 }
                 break;
-            case 131 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:843: RULE_ID
+            case 90 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:565: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 132 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:851: RULE_STRING
+            case 91 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:573: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 133 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:863: RULE_ML_COMMENT
+            case 92 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:585: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 134 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:879: RULE_SL_COMMENT
+            case 93 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:601: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 135 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:895: RULE_WS
+            case 94 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:617: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 136 :
-                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:903: RULE_ANY_OTHER
+            case 95 :
+                // ../de.nie.fin.ui/src-gen/de/nie/fin/ui/contentassist/antlr/internal/InternalFin.g:1:625: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -4586,890 +3751,1017 @@ public class InternalFinLexer extends Lexer {
     }
 
 
-    protected DFA19 dfa19 = new DFA19(this);
-    static final String DFA19_eotS =
-        "\1\uffff\1\105\1\107\1\111\1\113\1\126\1\143\1\146\1\147\1\150"+
-        "\1\151\1\152\1\153\1\154\10\157\1\175\1\177\1\u0082\1\u0084\1\u0086"+
-        "\1\u0089\1\u008c\1\u008f\1\uffff\6\157\1\uffff\3\157\1\uffff\4\157"+
-        "\6\uffff\1\157\1\u00b4\6\157\1\u00c0\1\102\1\uffff\2\102\13\uffff"+
-        "\1\u00c3\1\u00c4\1\u00c5\1\u00c6\1\u00c7\1\u00c8\1\u00c9\1\u00ca"+
-        "\1\u00cb\1\u00cc\1\uffff\1\u00c0\1\uffff\1\u00cd\1\u00ce\1\u00cf"+
-        "\1\u00d0\1\u00d1\1\u00d2\1\u00d3\1\u00d4\1\u00d5\1\u00d6\1\uffff"+
-        "\1\u00d7\1\u00d8\7\uffff\2\157\1\uffff\1\157\1\uffff\12\157\4\uffff"+
-        "\1\u00e8\20\uffff\12\157\1\u00f4\3\157\1\uffff\6\157\1\uffff\3\157"+
-        "\1\u0103\6\uffff\2\157\2\uffff\1\157\1\u0107\10\157\32\uffff\4\157"+
-        "\1\u0116\6\157\1\u011d\2\157\2\uffff\1\u0120\1\u0121\1\u0122\3\157"+
-        "\1\u0126\4\157\1\uffff\3\157\1\u012e\7\157\1\u0136\1\157\1\u0138"+
-        "\1\uffff\3\157\1\uffff\3\157\1\u013f\3\157\1\u0143\3\157\1\u0147"+
-        "\1\u0148\1\157\1\uffff\6\157\1\uffff\2\157\3\uffff\3\157\1\uffff"+
-        "\7\157\1\uffff\1\u015c\6\157\1\uffff\1\157\1\uffff\1\u0164\2\157"+
-        "\1\u0167\2\157\1\uffff\1\u016a\2\157\1\uffff\1\u016d\2\157\2\uffff"+
-        "\1\157\1\u0171\1\u0172\2\157\1\uffff\3\157\1\u0178\1\157\1\u017a"+
-        "\4\157\1\u017f\1\u0180\1\157\1\uffff\6\157\2\uffff\2\157\1\uffff"+
-        "\1\u018a\1\u018b\1\uffff\1\157\1\u018d\1\uffff\1\157\1\u018f\1\157"+
-        "\2\uffff\1\u0191\4\157\1\uffff\1\u0196\1\uffff\2\157\1\u0199\1\157"+
-        "\2\uffff\2\157\1\u019d\6\157\2\uffff\1\u01a4\1\uffff\1\u01a5\1\uffff"+
-        "\1\u01a6\1\uffff\1\157\1\u01a8\2\157\1\uffff\1\u01ab\1\u01ac\1\uffff"+
-        "\2\157\1\u01b0\1\uffff\2\157\1\u01b3\1\157\1\u01b5\1\u01b6\3\uffff"+
-        "\1\157\1\uffff\1\u01b8\1\u01b9\2\uffff\3\157\1\uffff\2\157\1\uffff"+
-        "\1\157\2\uffff\1\u01c0\2\uffff\1\157\1\u01c2\1\157\1\u01c4\1\157"+
-        "\1\u01c6\1\uffff\1\u01c7\1\uffff\1\157\1\uffff\1\u01c9\2\uffff\1"+
-        "\157\1\uffff\5\157\1\u01d0\1\uffff";
-    static final String DFA19_eofS =
-        "\u01d1\uffff";
-    static final String DFA19_minS =
-        "\1\0\2\75\1\174\1\46\11\60\1\141\1\145\1\141\1\160\1\145\1\153"+
-        "\1\157\1\145\3\75\1\76\2\56\2\52\1\uffff\1\141\1\165\2\141\1\146"+
-        "\1\141\1\uffff\1\141\1\145\1\156\1\uffff\1\141\1\155\1\114\1\163"+
-        "\6\uffff\1\154\1\72\1\145\1\141\1\150\1\145\1\150\1\145\1\60\1\44"+
-        "\1\uffff\2\0\13\uffff\12\60\1\uffff\1\60\1\uffff\12\60\1\uffff\2"+
-        "\60\7\uffff\1\156\1\154\1\uffff\1\142\1\uffff\1\151\1\156\1\162"+
-        "\1\147\1\160\1\162\2\164\1\166\1\172\4\uffff\1\76\20\uffff\1\154"+
-        "\1\156\1\160\1\151\1\154\1\162\1\156\1\143\1\160\1\163\1\44\1\156"+
-        "\1\157\1\164\1\uffff\1\172\1\156\1\143\1\155\1\162\1\150\1\uffff"+
-        "\1\147\1\160\1\132\1\44\6\uffff\1\163\1\164\2\uffff\1\146\1\44\1"+
-        "\163\1\151\1\167\1\154\1\160\1\162\1\165\1\164\32\uffff\1\165\2"+
-        "\151\1\162\1\44\1\141\1\151\1\165\1\164\1\141\1\157\1\44\2\145\2"+
-        "\uffff\3\44\1\145\1\164\1\163\1\44\1\141\1\153\1\157\1\164\1\uffff"+
-        "\1\164\1\116\1\145\1\44\1\153\1\150\1\162\1\145\1\167\1\141\1\145"+
-        "\1\44\1\146\1\44\1\uffff\2\145\1\141\1\uffff\1\145\1\143\1\154\1"+
-        "\44\1\154\1\145\1\157\1\44\1\145\1\165\1\141\2\44\1\165\1\uffff"+
-        "\1\164\1\154\1\163\1\145\1\u00df\1\142\1\uffff\2\155\3\uffff\1\162"+
+    protected DFA1 dfa1 = new DFA1(this);
+    protected DFA2 dfa2 = new DFA2(this);
+    protected DFA21 dfa21 = new DFA21(this);
+    static final String DFA1_eotS =
+        "\1\uffff\1\24\1\37\1\42\37\uffff";
+    static final String DFA1_eofS =
+        "\43\uffff";
+    static final String DFA1_minS =
+        "\1\61\3\60\37\uffff";
+    static final String DFA1_maxS =
+        "\3\71\1\61\37\uffff";
+    static final String DFA1_acceptS =
+        "\4\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17"+
+        "\1\20\1\21\1\22\1\23\1\1\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33"+
+        "\1\34\1\35\1\2\1\36\1\37\1\3";
+    static final String DFA1_specialS =
+        "\43\uffff}>";
+    static final String[] DFA1_transitionS = {
+            "\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11",
+            "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23",
+            "\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36",
+            "\1\40\1\41",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+    static final short[][] DFA1_transition;
+
+    static {
+        int numStates = DFA1_transitionS.length;
+        DFA1_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
+        }
+    }
+
+    class DFA1 extends DFA {
+
+        public DFA1(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 1;
+            this.eot = DFA1_eot;
+            this.eof = DFA1_eof;
+            this.min = DFA1_min;
+            this.max = DFA1_max;
+            this.accept = DFA1_accept;
+            this.special = DFA1_special;
+            this.transition = DFA1_transition;
+        }
+        public String getDescription() {
+            return "18178:12: ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16' | '17' | '18' | '19' | '20' | '21' | '22' | '23' | '24' | '25' | '26' | '27' | '28' | '29' | '30' | '31' )";
+        }
+    }
+    static final String DFA2_eotS =
+        "\21\uffff";
+    static final String DFA2_eofS =
+        "\21\uffff";
+    static final String DFA2_minS =
+        "\1\101\1\141\1\uffff\1\141\1\160\5\uffff\1\154\6\uffff";
+    static final String DFA2_maxS =
+        "\1\123\1\165\1\uffff\1\u00e4\1\165\5\uffff\1\156\6\uffff";
+    static final String DFA2_acceptS =
+        "\2\uffff\1\2\2\uffff\1\11\1\12\1\13\1\14\1\1\1\uffff\1\3\1\5\1"+
+        "\4\1\10\1\6\1\7";
+    static final String DFA2_specialS =
+        "\21\uffff}>";
+    static final String[] DFA2_transitionS = {
+            "\1\4\2\uffff\1\10\1\uffff\1\2\3\uffff\1\1\2\uffff\1\3\1\7\1"+
+            "\6\3\uffff\1\5",
+            "\1\11\23\uffff\1\12",
+            "",
+            "\1\14\u0082\uffff\1\13",
+            "\1\15\4\uffff\1\16",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\20\1\uffff\1\17",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA2_eot = DFA.unpackEncodedString(DFA2_eotS);
+    static final short[] DFA2_eof = DFA.unpackEncodedString(DFA2_eofS);
+    static final char[] DFA2_min = DFA.unpackEncodedStringToUnsignedChars(DFA2_minS);
+    static final char[] DFA2_max = DFA.unpackEncodedStringToUnsignedChars(DFA2_maxS);
+    static final short[] DFA2_accept = DFA.unpackEncodedString(DFA2_acceptS);
+    static final short[] DFA2_special = DFA.unpackEncodedString(DFA2_specialS);
+    static final short[][] DFA2_transition;
+
+    static {
+        int numStates = DFA2_transitionS.length;
+        DFA2_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA2_transition[i] = DFA.unpackEncodedString(DFA2_transitionS[i]);
+        }
+    }
+
+    class DFA2 extends DFA {
+
+        public DFA2(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 2;
+            this.eot = DFA2_eot;
+            this.eof = DFA2_eof;
+            this.min = DFA2_min;
+            this.max = DFA2_max;
+            this.accept = DFA2_accept;
+            this.special = DFA2_special;
+            this.transition = DFA2_transition;
+        }
+        public String getDescription() {
+            return "18180:14: ( 'Januar' | 'Februar' | 'M\\u00E4rz' | 'April' | 'Mai' | 'Juni' | 'Juli' | 'August' | 'September' | 'Oktober' | 'November' | 'Dezember' )";
+        }
+    }
+    static final String DFA21_eotS =
+        "\1\uffff\1\105\1\107\1\111\1\113\1\115\1\117\1\122\1\124\1\126"+
+        "\1\131\1\134\1\137\1\uffff\6\143\1\uffff\3\143\1\uffff\2\143\1\uffff"+
+        "\5\143\5\uffff\1\143\1\u008b\5\143\11\u009e\6\143\1\u00b7\1\102"+
+        "\1\uffff\2\102\17\uffff\1\u00bb\20\uffff\2\143\1\uffff\10\143\1"+
+        "\u00c7\3\143\1\uffff\6\143\1\uffff\2\143\1\u00d6\1\uffff\6\143\1"+
+        "\u00dd\5\uffff\2\143\2\uffff\10\143\12\u009e\1\uffff\1\u00b7\1\uffff"+
+        "\14\u009e\3\143\1\uffff\5\143\6\uffff\1\u00f3\1\u00f4\1\u00f5\3"+
+        "\143\1\u00f9\4\143\1\uffff\3\143\1\u0101\7\143\1\u0109\2\143\1\uffff"+
+        "\3\143\1\u010f\1\u0110\1\143\1\uffff\5\143\1\u0117\3\143\1\u011b"+
+        "\6\143\1\u00b0\4\143\3\uffff\3\143\1\uffff\7\143\1\uffff\1\u0130"+
+        "\6\143\2\uffff\4\143\2\uffff\1\143\1\u013c\1\143\1\u013e\2\143\1"+
+        "\uffff\1\u0141\2\143\1\uffff\1\u0144\2\143\2\u00b0\5\143\1\u014c"+
+        "\1\143\1\u014e\4\143\1\u0153\1\u0154\1\143\1\uffff\7\143\2\uffff"+
+        "\2\143\1\uffff\1\143\1\uffff\1\u0160\1\u0161\1\uffff\1\143\1\u0163"+
+        "\1\uffff\3\143\1\u00b0\3\143\1\uffff\1\u016a\1\uffff\2\143\1\u016d"+
+        "\1\143\2\uffff\2\143\1\u0171\10\143\2\uffff\1\u017a\1\uffff\1\u017b"+
+        "\1\u00b0\1\143\1\u00b0\2\143\1\uffff\1\u017f\1\u0180\1\uffff\2\143"+
+        "\1\u0184\1\uffff\2\143\1\u0187\1\143\1\u0189\1\143\1\u00b0\1\u018b"+
+        "\2\uffff\1\u00b0\2\143\2\uffff\3\143\1\uffff\2\143\1\uffff\1\143"+
+        "\1\uffff\1\143\1\uffff\2\u00b0\1\143\1\u0196\1\143\1\u0198\1\143"+
+        "\1\u019a\1\u00b0\1\u019b\1\uffff\1\143\1\uffff\1\u019d\2\uffff\1"+
+        "\143\1\uffff\5\143\1\u01a4\1\uffff";
+    static final String DFA21_eofS =
+        "\u01a5\uffff";
+    static final String DFA21_minS =
+        "\1\0\2\75\1\174\1\46\3\75\1\76\2\56\2\52\1\uffff\1\141\1\165\2"+
+        "\141\1\146\1\141\1\uffff\1\141\1\145\1\156\1\uffff\1\165\1\145\1"+
+        "\uffff\1\155\1\145\1\114\1\153\1\163\5\uffff\1\154\1\72\1\141\1"+
+        "\150\1\145\1\150\1\145\11\60\1\141\1\145\1\141\1\160\1\157\1\145"+
+        "\1\60\1\44\1\uffff\2\0\17\uffff\1\76\20\uffff\1\154\1\156\1\uffff"+
+        "\1\160\1\151\1\154\1\162\1\156\1\143\1\160\1\163\1\44\1\156\1\157"+
+        "\1\164\1\uffff\1\172\1\156\1\143\1\155\1\162\1\150\1\uffff\1\155"+
+        "\1\146\1\44\1\uffff\1\160\1\162\1\160\1\132\2\164\1\44\5\uffff\1"+
+        "\163\1\164\2\uffff\1\163\1\151\1\167\1\154\1\160\1\162\1\165\1\164"+
+        "\12\60\1\uffff\1\60\1\uffff\14\60\1\156\1\154\1\142\1\uffff\1\151"+
+        "\1\162\1\147\1\166\1\172\6\uffff\3\44\1\145\1\164\1\163\1\44\1\141"+
+        "\1\153\1\157\1\164\1\uffff\1\164\1\116\1\145\1\44\1\153\1\150\1"+
+        "\162\1\145\1\167\1\141\1\145\1\44\1\40\1\141\1\uffff\1\146\1\141"+
+        "\1\164\2\44\1\157\1\uffff\3\145\1\143\1\154\1\44\1\154\1\145\1\157"+
+        "\1\44\1\145\2\165\2\151\1\162\1\44\1\151\1\165\2\145\3\uffff\1\162"+
         "\1\143\1\145\1\uffff\1\154\1\141\1\162\1\141\1\157\1\162\1\147\1"+
-        "\uffff\1\44\1\165\1\141\1\162\1\145\1\142\1\162\1\uffff\1\u00e4"+
-        "\1\uffff\1\44\1\156\1\165\1\44\1\150\1\145\1\uffff\1\44\1\157\1"+
-        "\167\1\uffff\1\44\2\162\2\uffff\1\141\2\44\1\164\1\155\1\uffff\1"+
-        "\145\2\142\1\44\1\150\1\44\1\154\1\147\1\164\1\156\2\44\1\157\1"+
-        "\uffff\1\156\1\147\1\153\1\156\1\145\1\166\2\uffff\1\144\1\154\1"+
-        "\uffff\2\44\1\uffff\1\146\1\44\1\uffff\1\156\1\44\1\162\2\uffff"+
-        "\1\44\1\142\1\162\2\145\1\uffff\1\44\1\uffff\1\171\1\145\1\44\1"+
-        "\143\2\uffff\1\162\1\147\1\44\1\165\1\144\1\162\1\141\1\163\1\164"+
-        "\2\uffff\1\44\1\uffff\1\44\1\uffff\1\44\1\uffff\1\145\1\44\2\162"+
-        "\1\uffff\2\44\1\uffff\1\145\1\151\1\44\1\uffff\1\156\1\165\1\44"+
-        "\1\154\2\44\3\uffff\1\162\1\uffff\2\44\2\uffff\1\157\1\145\1\151"+
-        "\1\uffff\1\147\1\156\1\uffff\1\154\2\uffff\1\44\2\uffff\1\146\1"+
-        "\44\1\156\1\44\1\147\1\44\1\uffff\1\44\1\uffff\1\164\1\uffff\1\44"+
-        "\2\uffff\1\145\1\uffff\1\162\1\166\1\141\2\154\1\44\1\uffff";
-    static final String DFA19_maxS =
-        "\1\uffff\1\76\1\75\1\174\1\46\11\154\1\165\1\145\1\u00e4\1\165"+
-        "\1\164\1\162\1\157\1\145\2\75\2\76\1\56\1\72\1\56\1\57\1\uffff\1"+
-        "\157\1\167\1\157\1\141\1\156\1\164\1\uffff\1\165\1\145\1\156\1\uffff"+
-        "\1\141\1\155\1\114\1\163\6\uffff\1\170\1\72\1\157\1\141\1\150\1"+
-        "\165\1\171\1\145\1\170\1\172\1\uffff\2\uffff\13\uffff\12\154\1\uffff"+
-        "\1\154\1\uffff\12\154\1\uffff\2\154\7\uffff\2\156\1\uffff\1\142"+
-        "\1\uffff\1\151\1\156\1\162\1\147\1\160\1\162\2\164\1\166\1\172\4"+
-        "\uffff\1\76\20\uffff\1\162\1\156\1\160\1\151\1\154\1\162\1\156\1"+
-        "\143\1\160\1\163\1\172\1\156\1\157\1\164\1\uffff\1\172\1\156\1\143"+
-        "\1\164\1\162\1\164\1\uffff\1\147\1\160\1\132\1\172\6\uffff\1\163"+
-        "\1\164\2\uffff\1\146\1\172\1\164\1\151\1\167\1\154\1\160\1\162\1"+
-        "\171\1\164\32\uffff\1\165\2\151\1\162\1\172\1\141\1\151\1\165\1"+
-        "\164\1\141\1\157\1\172\2\145\2\uffff\3\172\1\145\1\164\1\163\1\172"+
-        "\1\141\1\153\1\157\1\164\1\uffff\1\164\1\116\1\145\1\172\1\153\1"+
-        "\150\1\162\1\145\1\167\1\141\1\145\1\172\1\146\1\172\1\uffff\2\145"+
-        "\1\141\1\uffff\1\145\1\143\1\154\1\172\1\154\1\145\1\157\1\172\1"+
-        "\145\1\165\1\141\2\172\1\165\1\uffff\1\164\1\154\1\163\1\145\1\u00df"+
-        "\1\142\1\uffff\2\155\3\uffff\1\162\1\143\1\145\1\uffff\1\154\1\141"+
-        "\1\162\1\141\1\157\1\162\1\147\1\uffff\1\172\1\165\1\141\1\162\1"+
-        "\145\1\142\1\162\1\uffff\1\u00e4\1\uffff\1\172\1\156\1\165\1\172"+
-        "\1\150\1\145\1\uffff\1\172\1\157\1\167\1\uffff\1\172\2\162\2\uffff"+
-        "\1\141\2\172\1\164\1\155\1\uffff\1\145\2\142\1\172\1\150\1\172\1"+
-        "\154\1\147\1\164\1\156\2\172\1\157\1\uffff\1\156\1\147\1\153\1\156"+
-        "\1\145\1\166\2\uffff\1\144\1\154\1\uffff\2\172\1\uffff\1\146\1\172"+
-        "\1\uffff\1\156\1\172\1\162\2\uffff\1\172\1\142\1\162\2\145\1\uffff"+
-        "\1\172\1\uffff\1\171\1\145\1\172\1\143\2\uffff\1\162\1\147\1\172"+
-        "\1\165\1\144\1\162\1\141\1\163\1\164\2\uffff\1\172\1\uffff\1\172"+
-        "\1\uffff\1\172\1\uffff\1\145\1\172\2\162\1\uffff\2\172\1\uffff\1"+
-        "\145\1\151\1\172\1\uffff\1\156\1\165\1\172\1\154\2\172\3\uffff\1"+
-        "\162\1\uffff\2\172\2\uffff\1\157\1\145\1\151\1\uffff\1\147\1\156"+
-        "\1\uffff\1\154\2\uffff\1\172\2\uffff\1\146\1\172\1\156\1\172\1\147"+
-        "\1\172\1\uffff\1\172\1\uffff\1\164\1\uffff\1\172\2\uffff\1\145\1"+
-        "\uffff\1\162\1\166\1\141\2\154\1\172\1\uffff";
-    static final String DFA19_acceptS =
-        "\36\uffff\1\101\6\uffff\1\112\3\uffff\1\120\4\uffff\1\140\1\141"+
-        "\1\142\1\143\1\144\1\145\12\uffff\1\u0083\2\uffff\1\u0087\1\u0088"+
-        "\1\60\1\70\1\1\1\2\1\74\1\3\1\175\1\4\1\172\12\uffff\1\5\1\uffff"+
-        "\1\u0082\12\uffff\1\6\2\uffff\1\7\1\10\1\11\1\12\1\13\1\14\1\15"+
-        "\2\uffff\1\u0083\1\uffff\1\46\12\uffff\1\61\1\102\1\62\1\64\1\uffff"+
-        "\1\71\1\65\1\66\1\75\1\67\1\103\1\72\1\173\1\170\1\77\1\174\1\76"+
-        "\1\u0085\1\u0086\1\100\1\101\16\uffff\1\112\6\uffff\1\120\4\uffff"+
-        "\1\140\1\141\1\142\1\143\1\144\1\145\2\uffff\1\157\1\151\12\uffff"+
-        "\1\u0080\1\u0081\1\u0084\1\u0087\1\16\1\17\1\20\1\21\1\22\1\23\1"+
-        "\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40"+
-        "\1\41\1\42\1\43\16\uffff\1\73\1\63\13\uffff\1\146\16\uffff\1\137"+
-        "\3\uffff\1\156\16\uffff\1\50\6\uffff\1\134\2\uffff\1\104\1\176\1"+
-        "\131\3\uffff\1\154\7\uffff\1\114\7\uffff\1\123\1\uffff\1\133\6\uffff"+
-        "\1\160\3\uffff\1\165\3\uffff\1\51\1\52\5\uffff\1\132\15\uffff\1"+
-        "\115\6\uffff\1\130\1\147\2\uffff\1\153\2\uffff\1\161\2\uffff\1\177"+
-        "\3\uffff\1\122\1\47\5\uffff\1\105\1\uffff\1\106\4\uffff\1\111\1"+
-        "\113\11\uffff\1\167\1\155\1\uffff\1\163\1\uffff\1\44\1\uffff\1\53"+
-        "\4\uffff\1\150\2\uffff\1\110\3\uffff\1\126\6\uffff\1\162\1\164\1"+
-        "\45\1\uffff\1\55\2\uffff\1\166\1\107\3\uffff\1\125\2\uffff\1\117"+
-        "\1\uffff\1\171\1\152\1\uffff\1\56\1\57\6\uffff\1\54\1\uffff\1\124"+
-        "\1\uffff\1\135\1\uffff\1\127\1\136\1\uffff\1\116\6\uffff\1\121";
-    static final String DFA19_specialS =
-        "\1\0\76\uffff\1\2\1\1\u0190\uffff}>";
-    static final String[] DFA19_transitionS = {
-            "\11\102\2\101\2\102\1\101\22\102\1\101\1\26\1\77\1\102\1\76"+
-            "\1\36\1\4\1\100\1\63\1\57\1\34\1\2\1\56\1\31\1\32\1\35\1\74"+
-            "\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\65\1\62\1\30\1"+
-            "\1\1\27\1\33\1\102\1\21\1\46\1\76\1\25\1\53\1\17\2\76\1\50\1"+
-            "\16\1\44\1\76\1\20\1\24\1\23\1\54\2\76\1\22\1\52\1\76\1\47\4"+
-            "\76\1\61\1\102\1\60\1\75\1\76\1\102\1\55\1\76\1\67\1\66\1\64"+
-            "\1\41\2\76\1\43\4\76\1\71\1\76\1\42\1\76\1\73\1\40\1\72\1\76"+
-            "\1\37\1\70\3\76\1\45\1\3\1\51\uff82\102",
+        "\uffff\1\44\1\165\1\141\1\162\1\145\1\142\1\162\2\uffff\1\165\1"+
+        "\u00e4\1\u00df\1\145\2\uffff\1\142\1\44\1\156\1\44\1\150\1\145\1"+
+        "\uffff\1\44\1\157\1\167\1\uffff\1\44\1\162\1\141\2\44\1\165\1\154"+
+        "\1\163\2\155\1\44\1\150\1\44\1\154\1\147\1\164\1\156\2\44\1\157"+
+        "\1\uffff\1\156\1\147\1\153\1\156\1\145\1\166\1\154\2\uffff\1\155"+
+        "\1\145\1\uffff\1\144\1\uffff\2\44\1\uffff\1\146\1\44\1\uffff\1\156"+
+        "\1\162\1\141\1\44\1\164\2\142\1\uffff\1\44\1\uffff\1\171\1\145\1"+
+        "\44\1\143\2\uffff\1\162\1\147\1\44\1\165\1\144\1\162\1\141\1\164"+
+        "\1\142\1\162\1\163\2\uffff\1\44\1\uffff\2\44\1\162\1\44\2\145\1"+
+        "\uffff\2\44\1\uffff\1\145\1\151\1\44\1\uffff\1\156\1\165\1\44\1"+
+        "\154\1\44\1\145\2\44\2\uffff\1\44\2\162\2\uffff\1\157\1\145\1\151"+
+        "\1\uffff\1\147\1\156\1\uffff\1\154\1\uffff\1\162\1\uffff\2\44\1"+
+        "\146\1\44\1\156\1\44\1\147\3\44\1\uffff\1\164\1\uffff\1\44\2\uffff"+
+        "\1\145\1\uffff\1\162\1\166\1\141\2\154\1\44\1\uffff";
+    static final String DFA21_maxS =
+        "\1\uffff\1\76\1\75\1\174\1\46\2\75\2\76\1\56\1\72\1\56\1\57\1\uffff"+
+        "\1\157\1\167\1\157\1\141\1\156\1\164\1\uffff\1\165\1\145\1\156\1"+
+        "\uffff\1\165\1\157\1\uffff\1\155\1\164\1\114\1\162\1\163\5\uffff"+
+        "\1\170\1\72\1\141\1\150\1\165\1\171\1\145\11\154\1\165\1\145\1\u00e4"+
+        "\1\165\1\157\1\145\1\170\1\172\1\uffff\2\uffff\17\uffff\1\76\20"+
+        "\uffff\1\162\1\156\1\uffff\1\160\1\151\1\154\1\162\1\156\1\143\1"+
+        "\160\1\163\1\172\1\156\1\157\1\164\1\uffff\1\172\1\156\1\143\1\164"+
+        "\1\162\1\164\1\uffff\1\155\1\162\1\172\1\uffff\1\160\1\162\1\160"+
+        "\1\132\2\164\1\172\5\uffff\1\163\1\164\2\uffff\1\164\1\151\1\167"+
+        "\1\154\1\160\1\162\1\171\1\164\12\154\1\uffff\1\154\1\uffff\14\154"+
+        "\2\156\1\142\1\uffff\1\151\1\162\1\147\1\166\1\172\6\uffff\3\172"+
+        "\1\145\1\164\1\163\1\172\1\141\1\153\1\157\1\164\1\uffff\1\164\1"+
+        "\116\1\145\1\172\1\153\1\150\1\162\1\145\1\167\1\141\1\145\1\172"+
+        "\1\40\1\141\1\uffff\1\146\1\141\1\164\2\172\1\157\1\uffff\3\145"+
+        "\1\143\1\154\1\172\1\154\1\145\1\157\1\172\1\145\2\165\2\151\1\162"+
+        "\1\172\1\151\1\165\2\145\3\uffff\1\162\1\143\1\145\1\uffff\1\154"+
+        "\1\141\1\162\1\141\1\157\1\162\1\147\1\uffff\1\172\1\165\1\141\1"+
+        "\162\1\145\1\142\1\162\2\uffff\1\165\1\u00e4\1\u00df\1\145\2\uffff"+
+        "\1\142\1\172\1\156\1\172\1\150\1\145\1\uffff\1\172\1\157\1\167\1"+
+        "\uffff\1\172\1\162\1\141\2\172\1\165\1\154\1\163\2\155\1\172\1\150"+
+        "\1\172\1\154\1\147\1\164\1\156\2\172\1\157\1\uffff\1\156\1\147\1"+
+        "\153\1\156\1\145\1\166\1\154\2\uffff\1\155\1\145\1\uffff\1\144\1"+
+        "\uffff\2\172\1\uffff\1\146\1\172\1\uffff\1\156\1\162\1\141\1\172"+
+        "\1\164\2\142\1\uffff\1\172\1\uffff\1\171\1\145\1\172\1\143\2\uffff"+
+        "\1\162\1\147\1\172\1\165\1\144\1\162\1\141\1\164\1\142\1\162\1\163"+
+        "\2\uffff\1\172\1\uffff\2\172\1\162\1\172\2\145\1\uffff\2\172\1\uffff"+
+        "\1\145\1\151\1\172\1\uffff\1\156\1\165\1\172\1\154\1\172\1\145\2"+
+        "\172\2\uffff\1\172\2\162\2\uffff\1\157\1\145\1\151\1\uffff\1\147"+
+        "\1\156\1\uffff\1\154\1\uffff\1\162\1\uffff\2\172\1\146\1\172\1\156"+
+        "\1\172\1\147\3\172\1\uffff\1\164\1\uffff\1\172\2\uffff\1\145\1\uffff"+
+        "\1\162\1\166\1\141\2\154\1\172\1\uffff";
+    static final String DFA21_acceptS =
+        "\15\uffff\1\26\6\uffff\1\37\3\uffff\1\45\2\uffff\1\51\5\uffff\1"+
+        "\66\1\67\1\70\1\71\1\72\30\uffff\1\132\2\uffff\1\136\1\137\1\5\1"+
+        "\15\1\1\1\2\1\21\1\3\1\122\1\4\1\117\1\6\1\27\1\7\1\11\1\uffff\1"+
+        "\16\1\12\1\13\1\22\1\14\1\30\1\17\1\120\1\115\1\24\1\121\1\23\1"+
+        "\134\1\135\1\25\1\26\2\uffff\1\132\14\uffff\1\37\6\uffff\1\45\3"+
+        "\uffff\1\51\7\uffff\1\66\1\67\1\70\1\71\1\72\2\uffff\1\104\1\76"+
+        "\22\uffff\1\125\1\uffff\1\131\17\uffff\1\126\5\uffff\1\127\1\130"+
+        "\1\133\1\136\1\20\1\10\13\uffff\1\73\16\uffff\1\103\6\uffff\1\65"+
+        "\25\uffff\1\31\1\123\1\57\3\uffff\1\101\7\uffff\1\41\7\uffff\1\47"+
+        "\1\50\4\uffff\1\61\1\62\6\uffff\1\105\3\uffff\1\112\24\uffff\1\42"+
+        "\7\uffff\1\56\1\60\2\uffff\1\74\1\uffff\1\100\2\uffff\1\106\2\uffff"+
+        "\1\124\7\uffff\1\32\1\uffff\1\33\4\uffff\1\36\1\40\13\uffff\1\114"+
+        "\1\102\1\uffff\1\110\6\uffff\1\75\2\uffff\1\35\3\uffff\1\54\10\uffff"+
+        "\1\107\1\111\3\uffff\1\113\1\34\3\uffff\1\53\2\uffff\1\44\1\uffff"+
+        "\1\77\1\uffff\1\116\12\uffff\1\52\1\uffff\1\63\1\uffff\1\55\1\64"+
+        "\1\uffff\1\43\6\uffff\1\46";
+    static final String DFA21_specialS =
+        "\1\2\76\uffff\1\0\1\1\u0164\uffff}>";
+    static final String[] DFA21_transitionS = {
+            "\11\102\2\101\2\102\1\101\22\102\1\101\1\5\1\77\1\102\1\76"+
+            "\1\15\1\4\1\100\1\45\1\41\1\13\1\2\1\33\1\10\1\11\1\14\1\74"+
+            "\1\55\1\56\1\57\1\60\1\61\1\62\1\63\1\64\1\65\1\47\1\44\1\7"+
+            "\1\1\1\6\1\12\1\102\1\71\1\25\1\76\1\73\1\34\1\67\2\76\1\27"+
+            "\1\66\1\23\1\76\1\70\1\72\1\37\1\36\2\76\1\35\2\76\1\26\3\76"+
+            "\1\31\1\43\1\102\1\42\1\75\1\76\1\102\1\40\1\76\1\50\1\32\1"+
+            "\46\1\20\2\76\1\22\4\76\1\52\1\76\1\21\1\76\1\54\1\17\1\53\1"+
+            "\76\1\16\1\51\3\76\1\24\1\3\1\30\uff82\102",
             "\1\103\1\104",
             "\1\106",
             "\1\110",
             "\1\112",
-            "\1\114\1\115\1\116\1\117\1\120\1\121\1\122\1\123\1\124\1\125"+
-            "\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff\1\127\2"+
-            "\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\1\131\1\132\1\133\1\134\1\135\1\136\1\137\1\140\1\141\1\142"+
-            "\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff\1\127\2"+
-            "\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\1\144\1\145\10\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1"+
-            "\130\22\uffff\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\1\155\23\uffff\1\156",
-            "\1\160",
-            "\1\162\15\uffff\1\163\164\uffff\1\161",
-            "\1\164\4\uffff\1\165",
-            "\1\166\16\uffff\1\167",
-            "\1\170\6\uffff\1\171",
-            "\1\172",
-            "\1\173",
+            "\1\114",
+            "\1\116",
+            "\1\120\1\121",
+            "\1\123",
+            "\1\125",
+            "\1\130\13\uffff\1\127",
+            "\1\132\3\uffff\1\133",
+            "\1\135\4\uffff\1\136",
+            "",
+            "\1\141\15\uffff\1\142",
+            "\1\144\1\uffff\1\145",
+            "\1\146\7\uffff\1\150\5\uffff\1\147",
+            "\1\151",
+            "\1\154\6\uffff\1\152\1\153",
+            "\1\157\15\uffff\1\155\4\uffff\1\156",
+            "",
+            "\1\162\3\uffff\1\164\6\uffff\1\161\10\uffff\1\163",
+            "\1\165",
+            "\1\166",
+            "",
+            "\1\170",
+            "\1\171\11\uffff\1\172",
+            "",
             "\1\174",
-            "\1\176",
-            "\1\u0080\1\u0081",
-            "\1\u0083",
-            "\1\u0085",
-            "\1\u0088\13\uffff\1\u0087",
-            "\1\u008a\3\uffff\1\u008b",
-            "\1\u008d\4\uffff\1\u008e",
-            "",
-            "\1\u0091\15\uffff\1\u0092",
-            "\1\u0093\1\uffff\1\u0094",
-            "\1\u0095\7\uffff\1\u0097\5\uffff\1\u0096",
-            "\1\u0098",
-            "\1\u009b\6\uffff\1\u0099\1\u009a",
-            "\1\u009e\15\uffff\1\u009c\4\uffff\1\u009d",
-            "",
-            "\1\u00a1\3\uffff\1\u00a3\6\uffff\1\u00a0\10\uffff\1\u00a2",
-            "\1\u00a4",
-            "\1\u00a5",
-            "",
-            "\1\u00a7",
-            "\1\u00a8",
-            "\1\u00a9",
-            "\1\u00aa",
+            "\1\176\16\uffff\1\175",
+            "\1\177",
+            "\1\u0081\6\uffff\1\u0080",
+            "\1\u0082",
             "",
             "",
             "",
             "",
             "",
+            "\1\u0088\13\uffff\1\u0089",
+            "\1\u008a",
+            "\1\u008c",
+            "\1\u008d",
+            "\1\u008e\17\uffff\1\u008f",
+            "\1\u0091\11\uffff\1\u0092\6\uffff\1\u0090",
+            "\1\u0093",
+            "\1\u0094\1\u0095\1\u0096\1\u0097\1\u0098\1\u0099\1\u009a\1"+
+            "\u009b\1\u009c\1\u009d\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff"+
+            "\1\u00a0\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5"+
+            "\uffff\1\u00a0",
+            "\1\u00a1\1\u00a2\1\u00a3\1\u00a4\1\u00a5\1\u00a6\1\u00a7\1"+
+            "\u00a8\1\u00a9\1\u00aa\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff"+
+            "\1\u00a0\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5"+
+            "\uffff\1\u00a0",
+            "\1\u00ab\1\u00ac\10\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0"+
+            "\5\uffff\1\u00a0\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3"+
+            "\u00a0\5\uffff\1\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\1\u00ad\23\uffff\1\u00ae",
+            "\1\u00af",
+            "\1\u00b1\u0082\uffff\1\u00b0",
+            "\1\u00b2\4\uffff\1\u00b3",
+            "\1\u00b4",
+            "\1\u00b5",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\13\uffff\1\u00b6\6\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3"+
+            "\u00a0\5\uffff\1\u00a0\13\uffff\1\u00b6",
+            "\1\143\34\uffff\32\143\4\uffff\1\143\1\uffff\32\143",
             "",
-            "\1\u00b1\13\uffff\1\u00b2",
-            "\1\u00b3",
-            "\1\u00b5\11\uffff\1\u00b6",
-            "\1\u00b7",
-            "\1\u00b8",
-            "\1\u00b9\17\uffff\1\u00ba",
-            "\1\u00bc\11\uffff\1\u00bd\6\uffff\1\u00bb",
+            "\0\u00b8",
+            "\0\u00b8",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u00ba",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u00bc\5\uffff\1\u00bd",
             "\1\u00be",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\13\uffff"+
-            "\1\u00bf\6\uffff\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1"+
-            "\130\13\uffff\1\u00bf",
-            "\1\157\34\uffff\32\157\4\uffff\1\157\1\uffff\32\157",
             "",
-            "\0\u00c1",
-            "\0\u00c1",
+            "\1\u00bf",
+            "\1\u00c0",
+            "\1\u00c1",
+            "\1\u00c2",
+            "\1\u00c3",
+            "\1\u00c4",
+            "\1\u00c5",
+            "\1\u00c6",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u00c8",
+            "\1\u00c9",
+            "\1\u00ca",
             "",
+            "\1\u00cb",
+            "\1\u00cc",
+            "\1\u00cd",
+            "\1\u00cf\6\uffff\1\u00ce",
+            "\1\u00d0",
+            "\1\u00d1\13\uffff\1\u00d2",
             "",
+            "\1\u00d3",
+            "\1\u00d5\13\uffff\1\u00d4",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\12\127\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff"+
-            "\1\127\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\u00d7",
+            "\1\u00d8",
             "\1\u00d9",
-            "\1\u00db\1\uffff\1\u00da",
-            "",
+            "\1\u00da",
+            "\1\u00db",
             "\1\u00dc",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "",
-            "\1\u00dd",
+            "",
+            "",
+            "",
+            "",
             "\1\u00de",
             "\1\u00df",
-            "\1\u00e0",
-            "\1\u00e1",
+            "",
+            "",
+            "\1\u00e0\1\u00e1",
             "\1\u00e2",
             "\1\u00e3",
             "\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
+            "\1\u00e8\3\uffff\1\u00e7",
+            "\1\u00e9",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
             "",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
             "",
-            "",
-            "",
-            "\1\u00e7",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00e9\5\uffff\1\u00ea",
-            "\1\u00eb",
-            "\1\u00ec",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\12\u009f\10\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1\u00a0"+
+            "\22\uffff\1\u009f\2\uffff\1\u00a0\1\uffff\3\u00a0\5\uffff\1"+
+            "\u00a0",
+            "\1\u00ea",
+            "\1\u00ec\1\uffff\1\u00eb",
             "\1\u00ed",
+            "",
             "\1\u00ee",
             "\1\u00ef",
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
-            "\1\u00f3",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u00f5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u00f6",
             "\1\u00f7",
-            "",
             "\1\u00f8",
-            "\1\u00f9",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u00fa",
-            "\1\u00fc\6\uffff\1\u00fb",
+            "\1\u00fb",
+            "\1\u00fc",
             "\1\u00fd",
-            "\1\u00fe\13\uffff\1\u00ff",
             "",
+            "\1\u00fe",
+            "\1\u00ff",
             "\1\u0100",
-            "\1\u0101",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0102",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\u0103",
             "\1\u0104",
             "\1\u0105",
-            "",
-            "",
             "\1\u0106",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u0108\1\u0109",
+            "\1\u0107",
+            "\1\u0108",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u010a",
             "\1\u010b",
+            "",
             "\1\u010c",
             "\1\u010d",
             "\1\u010e",
-            "\1\u0110\3\uffff\1\u010f",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0111",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             "\1\u0112",
             "\1\u0113",
             "\1\u0114",
             "\1\u0115",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u0117",
+            "\1\u0116",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0118",
             "\1\u0119",
             "\1\u011a",
-            "\1\u011b",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u011c",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u011d",
             "\1\u011e",
             "\1\u011f",
-            "",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u0120",
+            "\1\u0121",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u0122",
             "\1\u0123",
             "\1\u0124",
             "\1\u0125",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "",
+            "",
+            "",
+            "\1\u0126",
             "\1\u0127",
             "\1\u0128",
+            "",
             "\1\u0129",
             "\1\u012a",
-            "",
             "\1\u012b",
             "\1\u012c",
             "\1\u012d",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u012e",
             "\1\u012f",
-            "\1\u0130",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0131",
             "\1\u0132",
             "\1\u0133",
             "\1\u0134",
             "\1\u0135",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u0137",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u0136",
             "",
+            "",
+            "\1\u0137",
+            "\1\u0138",
             "\1\u0139",
             "\1\u013a",
-            "\1\u013b",
             "",
-            "\1\u013c",
+            "",
+            "\1\u013b",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u013d",
-            "\1\u013e",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u013f",
             "\1\u0140",
-            "\1\u0141",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0142",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u0144",
+            "\1\u0143",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0145",
             "\1\u0146",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u0147",
+            "\1\u0148",
             "\1\u0149",
-            "",
             "\1\u014a",
             "\1\u014b",
-            "\1\u014c",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u014d",
-            "\1\u014e",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u014f",
-            "",
             "\1\u0150",
             "\1\u0151",
-            "",
-            "",
-            "",
             "\1\u0152",
-            "\1\u0153",
-            "\1\u0154",
-            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0155",
+            "",
             "\1\u0156",
             "\1\u0157",
             "\1\u0158",
             "\1\u0159",
             "\1\u015a",
             "\1\u015b",
+            "\1\u015c",
             "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "",
             "\1\u015d",
             "\1\u015e",
+            "",
             "\1\u015f",
-            "\1\u0160",
-            "\1\u0161",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "",
             "\1\u0162",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "",
-            "\1\u0163",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u0164",
             "\1\u0165",
             "\1\u0166",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u0167",
             "\1\u0168",
             "\1\u0169",
             "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "",
             "\1\u016b",
             "\1\u016c",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u016e",
+            "",
+            "",
             "\1\u016f",
-            "",
-            "",
             "\1\u0170",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u0172",
             "\1\u0173",
             "\1\u0174",
-            "",
             "\1\u0175",
             "\1\u0176",
             "\1\u0177",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u0178",
             "\1\u0179",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u017b",
+            "",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u017c",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u017d",
             "\1\u017e",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u0181",
             "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "",
+            "\1\u0181",
             "\1\u0182",
-            "\1\u0183",
-            "\1\u0184",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\22\143\1\u0183\7\143",
+            "",
             "\1\u0185",
             "\1\u0186",
-            "\1\u0187",
-            "",
-            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0188",
-            "\1\u0189",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u018a",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
             "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u018c",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u018d",
+            "",
             "",
             "\1\u018e",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u018f",
             "\1\u0190",
             "",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\u0191",
             "\1\u0192",
+            "",
             "\1\u0193",
+            "",
             "\1\u0194",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0195",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "\1\u0197",
-            "\1\u0198",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u019a",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\u0199",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             "",
-            "",
-            "\1\u019b",
             "\1\u019c",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
+            "",
+            "",
             "\1\u019e",
+            "",
             "\1\u019f",
             "\1\u01a0",
             "\1\u01a1",
             "\1\u01a2",
             "\1\u01a3",
-            "",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\u01a7",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u01a9",
-            "\1\u01aa",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\u01ad",
-            "\1\u01ae",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\22\157\1\u01af\7\157",
-            "",
-            "\1\u01b1",
-            "\1\u01b2",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u01b4",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "",
-            "",
-            "\1\u01b7",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "",
-            "\1\u01ba",
-            "\1\u01bb",
-            "\1\u01bc",
-            "",
-            "\1\u01bd",
-            "\1\u01be",
-            "",
-            "\1\u01bf",
-            "",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "",
-            "\1\u01c1",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u01c3",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "\1\u01c5",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "\1\u01c8",
-            "",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
-            "",
-            "",
-            "\1\u01ca",
-            "",
-            "\1\u01cb",
-            "\1\u01cc",
-            "\1\u01cd",
-            "\1\u01ce",
-            "\1\u01cf",
-            "\1\157\13\uffff\12\157\7\uffff\32\157\4\uffff\1\157\1\uffff"+
-            "\32\157",
+            "\1\143\13\uffff\12\143\7\uffff\32\143\4\uffff\1\143\1\uffff"+
+            "\32\143",
             ""
     };
 
-    static final short[] DFA19_eot = DFA.unpackEncodedString(DFA19_eotS);
-    static final short[] DFA19_eof = DFA.unpackEncodedString(DFA19_eofS);
-    static final char[] DFA19_min = DFA.unpackEncodedStringToUnsignedChars(DFA19_minS);
-    static final char[] DFA19_max = DFA.unpackEncodedStringToUnsignedChars(DFA19_maxS);
-    static final short[] DFA19_accept = DFA.unpackEncodedString(DFA19_acceptS);
-    static final short[] DFA19_special = DFA.unpackEncodedString(DFA19_specialS);
-    static final short[][] DFA19_transition;
+    static final short[] DFA21_eot = DFA.unpackEncodedString(DFA21_eotS);
+    static final short[] DFA21_eof = DFA.unpackEncodedString(DFA21_eofS);
+    static final char[] DFA21_min = DFA.unpackEncodedStringToUnsignedChars(DFA21_minS);
+    static final char[] DFA21_max = DFA.unpackEncodedStringToUnsignedChars(DFA21_maxS);
+    static final short[] DFA21_accept = DFA.unpackEncodedString(DFA21_acceptS);
+    static final short[] DFA21_special = DFA.unpackEncodedString(DFA21_specialS);
+    static final short[][] DFA21_transition;
 
     static {
-        int numStates = DFA19_transitionS.length;
-        DFA19_transition = new short[numStates][];
+        int numStates = DFA21_transitionS.length;
+        DFA21_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA19_transition[i] = DFA.unpackEncodedString(DFA19_transitionS[i]);
+            DFA21_transition[i] = DFA.unpackEncodedString(DFA21_transitionS[i]);
         }
     }
 
-    class DFA19 extends DFA {
+    class DFA21 extends DFA {
 
-        public DFA19(BaseRecognizer recognizer) {
+        public DFA21(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 19;
-            this.eot = DFA19_eot;
-            this.eof = DFA19_eof;
-            this.min = DFA19_min;
-            this.max = DFA19_max;
-            this.accept = DFA19_accept;
-            this.special = DFA19_special;
-            this.transition = DFA19_transition;
+            this.decisionNumber = 21;
+            this.eot = DFA21_eot;
+            this.eof = DFA21_eof;
+            this.min = DFA21_min;
+            this.max = DFA21_max;
+            this.accept = DFA21_accept;
+            this.special = DFA21_special;
+            this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | RULE_TAG | RULE_MONAT | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA19_0 = input.LA(1);
+                        int LA21_63 = input.LA(1);
 
                         s = -1;
-                        if ( (LA19_0=='=') ) {s = 1;}
+                        if ( ((LA21_63>='\u0000' && LA21_63<='\uFFFF')) ) {s = 184;}
 
-                        else if ( (LA19_0=='+') ) {s = 2;}
-
-                        else if ( (LA19_0=='|') ) {s = 3;}
-
-                        else if ( (LA19_0=='&') ) {s = 4;}
-
-                        else if ( (LA19_0=='1') ) {s = 5;}
-
-                        else if ( (LA19_0=='2') ) {s = 6;}
-
-                        else if ( (LA19_0=='3') ) {s = 7;}
-
-                        else if ( (LA19_0=='4') ) {s = 8;}
-
-                        else if ( (LA19_0=='5') ) {s = 9;}
-
-                        else if ( (LA19_0=='6') ) {s = 10;}
-
-                        else if ( (LA19_0=='7') ) {s = 11;}
-
-                        else if ( (LA19_0=='8') ) {s = 12;}
-
-                        else if ( (LA19_0=='9') ) {s = 13;}
-
-                        else if ( (LA19_0=='J') ) {s = 14;}
-
-                        else if ( (LA19_0=='F') ) {s = 15;}
-
-                        else if ( (LA19_0=='M') ) {s = 16;}
-
-                        else if ( (LA19_0=='A') ) {s = 17;}
-
-                        else if ( (LA19_0=='S') ) {s = 18;}
-
-                        else if ( (LA19_0=='O') ) {s = 19;}
-
-                        else if ( (LA19_0=='N') ) {s = 20;}
-
-                        else if ( (LA19_0=='D') ) {s = 21;}
-
-                        else if ( (LA19_0=='!') ) {s = 22;}
-
-                        else if ( (LA19_0=='>') ) {s = 23;}
-
-                        else if ( (LA19_0=='<') ) {s = 24;}
-
-                        else if ( (LA19_0=='-') ) {s = 25;}
-
-                        else if ( (LA19_0=='.') ) {s = 26;}
-
-                        else if ( (LA19_0=='?') ) {s = 27;}
-
-                        else if ( (LA19_0=='*') ) {s = 28;}
-
-                        else if ( (LA19_0=='/') ) {s = 29;}
-
-                        else if ( (LA19_0=='%') ) {s = 30;}
-
-                        else if ( (LA19_0=='v') ) {s = 31;}
-
-                        else if ( (LA19_0=='s') ) {s = 32;}
-
-                        else if ( (LA19_0=='f') ) {s = 33;}
-
-                        else if ( (LA19_0=='p') ) {s = 34;}
-
-                        else if ( (LA19_0=='i') ) {s = 35;}
-
-                        else if ( (LA19_0=='K') ) {s = 36;}
-
-                        else if ( (LA19_0=='{') ) {s = 37;}
-
-                        else if ( (LA19_0=='B') ) {s = 38;}
-
-                        else if ( (LA19_0=='V') ) {s = 39;}
-
-                        else if ( (LA19_0=='I') ) {s = 40;}
-
-                        else if ( (LA19_0=='}') ) {s = 41;}
-
-                        else if ( (LA19_0=='T') ) {s = 42;}
-
-                        else if ( (LA19_0=='E') ) {s = 43;}
-
-                        else if ( (LA19_0=='P') ) {s = 44;}
-
-                        else if ( (LA19_0=='a') ) {s = 45;}
-
-                        else if ( (LA19_0==',') ) {s = 46;}
-
-                        else if ( (LA19_0==')') ) {s = 47;}
-
-                        else if ( (LA19_0==']') ) {s = 48;}
-
-                        else if ( (LA19_0=='[') ) {s = 49;}
-
-                        else if ( (LA19_0==';') ) {s = 50;}
-
-                        else if ( (LA19_0=='(') ) {s = 51;}
-
-                        else if ( (LA19_0=='e') ) {s = 52;}
-
-                        else if ( (LA19_0==':') ) {s = 53;}
-
-                        else if ( (LA19_0=='d') ) {s = 54;}
-
-                        else if ( (LA19_0=='c') ) {s = 55;}
-
-                        else if ( (LA19_0=='w') ) {s = 56;}
-
-                        else if ( (LA19_0=='n') ) {s = 57;}
-
-                        else if ( (LA19_0=='t') ) {s = 58;}
-
-                        else if ( (LA19_0=='r') ) {s = 59;}
-
-                        else if ( (LA19_0=='0') ) {s = 60;}
-
-                        else if ( (LA19_0=='^') ) {s = 61;}
-
-                        else if ( (LA19_0=='$'||LA19_0=='C'||(LA19_0>='G' && LA19_0<='H')||LA19_0=='L'||(LA19_0>='Q' && LA19_0<='R')||LA19_0=='U'||(LA19_0>='W' && LA19_0<='Z')||LA19_0=='_'||LA19_0=='b'||(LA19_0>='g' && LA19_0<='h')||(LA19_0>='j' && LA19_0<='m')||LA19_0=='o'||LA19_0=='q'||LA19_0=='u'||(LA19_0>='x' && LA19_0<='z')) ) {s = 62;}
-
-                        else if ( (LA19_0=='\"') ) {s = 63;}
-
-                        else if ( (LA19_0=='\'') ) {s = 64;}
-
-                        else if ( ((LA19_0>='\t' && LA19_0<='\n')||LA19_0=='\r'||LA19_0==' ') ) {s = 65;}
-
-                        else if ( ((LA19_0>='\u0000' && LA19_0<='\b')||(LA19_0>='\u000B' && LA19_0<='\f')||(LA19_0>='\u000E' && LA19_0<='\u001F')||LA19_0=='#'||LA19_0=='@'||LA19_0=='\\'||LA19_0=='`'||(LA19_0>='~' && LA19_0<='\uFFFF')) ) {s = 66;}
+                        else s = 66;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA19_64 = input.LA(1);
+                        int LA21_64 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA19_64>='\u0000' && LA19_64<='\uFFFF')) ) {s = 193;}
+                        if ( ((LA21_64>='\u0000' && LA21_64<='\uFFFF')) ) {s = 184;}
 
                         else s = 66;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA19_63 = input.LA(1);
+                        int LA21_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA19_63>='\u0000' && LA19_63<='\uFFFF')) ) {s = 193;}
+                        if ( (LA21_0=='=') ) {s = 1;}
 
-                        else s = 66;
+                        else if ( (LA21_0=='+') ) {s = 2;}
+
+                        else if ( (LA21_0=='|') ) {s = 3;}
+
+                        else if ( (LA21_0=='&') ) {s = 4;}
+
+                        else if ( (LA21_0=='!') ) {s = 5;}
+
+                        else if ( (LA21_0=='>') ) {s = 6;}
+
+                        else if ( (LA21_0=='<') ) {s = 7;}
+
+                        else if ( (LA21_0=='-') ) {s = 8;}
+
+                        else if ( (LA21_0=='.') ) {s = 9;}
+
+                        else if ( (LA21_0=='?') ) {s = 10;}
+
+                        else if ( (LA21_0=='*') ) {s = 11;}
+
+                        else if ( (LA21_0=='/') ) {s = 12;}
+
+                        else if ( (LA21_0=='%') ) {s = 13;}
+
+                        else if ( (LA21_0=='v') ) {s = 14;}
+
+                        else if ( (LA21_0=='s') ) {s = 15;}
+
+                        else if ( (LA21_0=='f') ) {s = 16;}
+
+                        else if ( (LA21_0=='p') ) {s = 17;}
+
+                        else if ( (LA21_0=='i') ) {s = 18;}
+
+                        else if ( (LA21_0=='K') ) {s = 19;}
+
+                        else if ( (LA21_0=='{') ) {s = 20;}
+
+                        else if ( (LA21_0=='B') ) {s = 21;}
+
+                        else if ( (LA21_0=='V') ) {s = 22;}
+
+                        else if ( (LA21_0=='I') ) {s = 23;}
+
+                        else if ( (LA21_0=='}') ) {s = 24;}
+
+                        else if ( (LA21_0=='Z') ) {s = 25;}
+
+                        else if ( (LA21_0=='d') ) {s = 26;}
+
+                        else if ( (LA21_0==',') ) {s = 27;}
+
+                        else if ( (LA21_0=='E') ) {s = 28;}
+
+                        else if ( (LA21_0=='S') ) {s = 29;}
+
+                        else if ( (LA21_0=='P') ) {s = 30;}
+
+                        else if ( (LA21_0=='O') ) {s = 31;}
+
+                        else if ( (LA21_0=='a') ) {s = 32;}
+
+                        else if ( (LA21_0==')') ) {s = 33;}
+
+                        else if ( (LA21_0==']') ) {s = 34;}
+
+                        else if ( (LA21_0=='[') ) {s = 35;}
+
+                        else if ( (LA21_0==';') ) {s = 36;}
+
+                        else if ( (LA21_0=='(') ) {s = 37;}
+
+                        else if ( (LA21_0=='e') ) {s = 38;}
+
+                        else if ( (LA21_0==':') ) {s = 39;}
+
+                        else if ( (LA21_0=='c') ) {s = 40;}
+
+                        else if ( (LA21_0=='w') ) {s = 41;}
+
+                        else if ( (LA21_0=='n') ) {s = 42;}
+
+                        else if ( (LA21_0=='t') ) {s = 43;}
+
+                        else if ( (LA21_0=='r') ) {s = 44;}
+
+                        else if ( (LA21_0=='1') ) {s = 45;}
+
+                        else if ( (LA21_0=='2') ) {s = 46;}
+
+                        else if ( (LA21_0=='3') ) {s = 47;}
+
+                        else if ( (LA21_0=='4') ) {s = 48;}
+
+                        else if ( (LA21_0=='5') ) {s = 49;}
+
+                        else if ( (LA21_0=='6') ) {s = 50;}
+
+                        else if ( (LA21_0=='7') ) {s = 51;}
+
+                        else if ( (LA21_0=='8') ) {s = 52;}
+
+                        else if ( (LA21_0=='9') ) {s = 53;}
+
+                        else if ( (LA21_0=='J') ) {s = 54;}
+
+                        else if ( (LA21_0=='F') ) {s = 55;}
+
+                        else if ( (LA21_0=='M') ) {s = 56;}
+
+                        else if ( (LA21_0=='A') ) {s = 57;}
+
+                        else if ( (LA21_0=='N') ) {s = 58;}
+
+                        else if ( (LA21_0=='D') ) {s = 59;}
+
+                        else if ( (LA21_0=='0') ) {s = 60;}
+
+                        else if ( (LA21_0=='^') ) {s = 61;}
+
+                        else if ( (LA21_0=='$'||LA21_0=='C'||(LA21_0>='G' && LA21_0<='H')||LA21_0=='L'||(LA21_0>='Q' && LA21_0<='R')||(LA21_0>='T' && LA21_0<='U')||(LA21_0>='W' && LA21_0<='Y')||LA21_0=='_'||LA21_0=='b'||(LA21_0>='g' && LA21_0<='h')||(LA21_0>='j' && LA21_0<='m')||LA21_0=='o'||LA21_0=='q'||LA21_0=='u'||(LA21_0>='x' && LA21_0<='z')) ) {s = 62;}
+
+                        else if ( (LA21_0=='\"') ) {s = 63;}
+
+                        else if ( (LA21_0=='\'') ) {s = 64;}
+
+                        else if ( ((LA21_0>='\t' && LA21_0<='\n')||LA21_0=='\r'||LA21_0==' ') ) {s = 65;}
+
+                        else if ( ((LA21_0>='\u0000' && LA21_0<='\b')||(LA21_0>='\u000B' && LA21_0<='\f')||(LA21_0>='\u000E' && LA21_0<='\u001F')||LA21_0=='#'||LA21_0=='@'||LA21_0=='\\'||LA21_0=='`'||(LA21_0>='~' && LA21_0<='\uFFFF')) ) {s = 66;}
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 19, _s, input);
+                new NoViableAltException(getDescription(), 21, _s, input);
             error(nvae);
             throw nvae;
         }

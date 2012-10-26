@@ -68,6 +68,15 @@ public interface FinFactory extends EFactory
   Buchungsintervall createBuchungsintervall();
 
   /**
+   * Returns a new object of class '<em>Intervall</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Intervall</em>'.
+   * @generated
+   */
+  Intervall createIntervall();
+
+  /**
    * Returns a new object of class '<em>Kategorie</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

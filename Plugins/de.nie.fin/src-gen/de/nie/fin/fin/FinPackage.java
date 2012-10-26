@@ -251,22 +251,13 @@ public interface FinPackage extends EPackage
   int BUCHUNGSINTERVALL__NAME = ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Monate</b></em>' attribute list.
+   * The feature id for the '<em><b>Intervall</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUCHUNGSINTERVALL__MONATE = ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Tag</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUCHUNGSINTERVALL__TAG = ELEMENT_FEATURE_COUNT + 1;
+  int BUCHUNGSINTERVALL__INTERVALL = ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Buchungsintervall</em>' class.
@@ -275,44 +266,7 @@ public interface FinPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUCHUNGSINTERVALL_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link de.nie.fin.fin.impl.KategorieImpl <em>Kategorie</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.nie.fin.fin.impl.KategorieImpl
-   * @see de.nie.fin.fin.impl.FinPackageImpl#getKategorie()
-   * @generated
-   */
-  int KATEGORIE = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int KATEGORIE__NAME = ELEMENT__NAME;
-
-  /**
-   * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int KATEGORIE__BESCHREIBUNG = ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Kategorie</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int KATEGORIE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+  int BUCHUNGSINTERVALL_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link de.nie.fin.fin.impl.BuchungImpl <em>Buchung</em>}' class.
@@ -322,7 +276,7 @@ public interface FinPackage extends EPackage
    * @see de.nie.fin.fin.impl.FinPackageImpl#getBuchung()
    * @generated
    */
-  int BUCHUNG = 6;
+  int BUCHUNG = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -379,22 +333,150 @@ public interface FinPackage extends EPackage
   int BUCHUNG__INTERVALL = ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Kategorie</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUCHUNG__KATEGORIE = ELEMENT_FEATURE_COUNT + 5;
-
-  /**
    * The number of structural features of the '<em>Buchung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUCHUNG_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 6;
+  int BUCHUNG_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The meta object id for the '{@link de.nie.fin.fin.impl.IntervallImpl <em>Intervall</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.nie.fin.fin.impl.IntervallImpl
+   * @see de.nie.fin.fin.impl.FinPackageImpl#getIntervall()
+   * @generated
+   */
+  int INTERVALL = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__NAME = BUCHUNG__NAME;
+
+  /**
+   * The feature id for the '<em><b>Konto</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__KONTO = BUCHUNG__KONTO;
+
+  /**
+   * The feature id for the '<em><b>Betrag</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__BETRAG = BUCHUNG__BETRAG;
+
+  /**
+   * The feature id for the '<em><b>Empfaenger</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__EMPFAENGER = BUCHUNG__EMPFAENGER;
+
+  /**
+   * The feature id for the '<em><b>Von</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__VON = BUCHUNG__VON;
+
+  /**
+   * The feature id for the '<em><b>Intervall</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__INTERVALL = BUCHUNG__INTERVALL;
+
+  /**
+   * The feature id for the '<em><b>Tag</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__TAG = BUCHUNG_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Monate</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__MONATE = BUCHUNG_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Kategorie</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL__KATEGORIE = BUCHUNG_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Intervall</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERVALL_FEATURE_COUNT = BUCHUNG_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link de.nie.fin.fin.impl.KategorieImpl <em>Kategorie</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.nie.fin.fin.impl.KategorieImpl
+   * @see de.nie.fin.fin.impl.FinPackageImpl#getKategorie()
+   * @generated
+   */
+  int KATEGORIE = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KATEGORIE__NAME = ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Beschreibung</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KATEGORIE__BESCHREIBUNG = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Kategorie</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KATEGORIE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link de.nie.fin.fin.impl.EmpfaengerImpl <em>Empfaenger</em>}' class.
@@ -404,7 +486,7 @@ public interface FinPackage extends EPackage
    * @see de.nie.fin.fin.impl.FinPackageImpl#getEmpfaenger()
    * @generated
    */
-  int EMPFAENGER = 7;
+  int EMPFAENGER = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -622,26 +704,58 @@ public interface FinPackage extends EPackage
   EClass getBuchungsintervall();
 
   /**
-   * Returns the meta object for the attribute list '{@link de.nie.fin.fin.Buchungsintervall#getMonate <em>Monate</em>}'.
+   * Returns the meta object for the containment reference '{@link de.nie.fin.fin.Buchungsintervall#getIntervall <em>Intervall</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Monate</em>'.
-   * @see de.nie.fin.fin.Buchungsintervall#getMonate()
+   * @return the meta object for the containment reference '<em>Intervall</em>'.
+   * @see de.nie.fin.fin.Buchungsintervall#getIntervall()
    * @see #getBuchungsintervall()
    * @generated
    */
-  EAttribute getBuchungsintervall_Monate();
+  EReference getBuchungsintervall_Intervall();
 
   /**
-   * Returns the meta object for the attribute '{@link de.nie.fin.fin.Buchungsintervall#getTag <em>Tag</em>}'.
+   * Returns the meta object for class '{@link de.nie.fin.fin.Intervall <em>Intervall</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Intervall</em>'.
+   * @see de.nie.fin.fin.Intervall
+   * @generated
+   */
+  EClass getIntervall();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.nie.fin.fin.Intervall#getTag <em>Tag</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Tag</em>'.
-   * @see de.nie.fin.fin.Buchungsintervall#getTag()
-   * @see #getBuchungsintervall()
+   * @see de.nie.fin.fin.Intervall#getTag()
+   * @see #getIntervall()
    * @generated
    */
-  EAttribute getBuchungsintervall_Tag();
+  EAttribute getIntervall_Tag();
+
+  /**
+   * Returns the meta object for the attribute list '{@link de.nie.fin.fin.Intervall#getMonate <em>Monate</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Monate</em>'.
+   * @see de.nie.fin.fin.Intervall#getMonate()
+   * @see #getIntervall()
+   * @generated
+   */
+  EAttribute getIntervall_Monate();
+
+  /**
+   * Returns the meta object for the reference list '{@link de.nie.fin.fin.Intervall#getKategorie <em>Kategorie</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Kategorie</em>'.
+   * @see de.nie.fin.fin.Intervall#getKategorie()
+   * @see #getIntervall()
+   * @generated
+   */
+  EReference getIntervall_Kategorie();
 
   /**
    * Returns the meta object for class '{@link de.nie.fin.fin.Kategorie <em>Kategorie</em>}'.
@@ -728,17 +842,6 @@ public interface FinPackage extends EPackage
    * @generated
    */
   EReference getBuchung_Intervall();
-
-  /**
-   * Returns the meta object for the reference list '{@link de.nie.fin.fin.Buchung#getKategorie <em>Kategorie</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Kategorie</em>'.
-   * @see de.nie.fin.fin.Buchung#getKategorie()
-   * @see #getBuchung()
-   * @generated
-   */
-  EReference getBuchung_Kategorie();
 
   /**
    * Returns the meta object for class '{@link de.nie.fin.fin.Empfaenger <em>Empfaenger</em>}'.
@@ -948,12 +1051,22 @@ public interface FinPackage extends EPackage
     EClass BUCHUNGSINTERVALL = eINSTANCE.getBuchungsintervall();
 
     /**
-     * The meta object literal for the '<em><b>Monate</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Intervall</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BUCHUNGSINTERVALL__MONATE = eINSTANCE.getBuchungsintervall_Monate();
+    EReference BUCHUNGSINTERVALL__INTERVALL = eINSTANCE.getBuchungsintervall_Intervall();
+
+    /**
+     * The meta object literal for the '{@link de.nie.fin.fin.impl.IntervallImpl <em>Intervall</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.nie.fin.fin.impl.IntervallImpl
+     * @see de.nie.fin.fin.impl.FinPackageImpl#getIntervall()
+     * @generated
+     */
+    EClass INTERVALL = eINSTANCE.getIntervall();
 
     /**
      * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
@@ -961,7 +1074,23 @@ public interface FinPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BUCHUNGSINTERVALL__TAG = eINSTANCE.getBuchungsintervall_Tag();
+    EAttribute INTERVALL__TAG = eINSTANCE.getIntervall_Tag();
+
+    /**
+     * The meta object literal for the '<em><b>Monate</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERVALL__MONATE = eINSTANCE.getIntervall_Monate();
+
+    /**
+     * The meta object literal for the '<em><b>Kategorie</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INTERVALL__KATEGORIE = eINSTANCE.getIntervall_Kategorie();
 
     /**
      * The meta object literal for the '{@link de.nie.fin.fin.impl.KategorieImpl <em>Kategorie</em>}' class.
@@ -1030,14 +1159,6 @@ public interface FinPackage extends EPackage
      * @generated
      */
     EReference BUCHUNG__INTERVALL = eINSTANCE.getBuchung_Intervall();
-
-    /**
-     * The meta object literal for the '<em><b>Kategorie</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BUCHUNG__KATEGORIE = eINSTANCE.getBuchung_Kategorie();
 
     /**
      * The meta object literal for the '{@link de.nie.fin.fin.impl.EmpfaengerImpl <em>Empfaenger</em>}' class.

@@ -16,8 +16,7 @@ Import:
 ;
 
 Element:
-	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie
-;
+	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie ;
 
 Konto:
 	'Konto' name=ValidID '{'
@@ -30,18 +29,24 @@ Konto:
 	
 ;
 
-Tag:
+
+
+terminal TAG:
 	'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31'
 ;
-Monat:
+
+terminal MONAT:
 	'Januar'| 'Februar'| 'März'| 'April'| 'Mai'| 'Juni'| 'Juli'| 'August'| 'September'| 'Oktober'| 'November'| 'Dezember'
 ;
 
 Buchungsintervall:
 	'Buchungsintervall' name=ValidID '{'
-		'Monat' monate+= Monat
-		'Tag' tag=Tag
+		intervall = Intervall
 	'}'
+;
+
+Intervall:
+	'Zum' tag=TAG 'der Monate' monate+= MONAT (',' monate+=MONAT)*
 ;
 
 Kategorie:
@@ -50,13 +55,12 @@ Kategorie:
 	'}')?
 ;
 
-
 Buchung:
 	'Buchung' name=ValidID '{'
 		'Konto' konto=[Konto]
 		'Betrag' betrag=INT
 		('Empfänger' empfaenger=[Empfaenger] | "von" von=[Empfaenger])
-		'Intervall' intervall=[Buchungsintervall]
+		'Intervall' intervall=[Buchungsintervall]|Intervall
 		'Kategorie' kategorie+=[Kategorie]
 	'}'
 ;

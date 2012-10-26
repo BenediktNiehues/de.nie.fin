@@ -2,7 +2,6 @@
  */
 package de.nie.fin.fin;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.nie.fin.fin.Buchung#getEmpfaenger <em>Empfaenger</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getVon <em>Von</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getIntervall <em>Intervall</em>}</li>
- *   <li>{@link de.nie.fin.fin.Buchung#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
  *
@@ -156,21 +154,5 @@ public interface Buchung extends Element
    * @generated
    */
   void setIntervall(Buchungsintervall value);
-
-  /**
-   * Returns the value of the '<em><b>Kategorie</b></em>' reference list.
-   * The list contents are of type {@link de.nie.fin.fin.Kategorie}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Kategorie</em>' reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Kategorie</em>' reference list.
-   * @see de.nie.fin.fin.FinPackage#getBuchung_Kategorie()
-   * @model
-   * @generated
-   */
-  EList<Kategorie> getKategorie();
 
 } // Buchung

@@ -6,21 +6,14 @@ import de.nie.fin.fin.Buchung;
 import de.nie.fin.fin.Buchungsintervall;
 import de.nie.fin.fin.Empfaenger;
 import de.nie.fin.fin.FinPackage;
-import de.nie.fin.fin.Kategorie;
 import de.nie.fin.fin.Konto;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +27,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getEmpfaenger <em>Empfaenger</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getVon <em>Von</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getIntervall <em>Intervall</em>}</li>
- *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,16 +93,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * @ordered
    */
   protected Buchungsintervall intervall;
-
-  /**
-   * The cached value of the '{@link #getKategorie() <em>Kategorie</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKategorie()
-   * @generated
-   * @ordered
-   */
-  protected EList<Kategorie> kategorie;
 
   /**
    * <!-- begin-user-doc -->
@@ -333,20 +315,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Kategorie> getKategorie()
-  {
-    if (kategorie == null)
-    {
-      kategorie = new EObjectResolvingEList<Kategorie>(Kategorie.class, this, FinPackage.BUCHUNG__KATEGORIE);
-    }
-    return kategorie;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -366,8 +334,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
       case FinPackage.BUCHUNG__INTERVALL:
         if (resolve) return getIntervall();
         return basicGetIntervall();
-      case FinPackage.BUCHUNG__KATEGORIE:
-        return getKategorie();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -377,7 +343,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -397,10 +362,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
         return;
       case FinPackage.BUCHUNG__INTERVALL:
         setIntervall((Buchungsintervall)newValue);
-        return;
-      case FinPackage.BUCHUNG__KATEGORIE:
-        getKategorie().clear();
-        getKategorie().addAll((Collection<? extends Kategorie>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -431,9 +392,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
       case FinPackage.BUCHUNG__INTERVALL:
         setIntervall((Buchungsintervall)null);
         return;
-      case FinPackage.BUCHUNG__KATEGORIE:
-        getKategorie().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -458,8 +416,6 @@ public class BuchungImpl extends ElementImpl implements Buchung
         return von != null;
       case FinPackage.BUCHUNG__INTERVALL:
         return intervall != null;
-      case FinPackage.BUCHUNG__KATEGORIE:
-        return kategorie != null && !kategorie.isEmpty();
     }
     return super.eIsSet(featureID);
   }

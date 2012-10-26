@@ -4,18 +4,15 @@ package de.nie.fin.fin.impl;
 
 import de.nie.fin.fin.Buchungsintervall;
 import de.nie.fin.fin.FinPackage;
-
-import java.util.Collection;
+import de.nie.fin.fin.Intervall;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +21,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.nie.fin.fin.impl.BuchungsintervallImpl#getMonate <em>Monate</em>}</li>
- *   <li>{@link de.nie.fin.fin.impl.BuchungsintervallImpl#getTag <em>Tag</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.BuchungsintervallImpl#getIntervall <em>Intervall</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,34 +30,14 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 public class BuchungsintervallImpl extends ElementImpl implements Buchungsintervall
 {
   /**
-   * The cached value of the '{@link #getMonate() <em>Monate</em>}' attribute list.
+   * The cached value of the '{@link #getIntervall() <em>Intervall</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMonate()
+   * @see #getIntervall()
    * @generated
    * @ordered
    */
-  protected EList<String> monate;
-
-  /**
-   * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTag()
-   * @generated
-   * @ordered
-   */
-  protected static final String TAG_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTag() <em>Tag</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTag()
-   * @generated
-   * @ordered
-   */
-  protected String tag = TAG_EDEFAULT;
+  protected Intervall intervall;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,13 +65,9 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getMonate()
+  public Intervall getIntervall()
   {
-    if (monate == null)
-    {
-      monate = new EDataTypeEList<String>(String.class, this, FinPackage.BUCHUNGSINTERVALL__MONATE);
-    }
-    return monate;
+    return intervall;
   }
 
   /**
@@ -103,22 +75,53 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getTag()
+  public NotificationChain basicSetIntervall(Intervall newIntervall, NotificationChain msgs)
   {
-    return tag;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTag(String newTag)
-  {
-    String oldTag = tag;
-    tag = newTag;
+    Intervall oldIntervall = intervall;
+    intervall = newIntervall;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNGSINTERVALL__TAG, oldTag, tag));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNGSINTERVALL__INTERVALL, oldIntervall, newIntervall);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIntervall(Intervall newIntervall)
+  {
+    if (newIntervall != intervall)
+    {
+      NotificationChain msgs = null;
+      if (intervall != null)
+        msgs = ((InternalEObject)intervall).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FinPackage.BUCHUNGSINTERVALL__INTERVALL, null, msgs);
+      if (newIntervall != null)
+        msgs = ((InternalEObject)newIntervall).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FinPackage.BUCHUNGSINTERVALL__INTERVALL, null, msgs);
+      msgs = basicSetIntervall(newIntervall, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNGSINTERVALL__INTERVALL, newIntervall, newIntervall));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FinPackage.BUCHUNGSINTERVALL__INTERVALL:
+        return basicSetIntervall(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -131,10 +134,8 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
   {
     switch (featureID)
     {
-      case FinPackage.BUCHUNGSINTERVALL__MONATE:
-        return getMonate();
-      case FinPackage.BUCHUNGSINTERVALL__TAG:
-        return getTag();
+      case FinPackage.BUCHUNGSINTERVALL__INTERVALL:
+        return getIntervall();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -144,18 +145,13 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case FinPackage.BUCHUNGSINTERVALL__MONATE:
-        getMonate().clear();
-        getMonate().addAll((Collection<? extends String>)newValue);
-        return;
-      case FinPackage.BUCHUNGSINTERVALL__TAG:
-        setTag((String)newValue);
+      case FinPackage.BUCHUNGSINTERVALL__INTERVALL:
+        setIntervall((Intervall)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,11 +167,8 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
   {
     switch (featureID)
     {
-      case FinPackage.BUCHUNGSINTERVALL__MONATE:
-        getMonate().clear();
-        return;
-      case FinPackage.BUCHUNGSINTERVALL__TAG:
-        setTag(TAG_EDEFAULT);
+      case FinPackage.BUCHUNGSINTERVALL__INTERVALL:
+        setIntervall((Intervall)null);
         return;
     }
     super.eUnset(featureID);
@@ -191,31 +184,10 @@ public class BuchungsintervallImpl extends ElementImpl implements Buchungsinterv
   {
     switch (featureID)
     {
-      case FinPackage.BUCHUNGSINTERVALL__MONATE:
-        return monate != null && !monate.isEmpty();
-      case FinPackage.BUCHUNGSINTERVALL__TAG:
-        return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
+      case FinPackage.BUCHUNGSINTERVALL__INTERVALL:
+        return intervall != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (monate: ");
-    result.append(monate);
-    result.append(", tag: ");
-    result.append(tag);
-    result.append(')');
-    return result.toString();
   }
 
 } //BuchungsintervallImpl
