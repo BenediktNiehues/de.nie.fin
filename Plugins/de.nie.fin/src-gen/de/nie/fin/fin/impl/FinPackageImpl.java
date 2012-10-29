@@ -5,17 +5,18 @@ package de.nie.fin.fin.impl;
 import de.nie.fin.fin.Buchung;
 import de.nie.fin.fin.Buchungsintervall;
 import de.nie.fin.fin.Element;
-import de.nie.fin.fin.Empfaenger;
 import de.nie.fin.fin.FinFactory;
 import de.nie.fin.fin.FinModelFile;
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Import;
 import de.nie.fin.fin.Intervall;
 import de.nie.fin.fin.Kategorie;
+import de.nie.fin.fin.Kontakt;
 import de.nie.fin.fin.Konto;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -41,14 +42,14 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass importEClass = null;
+  private EClass elementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass elementEClass = null;
+  private EClass importEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -90,7 +91,14 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass empfaengerEClass = null;
+  private EClass kontaktEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum monatEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -200,26 +208,6 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getImport()
-  {
-    return importEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImport_ImportedNamespace()
-  {
-    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getElement()
   {
     return elementEClass;
@@ -233,6 +221,26 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
   public EAttribute getElement_Name()
   {
     return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImport()
+  {
+    return importEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImport_ImportedNamespace()
+  {
+    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -270,9 +278,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKonto_Bank()
+  public EReference getKonto_Bank()
   {
-    return (EAttribute)kontoEClass.getEStructuralFeatures().get(2);
+    return (EReference)kontoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -290,9 +298,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKonto_Inhaber()
+  public EReference getKonto_Inhaber()
   {
-    return (EAttribute)kontoEClass.getEStructuralFeatures().get(4);
+    return (EReference)kontoEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -350,29 +358,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIntervall_Kategorie()
-  {
-    return (EReference)intervallEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getKategorie()
   {
     return kategorieEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getKategorie_Beschreibung()
-  {
-    return (EAttribute)kategorieEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -420,7 +408,7 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBuchung_Von()
+  public EReference getBuchung_EmpfaengerKto()
   {
     return (EReference)buchungEClass.getEStructuralFeatures().get(3);
   }
@@ -430,7 +418,7 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBuchung_Intervall()
+  public EReference getBuchung_Von()
   {
     return (EReference)buchungEClass.getEStructuralFeatures().get(4);
   }
@@ -440,9 +428,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEmpfaenger()
+  public EReference getBuchung_VonKto()
   {
-    return empfaengerEClass;
+    return (EReference)buchungEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -450,9 +438,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEmpfaenger_Strasse()
+  public EReference getBuchung_Intervall()
   {
-    return (EAttribute)empfaengerEClass.getEStructuralFeatures().get(0);
+    return (EReference)buchungEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -460,9 +448,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEmpfaenger_Plz()
+  public EReference getBuchung_BuchInterv()
   {
-    return (EAttribute)empfaengerEClass.getEStructuralFeatures().get(1);
+    return (EReference)buchungEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -470,9 +458,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEmpfaenger_Ort()
+  public EReference getBuchung_Kategorie()
   {
-    return (EAttribute)empfaengerEClass.getEStructuralFeatures().get(2);
+    return (EReference)buchungEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -480,9 +468,69 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEmpfaenger_Bemerkung()
+  public EClass getKontakt()
   {
-    return (EAttribute)empfaengerEClass.getEStructuralFeatures().get(3);
+    return kontaktEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getKontakt_Konten()
+  {
+    return (EReference)kontaktEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getKontakt_Strasse()
+  {
+    return (EAttribute)kontaktEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getKontakt_Plz()
+  {
+    return (EAttribute)kontaktEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getKontakt_Ort()
+  {
+    return (EAttribute)kontaktEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getKontakt_Bemerkung()
+  {
+    return (EAttribute)kontaktEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getMONAT()
+  {
+    return monatEEnum;
   }
 
   /**
@@ -520,18 +568,18 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     createEReference(finModelFileEClass, FIN_MODEL_FILE__IMPORTS);
     createEReference(finModelFileEClass, FIN_MODEL_FILE__ELEMENTS);
 
-    importEClass = createEClass(IMPORT);
-    createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
-
     elementEClass = createEClass(ELEMENT);
     createEAttribute(elementEClass, ELEMENT__NAME);
+
+    importEClass = createEClass(IMPORT);
+    createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
 
     kontoEClass = createEClass(KONTO);
     createEAttribute(kontoEClass, KONTO__KTO_NR);
     createEAttribute(kontoEClass, KONTO__BLZ);
-    createEAttribute(kontoEClass, KONTO__BANK);
+    createEReference(kontoEClass, KONTO__BANK);
     createEAttribute(kontoEClass, KONTO__VERWENDUNG);
-    createEAttribute(kontoEClass, KONTO__INHABER);
+    createEReference(kontoEClass, KONTO__INHABER);
 
     buchungsintervallEClass = createEClass(BUCHUNGSINTERVALL);
     createEReference(buchungsintervallEClass, BUCHUNGSINTERVALL__INTERVALL);
@@ -539,23 +587,29 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     intervallEClass = createEClass(INTERVALL);
     createEAttribute(intervallEClass, INTERVALL__TAG);
     createEAttribute(intervallEClass, INTERVALL__MONATE);
-    createEReference(intervallEClass, INTERVALL__KATEGORIE);
 
     kategorieEClass = createEClass(KATEGORIE);
-    createEAttribute(kategorieEClass, KATEGORIE__BESCHREIBUNG);
 
     buchungEClass = createEClass(BUCHUNG);
     createEReference(buchungEClass, BUCHUNG__KONTO);
     createEAttribute(buchungEClass, BUCHUNG__BETRAG);
     createEReference(buchungEClass, BUCHUNG__EMPFAENGER);
+    createEReference(buchungEClass, BUCHUNG__EMPFAENGER_KTO);
     createEReference(buchungEClass, BUCHUNG__VON);
+    createEReference(buchungEClass, BUCHUNG__VON_KTO);
     createEReference(buchungEClass, BUCHUNG__INTERVALL);
+    createEReference(buchungEClass, BUCHUNG__BUCH_INTERV);
+    createEReference(buchungEClass, BUCHUNG__KATEGORIE);
 
-    empfaengerEClass = createEClass(EMPFAENGER);
-    createEAttribute(empfaengerEClass, EMPFAENGER__STRASSE);
-    createEAttribute(empfaengerEClass, EMPFAENGER__PLZ);
-    createEAttribute(empfaengerEClass, EMPFAENGER__ORT);
-    createEAttribute(empfaengerEClass, EMPFAENGER__BEMERKUNG);
+    kontaktEClass = createEClass(KONTAKT);
+    createEReference(kontaktEClass, KONTAKT__KONTEN);
+    createEAttribute(kontaktEClass, KONTAKT__STRASSE);
+    createEAttribute(kontaktEClass, KONTAKT__PLZ);
+    createEAttribute(kontaktEClass, KONTAKT__ORT);
+    createEAttribute(kontaktEClass, KONTAKT__BEMERKUNG);
+
+    // Create enums
+    monatEEnum = createEEnum(MONAT);
   }
 
   /**
@@ -589,10 +643,9 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     // Add supertypes to classes
     kontoEClass.getESuperTypes().add(this.getElement());
     buchungsintervallEClass.getESuperTypes().add(this.getElement());
-    intervallEClass.getESuperTypes().add(this.getBuchung());
     kategorieEClass.getESuperTypes().add(this.getElement());
     buchungEClass.getESuperTypes().add(this.getElement());
-    empfaengerEClass.getESuperTypes().add(this.getElement());
+    kontaktEClass.getESuperTypes().add(this.getElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(finModelFileEClass, FinModelFile.class, "FinModelFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -600,42 +653,61 @@ public class FinPackageImpl extends EPackageImpl implements FinPackage
     initEReference(getFinModelFile_Imports(), this.getImport(), null, "imports", null, 0, -1, FinModelFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFinModelFile_Elements(), this.getElement(), null, "elements", null, 0, -1, FinModelFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kontoEClass, Konto.class, "Konto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getKonto_KtoNr(), ecorePackage.getEInt(), "ktoNr", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getKonto_Blz(), ecorePackage.getEInt(), "blz", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKonto_Bank(), ecorePackage.getEString(), "bank", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKonto_Bank(), this.getKontakt(), null, "bank", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getKonto_Verwendung(), ecorePackage.getEString(), "verwendung", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKonto_Inhaber(), ecorePackage.getEString(), "inhaber", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKonto_Inhaber(), this.getKontakt(), null, "inhaber", null, 0, 1, Konto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buchungsintervallEClass, Buchungsintervall.class, "Buchungsintervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBuchungsintervall_Intervall(), this.getIntervall(), null, "intervall", null, 0, 1, Buchungsintervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intervallEClass, Intervall.class, "Intervall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIntervall_Tag(), ecorePackage.getEString(), "tag", null, 0, 1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIntervall_Monate(), ecorePackage.getEString(), "monate", null, 0, -1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIntervall_Kategorie(), this.getKategorie(), null, "kategorie", null, 0, -1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIntervall_Monate(), this.getMONAT(), "monate", null, 0, -1, Intervall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kategorieEClass, Kategorie.class, "Kategorie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getKategorie_Beschreibung(), ecorePackage.getEString(), "beschreibung", null, 0, 1, Kategorie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(buchungEClass, Buchung.class, "Buchung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBuchung_Konto(), this.getKonto(), null, "konto", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBuchung_Betrag(), ecorePackage.getEInt(), "betrag", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBuchung_Empfaenger(), this.getEmpfaenger(), null, "empfaenger", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBuchung_Von(), this.getEmpfaenger(), null, "von", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBuchung_Intervall(), this.getBuchungsintervall(), null, "intervall", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_Empfaenger(), this.getKontakt(), null, "empfaenger", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_EmpfaengerKto(), this.getKonto(), null, "empfaengerKto", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_Von(), this.getKontakt(), null, "von", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_VonKto(), this.getKonto(), null, "vonKto", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_Intervall(), this.getIntervall(), null, "intervall", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_BuchInterv(), this.getBuchungsintervall(), null, "buchInterv", null, 0, 1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBuchung_Kategorie(), this.getKategorie(), null, "kategorie", null, 0, -1, Buchung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(empfaengerEClass, Empfaenger.class, "Empfaenger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEmpfaenger_Strasse(), ecorePackage.getEString(), "strasse", null, 0, 1, Empfaenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEmpfaenger_Plz(), ecorePackage.getEString(), "plz", null, 0, 1, Empfaenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEmpfaenger_Ort(), ecorePackage.getEString(), "ort", null, 0, 1, Empfaenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEmpfaenger_Bemerkung(), ecorePackage.getEString(), "bemerkung", null, 0, 1, Empfaenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(kontaktEClass, Kontakt.class, "Kontakt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getKontakt_Konten(), this.getKonto(), null, "konten", null, 0, -1, Kontakt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKontakt_Strasse(), ecorePackage.getEString(), "strasse", null, 0, 1, Kontakt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKontakt_Plz(), ecorePackage.getEInt(), "plz", null, 0, 1, Kontakt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKontakt_Ort(), ecorePackage.getEString(), "ort", null, 0, 1, Kontakt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKontakt_Bemerkung(), ecorePackage.getEString(), "bemerkung", null, 0, 1, Kontakt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(monatEEnum, de.nie.fin.fin.MONAT.class, "MONAT");
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.ALLE);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.JANUAR);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.FEBRUAR);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.MAERZ);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.APRIL);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.MAI);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.JUNI);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.JULI);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.AUGUST);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.SEPTEMBER);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.OKTOBER);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.NOVEMBER);
+    addEEnumLiteral(monatEEnum, de.nie.fin.fin.MONAT.DEZEMBER);
 
     // Create resource
     createResource(eNS_URI);

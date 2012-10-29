@@ -7,23 +7,38 @@
     runtimeVersion="2.8">
   <genPackages prefix="Fin" basePackage="de.nie.fin" disposableProviderFactory="true"
       ecorePackage="Fin.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fin.ecore#//MONAT">
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/ALLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/JANUAR"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/FEBRUAR"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/MAERZ"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/APRIL"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/MAI"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/JUNI"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/JULI"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/AUGUST"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/SEPTEMBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/OKTOBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/NOVEMBER"/>
+      <genEnumLiterals ecoreEnumLiteral="Fin.ecore#//MONAT/DEZEMBER"/>
+    </genEnums>
     <genClasses ecoreClass="Fin.ecore#//FinModelFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//FinModelFile/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//FinModelFile/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//FinModelFile/elements"/>
     </genClasses>
-    <genClasses ecoreClass="Fin.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Import/importedNamespace"/>
-    </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Element/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Import/importedNamespace"/>
     </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Konto">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/ktoNr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/blz"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/bank"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Konto/bank"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/verwendung"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Konto/inhaber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Konto/inhaber"/>
     </genClasses>
     <genClasses ecoreClass="Fin.ecore#//Buchungsintervall">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchungsintervall/intervall"/>
@@ -31,23 +46,25 @@
     <genClasses ecoreClass="Fin.ecore#//Intervall">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Intervall/tag"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Intervall/monate"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Intervall/kategorie"/>
     </genClasses>
-    <genClasses ecoreClass="Fin.ecore#//Kategorie">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kategorie/beschreibung"/>
-    </genClasses>
+    <genClasses ecoreClass="Fin.ecore#//Kategorie"/>
     <genClasses ecoreClass="Fin.ecore#//Buchung">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/konto"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Buchung/betrag"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/empfaenger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/empfaengerKto"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/von"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/intervall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/vonKto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/intervall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/buchInterv"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Buchung/kategorie"/>
     </genClasses>
-    <genClasses ecoreClass="Fin.ecore#//Empfaenger">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/strasse"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/plz"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/ort"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Empfaenger/bemerkung"/>
+    <genClasses ecoreClass="Fin.ecore#//Kontakt">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fin.ecore#//Kontakt/konten"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kontakt/strasse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kontakt/plz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kontakt/ort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fin.ecore#//Kontakt/bemerkung"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

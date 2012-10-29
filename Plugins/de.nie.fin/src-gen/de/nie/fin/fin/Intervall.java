@@ -4,6 +4,8 @@ package de.nie.fin.fin;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Intervall</b></em>'.
@@ -14,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.nie.fin.fin.Intervall#getTag <em>Tag</em>}</li>
  *   <li>{@link de.nie.fin.fin.Intervall#getMonate <em>Monate</em>}</li>
- *   <li>{@link de.nie.fin.fin.Intervall#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Intervall extends Buchung
+public interface Intervall extends EObject
 {
   /**
    * Returns the value of the '<em><b>Tag</b></em>' attribute.
@@ -52,7 +53,8 @@ public interface Intervall extends Buchung
 
   /**
    * Returns the value of the '<em><b>Monate</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * The list contents are of type {@link de.nie.fin.fin.MONAT}.
+   * The literals are from the enumeration {@link de.nie.fin.fin.MONAT}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Monate</em>' attribute list isn't clear,
@@ -60,26 +62,11 @@ public interface Intervall extends Buchung
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Monate</em>' attribute list.
+   * @see de.nie.fin.fin.MONAT
    * @see de.nie.fin.fin.FinPackage#getIntervall_Monate()
    * @model unique="false"
    * @generated
    */
-  EList<String> getMonate();
-
-  /**
-   * Returns the value of the '<em><b>Kategorie</b></em>' reference list.
-   * The list contents are of type {@link de.nie.fin.fin.Kategorie}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Kategorie</em>' reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Kategorie</em>' reference list.
-   * @see de.nie.fin.fin.FinPackage#getIntervall_Kategorie()
-   * @model
-   * @generated
-   */
-  EList<Kategorie> getKategorie();
+  EList<MONAT> getMonate();
 
 } // Intervall

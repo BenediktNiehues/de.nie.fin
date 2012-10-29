@@ -4,7 +4,7 @@ package de.nie.fin.fin.impl;
 
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Intervall;
-import de.nie.fin.fin.Kategorie;
+import de.nie.fin.fin.MONAT;
 
 import java.util.Collection;
 
@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,13 +28,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link de.nie.fin.fin.impl.IntervallImpl#getTag <em>Tag</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.IntervallImpl#getMonate <em>Monate</em>}</li>
- *   <li>{@link de.nie.fin.fin.impl.IntervallImpl#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IntervallImpl extends BuchungImpl implements Intervall
+public class IntervallImpl extends MinimalEObjectImpl.Container implements Intervall
 {
   /**
    * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
@@ -64,17 +63,7 @@ public class IntervallImpl extends BuchungImpl implements Intervall
    * @generated
    * @ordered
    */
-  protected EList<String> monate;
-
-  /**
-   * The cached value of the '{@link #getKategorie() <em>Kategorie</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKategorie()
-   * @generated
-   * @ordered
-   */
-  protected EList<Kategorie> kategorie;
+  protected EList<MONAT> monate;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,27 +114,13 @@ public class IntervallImpl extends BuchungImpl implements Intervall
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getMonate()
+  public EList<MONAT> getMonate()
   {
     if (monate == null)
     {
-      monate = new EDataTypeEList<String>(String.class, this, FinPackage.INTERVALL__MONATE);
+      monate = new EDataTypeEList<MONAT>(MONAT.class, this, FinPackage.INTERVALL__MONATE);
     }
     return monate;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Kategorie> getKategorie()
-  {
-    if (kategorie == null)
-    {
-      kategorie = new EObjectResolvingEList<Kategorie>(Kategorie.class, this, FinPackage.INTERVALL__KATEGORIE);
-    }
-    return kategorie;
   }
 
   /**
@@ -162,8 +137,6 @@ public class IntervallImpl extends BuchungImpl implements Intervall
         return getTag();
       case FinPackage.INTERVALL__MONATE:
         return getMonate();
-      case FinPackage.INTERVALL__KATEGORIE:
-        return getKategorie();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -184,11 +157,7 @@ public class IntervallImpl extends BuchungImpl implements Intervall
         return;
       case FinPackage.INTERVALL__MONATE:
         getMonate().clear();
-        getMonate().addAll((Collection<? extends String>)newValue);
-        return;
-      case FinPackage.INTERVALL__KATEGORIE:
-        getKategorie().clear();
-        getKategorie().addAll((Collection<? extends Kategorie>)newValue);
+        getMonate().addAll((Collection<? extends MONAT>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -210,9 +179,6 @@ public class IntervallImpl extends BuchungImpl implements Intervall
       case FinPackage.INTERVALL__MONATE:
         getMonate().clear();
         return;
-      case FinPackage.INTERVALL__KATEGORIE:
-        getKategorie().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -231,8 +197,6 @@ public class IntervallImpl extends BuchungImpl implements Intervall
         return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
       case FinPackage.INTERVALL__MONATE:
         return monate != null && !monate.isEmpty();
-      case FinPackage.INTERVALL__KATEGORIE:
-        return kategorie != null && !kategorie.isEmpty();
     }
     return super.eIsSet(featureID);
   }

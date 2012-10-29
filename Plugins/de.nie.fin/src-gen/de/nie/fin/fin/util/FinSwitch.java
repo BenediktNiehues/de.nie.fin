@@ -79,17 +79,17 @@ public class FinSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case FinPackage.IMPORT:
-      {
-        Import import_ = (Import)theEObject;
-        T result = caseImport(import_);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case FinPackage.ELEMENT:
       {
         Element element = (Element)theEObject;
         T result = caseElement(element);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FinPackage.IMPORT:
+      {
+        Import import_ = (Import)theEObject;
+        T result = caseImport(import_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -113,8 +113,6 @@ public class FinSwitch<T> extends Switch<T>
       {
         Intervall intervall = (Intervall)theEObject;
         T result = caseIntervall(intervall);
-        if (result == null) result = caseBuchung(intervall);
-        if (result == null) result = caseElement(intervall);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -134,11 +132,11 @@ public class FinSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case FinPackage.EMPFAENGER:
+      case FinPackage.KONTAKT:
       {
-        Empfaenger empfaenger = (Empfaenger)theEObject;
-        T result = caseEmpfaenger(empfaenger);
-        if (result == null) result = caseElement(empfaenger);
+        Kontakt kontakt = (Kontakt)theEObject;
+        T result = caseKontakt(kontakt);
+        if (result == null) result = caseElement(kontakt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,22 +161,6 @@ public class FinSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImport(Import object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -190,6 +172,22 @@ public class FinSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseElement(Element object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImport(Import object)
   {
     return null;
   }
@@ -275,17 +273,17 @@ public class FinSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Empfaenger</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Kontakt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Empfaenger</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Kontakt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEmpfaenger(Empfaenger object)
+  public T caseKontakt(Kontakt object)
   {
     return null;
   }

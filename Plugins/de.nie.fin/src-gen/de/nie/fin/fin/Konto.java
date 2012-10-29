@@ -78,30 +78,30 @@ public interface Konto extends Element
   void setBlz(int value);
 
   /**
-   * Returns the value of the '<em><b>Bank</b></em>' attribute.
+   * Returns the value of the '<em><b>Bank</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Bank</em>' attribute isn't clear,
+   * If the meaning of the '<em>Bank</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Bank</em>' attribute.
-   * @see #setBank(String)
+   * @return the value of the '<em>Bank</em>' reference.
+   * @see #setBank(Kontakt)
    * @see de.nie.fin.fin.FinPackage#getKonto_Bank()
    * @model
    * @generated
    */
-  String getBank();
+  Kontakt getBank();
 
   /**
-   * Sets the value of the '{@link de.nie.fin.fin.Konto#getBank <em>Bank</em>}' attribute.
+   * Sets the value of the '{@link de.nie.fin.fin.Konto#getBank <em>Bank</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Bank</em>' attribute.
+   * @param value the new value of the '<em>Bank</em>' reference.
    * @see #getBank()
    * @generated
    */
-  void setBank(String value);
+  void setBank(Kontakt value);
 
   /**
    * Returns the value of the '<em><b>Verwendung</b></em>' attribute.
@@ -130,29 +130,29 @@ public interface Konto extends Element
   void setVerwendung(String value);
 
   /**
-   * Returns the value of the '<em><b>Inhaber</b></em>' attribute.
+   * Returns the value of the '<em><b>Inhaber</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Inhaber</em>' attribute isn't clear,
+   * If the meaning of the '<em>Inhaber</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Inhaber</em>' attribute.
-   * @see #setInhaber(String)
+   * @return the value of the '<em>Inhaber</em>' reference.
+   * @see #setInhaber(Kontakt)
    * @see de.nie.fin.fin.FinPackage#getKonto_Inhaber()
    * @model
    * @generated
    */
-  String getInhaber();
+  Kontakt getInhaber();
 
   /**
-   * Sets the value of the '{@link de.nie.fin.fin.Konto#getInhaber <em>Inhaber</em>}' attribute.
+   * Sets the value of the '{@link de.nie.fin.fin.Konto#getInhaber <em>Inhaber</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Inhaber</em>' attribute.
+   * @param value the new value of the '<em>Inhaber</em>' reference.
    * @see #getInhaber()
    * @generated
    */
-  void setInhaber(String value);
+  void setInhaber(Kontakt value);
 
 } // Konto

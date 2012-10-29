@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
   <xtext:Grammar name="de.nie.fin.Fin" usedGrammars="/1">
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="types">
+      <ePackage href="http://www.eclipse.org/xtext/common/JavaVMTypes#/"/>
+    </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="fin">
       <ePackage href="http://www.nie.de/fin/Fin#/"/>
     </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="FinModelFile">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//FinModelFile"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -16,26 +22,15 @@
           </elements>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="*" feature="elements" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="Import">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Import"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="import"/>
-        <elements xsi:type="xtext:Assignment" feature="importedNamespace" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.52"/>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="elements" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Element">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Element"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -46,8 +41,19 @@
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
       </alternatives>
     </rules>
+    <rules xsi:type="xtext:ParserRule" name="Import">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Import"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="import"/>
+        <elements xsi:type="xtext:Assignment" feature="importedNamespace" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.52"/>
+        </elements>
+      </alternatives>
+    </rules>
     <rules xsi:type="xtext:ParserRule" name="Konto">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -66,7 +72,12 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="Bank"/>
         <elements xsi:type="xtext:Assignment" feature="bank" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kontakt"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="Verwendung"/>
         <elements xsi:type="xtext:Assignment" feature="verwendung" operator="=">
@@ -74,70 +85,167 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="Inhaber"/>
         <elements xsi:type="xtext:Assignment" feature="inhaber" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kontakt"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+          </terminal>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:TerminalRule" name="TAG">
-      <type metamodel="/1/@metamodelDeclarations.2">
+      <type metamodel="/0/@metamodelDeclarations.1">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value="1"/>
-        <elements xsi:type="xtext:Keyword" value="2"/>
-        <elements xsi:type="xtext:Keyword" value="3"/>
-        <elements xsi:type="xtext:Keyword" value="4"/>
-        <elements xsi:type="xtext:Keyword" value="5"/>
-        <elements xsi:type="xtext:Keyword" value="6"/>
-        <elements xsi:type="xtext:Keyword" value="7"/>
-        <elements xsi:type="xtext:Keyword" value="8"/>
-        <elements xsi:type="xtext:Keyword" value="9"/>
-        <elements xsi:type="xtext:Keyword" value="10"/>
-        <elements xsi:type="xtext:Keyword" value="11"/>
-        <elements xsi:type="xtext:Keyword" value="12"/>
-        <elements xsi:type="xtext:Keyword" value="13"/>
-        <elements xsi:type="xtext:Keyword" value="14"/>
-        <elements xsi:type="xtext:Keyword" value="15"/>
-        <elements xsi:type="xtext:Keyword" value="16"/>
-        <elements xsi:type="xtext:Keyword" value="17"/>
-        <elements xsi:type="xtext:Keyword" value="18"/>
-        <elements xsi:type="xtext:Keyword" value="19"/>
-        <elements xsi:type="xtext:Keyword" value="20"/>
-        <elements xsi:type="xtext:Keyword" value="21"/>
-        <elements xsi:type="xtext:Keyword" value="22"/>
-        <elements xsi:type="xtext:Keyword" value="23"/>
-        <elements xsi:type="xtext:Keyword" value="24"/>
-        <elements xsi:type="xtext:Keyword" value="25"/>
-        <elements xsi:type="xtext:Keyword" value="26"/>
-        <elements xsi:type="xtext:Keyword" value="27"/>
-        <elements xsi:type="xtext:Keyword" value="28"/>
-        <elements xsi:type="xtext:Keyword" value="29"/>
-        <elements xsi:type="xtext:Keyword" value="30"/>
-        <elements xsi:type="xtext:Keyword" value="31"/>
+        <elements xsi:type="xtext:Keyword" value="1."/>
+        <elements xsi:type="xtext:Keyword" value="2."/>
+        <elements xsi:type="xtext:Keyword" value="3."/>
+        <elements xsi:type="xtext:Keyword" value="4."/>
+        <elements xsi:type="xtext:Keyword" value="5."/>
+        <elements xsi:type="xtext:Keyword" value="6."/>
+        <elements xsi:type="xtext:Keyword" value="7."/>
+        <elements xsi:type="xtext:Keyword" value="8."/>
+        <elements xsi:type="xtext:Keyword" value="9."/>
+        <elements xsi:type="xtext:Keyword" value="10."/>
+        <elements xsi:type="xtext:Keyword" value="11."/>
+        <elements xsi:type="xtext:Keyword" value="12."/>
+        <elements xsi:type="xtext:Keyword" value="13."/>
+        <elements xsi:type="xtext:Keyword" value="14."/>
+        <elements xsi:type="xtext:Keyword" value="15."/>
+        <elements xsi:type="xtext:Keyword" value="16."/>
+        <elements xsi:type="xtext:Keyword" value="17."/>
+        <elements xsi:type="xtext:Keyword" value="18."/>
+        <elements xsi:type="xtext:Keyword" value="19."/>
+        <elements xsi:type="xtext:Keyword" value="20."/>
+        <elements xsi:type="xtext:Keyword" value="21."/>
+        <elements xsi:type="xtext:Keyword" value="22."/>
+        <elements xsi:type="xtext:Keyword" value="23."/>
+        <elements xsi:type="xtext:Keyword" value="24."/>
+        <elements xsi:type="xtext:Keyword" value="25."/>
+        <elements xsi:type="xtext:Keyword" value="26."/>
+        <elements xsi:type="xtext:Keyword" value="27."/>
+        <elements xsi:type="xtext:Keyword" value="28."/>
+        <elements xsi:type="xtext:Keyword" value="29."/>
+        <elements xsi:type="xtext:Keyword" value="30."/>
+        <elements xsi:type="xtext:Keyword" value="31."/>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:TerminalRule" name="MONAT">
-      <type metamodel="/1/@metamodelDeclarations.2">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <rules xsi:type="xtext:EnumRule" name="MONAT">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EEnum" href="http://www.nie.de/fin/Fin#//MONAT"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value="Januar"/>
-        <elements xsi:type="xtext:Keyword" value="Februar"/>
-        <elements xsi:type="xtext:Keyword" value="M&#xe4;rz"/>
-        <elements xsi:type="xtext:Keyword" value="April"/>
-        <elements xsi:type="xtext:Keyword" value="Mai"/>
-        <elements xsi:type="xtext:Keyword" value="Juni"/>
-        <elements xsi:type="xtext:Keyword" value="Juli"/>
-        <elements xsi:type="xtext:Keyword" value="August"/>
-        <elements xsi:type="xtext:Keyword" value="September"/>
-        <elements xsi:type="xtext:Keyword" value="Oktober"/>
-        <elements xsi:type="xtext:Keyword" value="November"/>
-        <elements xsi:type="xtext:Keyword" value="Dezember"/>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/ALLE"/>
+          <literal value="monatlich"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/ALLE"/>
+          <literal value="*"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JANUAR"/>
+          <literal value="Januar"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JANUAR"/>
+          <literal value="Jan"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/FEBRUAR"/>
+          <literal value="Februar"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/FEBRUAR"/>
+          <literal value="Feb"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/MAERZ"/>
+          <literal value="M&#xe4;rz"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/MAERZ"/>
+          <literal value="Mar"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/APRIL"/>
+          <literal value="April"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/APRIL"/>
+          <literal value="Apr"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/MAI"/>
+          <literal value="Mai"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/MAI"/>
+          <literal value="May"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JUNI"/>
+          <literal value="Juni"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JUNI"/>
+          <literal value="Jun"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JULI"/>
+          <literal value="Juli"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/JULI"/>
+          <literal value="Jul"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/AUGUST"/>
+          <literal value="August"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/AUGUST"/>
+          <literal value="Aug"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/SEPTEMBER"/>
+          <literal value="September"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/SEPTEMBER"/>
+          <literal value="Sep"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/OKTOBER"/>
+          <literal value="Oktober"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/OKTOBER"/>
+          <literal value="Okt"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/NOVEMBER"/>
+          <literal value="November"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/NOVEMBER"/>
+          <literal value="Nov"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/DEZEMBER"/>
+          <literal value="Dezember"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.nie.de/fin/Fin#//MONAT/DEZEMBER"/>
+          <literal value="Dez"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Buchungsintervall">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Buchungsintervall"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -153,7 +261,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Intervall">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Intervall"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -162,19 +270,21 @@
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="der Monate"/>
-        <elements xsi:type="xtext:Assignment" feature="monate" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="*">
-          <elements xsi:type="xtext:Keyword" value=","/>
+        <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Assignment" feature="monate" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="monate" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+            </elements>
           </elements>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Kategorie">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kategorie"/>
       </type>
       <alternatives xsi:type="xtext:Group">
@@ -182,114 +292,171 @@
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Keyword" value="{"/>
-          <elements xsi:type="xtext:Assignment" feature="beschreibung" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="}"/>
-        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Buchung">
-      <type metamodel="/0/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.2">
         <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Buchung"/>
       </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="Buchung"/>
-          <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="{"/>
-          <elements xsi:type="xtext:Keyword" value="Konto"/>
-          <elements xsi:type="xtext:Assignment" feature="konto" operator="=">
-            <terminal xsi:type="xtext:CrossReference">
-              <type metamodel="/0/@metamodelDeclarations.0">
-                <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
-              </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
-            </terminal>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="Betrag"/>
-          <elements xsi:type="xtext:Assignment" feature="betrag" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.55"/>
-          </elements>
-          <elements xsi:type="xtext:Alternatives">
-            <elements xsi:type="xtext:Group">
-              <elements xsi:type="xtext:Keyword" value="Empf&#xe4;nger"/>
-              <elements xsi:type="xtext:Assignment" feature="empfaenger" operator="=">
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Buchung"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="Konto"/>
+        <elements xsi:type="xtext:Assignment" feature="konto" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="Betrag"/>
+        <elements xsi:type="xtext:Assignment" feature="betrag" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.55"/>
+        </elements>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" value="Empf&#xe4;nger"/>
+            <elements xsi:type="xtext:Assignment" feature="empfaenger" operator="=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.2">
+                  <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kontakt"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="?">
+              <elements xsi:type="xtext:Keyword" value="Empf&#xe4;ngerKonto"/>
+              <elements xsi:type="xtext:Assignment" feature="empfaengerKto" operator="=">
                 <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.0">
-                    <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Empfaenger"/>
+                  <type metamodel="/0/@metamodelDeclarations.2">
+                    <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
                   </type>
                   <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
                 </terminal>
               </elements>
             </elements>
-            <elements xsi:type="xtext:Group">
-              <elements xsi:type="xtext:Keyword" value="von"/>
-              <elements xsi:type="xtext:Assignment" feature="von" operator="=">
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" value="von"/>
+            <elements xsi:type="xtext:Assignment" feature="von" operator="=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.2">
+                  <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kontakt"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="?">
+              <elements xsi:type="xtext:Keyword" value="Konto"/>
+              <elements xsi:type="xtext:Assignment" feature="vonKto" operator="=">
                 <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.0">
-                    <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Empfaenger"/>
+                  <type metamodel="/0/@metamodelDeclarations.2">
+                    <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
                   </type>
                   <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
                 </terminal>
               </elements>
             </elements>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="Intervall"/>
-          <elements xsi:type="xtext:Assignment" feature="intervall" operator="=">
-            <terminal xsi:type="xtext:CrossReference">
-              <type metamodel="/0/@metamodelDeclarations.0">
-                <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Buchungsintervall"/>
-              </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
-            </terminal>
           </elements>
         </elements>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" value="Intervall"/>
+            <elements xsi:type="xtext:Assignment" feature="intervall" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" predicated="true" value="Intervall"/>
+            <elements xsi:type="xtext:Assignment" feature="buchInterv" operator="=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.2">
+                  <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Buchungsintervall"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+              </terminal>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="Kategorie"/>
           <elements xsi:type="xtext:Assignment" feature="kategorie" operator="+=">
             <terminal xsi:type="xtext:CrossReference">
-              <type metamodel="/0/@metamodelDeclarations.0">
+              <type metamodel="/0/@metamodelDeclarations.2">
                 <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kategorie"/>
               </type>
               <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
             </terminal>
           </elements>
-          <elements xsi:type="xtext:Keyword" value="}"/>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="kategorie" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.2">
+                  <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kategorie"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+              </terminal>
+            </elements>
+          </elements>
         </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="Empfaenger">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Empfaenger"/>
+    <rules xsi:type="xtext:ParserRule" name="Kontakt">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Kontakt"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="Empf&#xe4;nger"/>
+        <elements xsi:type="xtext:Keyword" value="Kontakt"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.10"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="Konten"/>
+            <elements xsi:type="xtext:Assignment" feature="konten" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.2">
+                  <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="konten" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.2">
+                    <classifier xsi:type="ecore:EClass" href="http://www.nie.de/fin/Fin#//Konto"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.11"/>
+                </terminal>
+              </elements>
+            </elements>
+          </elements>
           <elements xsi:type="xtext:Keyword" value="Stra&#xdf;e"/>
           <elements xsi:type="xtext:Assignment" feature="strasse" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value="PLZ"/>
           <elements xsi:type="xtext:Assignment" feature="plz" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.55"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value="Ort"/>
           <elements xsi:type="xtext:Assignment" feature="ort" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
           </elements>
-          <elements xsi:type="xtext:Keyword" value="Bemerkung"/>
-          <elements xsi:type="xtext:Assignment" feature="bemerkung" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="Bemerkung"/>
+            <elements xsi:type="xtext:Assignment" feature="bemerkung" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/2/@rules.12"/>
+            </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
         </elements>

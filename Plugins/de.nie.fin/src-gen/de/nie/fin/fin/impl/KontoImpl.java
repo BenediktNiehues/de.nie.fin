@@ -3,11 +3,13 @@
 package de.nie.fin.fin.impl;
 
 import de.nie.fin.fin.FinPackage;
+import de.nie.fin.fin.Kontakt;
 import de.nie.fin.fin.Konto;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -71,24 +73,14 @@ public class KontoImpl extends ElementImpl implements Konto
   protected int blz = BLZ_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getBank() <em>Bank</em>}' attribute.
+   * The cached value of the '{@link #getBank() <em>Bank</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getBank()
    * @generated
    * @ordered
    */
-  protected static final String BANK_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getBank() <em>Bank</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getBank()
-   * @generated
-   * @ordered
-   */
-  protected String bank = BANK_EDEFAULT;
+  protected Kontakt bank;
 
   /**
    * The default value of the '{@link #getVerwendung() <em>Verwendung</em>}' attribute.
@@ -111,24 +103,14 @@ public class KontoImpl extends ElementImpl implements Konto
   protected String verwendung = VERWENDUNG_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getInhaber() <em>Inhaber</em>}' attribute.
+   * The cached value of the '{@link #getInhaber() <em>Inhaber</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getInhaber()
    * @generated
    * @ordered
    */
-  protected static final String INHABER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getInhaber() <em>Inhaber</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInhaber()
-   * @generated
-   * @ordered
-   */
-  protected String inhaber = INHABER_EDEFAULT;
+  protected Kontakt inhaber;
 
   /**
    * <!-- begin-user-doc -->
@@ -202,7 +184,27 @@ public class KontoImpl extends ElementImpl implements Konto
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getBank()
+  public Kontakt getBank()
+  {
+    if (bank != null && bank.eIsProxy())
+    {
+      InternalEObject oldBank = (InternalEObject)bank;
+      bank = (Kontakt)eResolveProxy(oldBank);
+      if (bank != oldBank)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.KONTO__BANK, oldBank, bank));
+      }
+    }
+    return bank;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Kontakt basicGetBank()
   {
     return bank;
   }
@@ -212,9 +214,9 @@ public class KontoImpl extends ElementImpl implements Konto
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBank(String newBank)
+  public void setBank(Kontakt newBank)
   {
-    String oldBank = bank;
+    Kontakt oldBank = bank;
     bank = newBank;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.KONTO__BANK, oldBank, bank));
@@ -248,7 +250,27 @@ public class KontoImpl extends ElementImpl implements Konto
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getInhaber()
+  public Kontakt getInhaber()
+  {
+    if (inhaber != null && inhaber.eIsProxy())
+    {
+      InternalEObject oldInhaber = (InternalEObject)inhaber;
+      inhaber = (Kontakt)eResolveProxy(oldInhaber);
+      if (inhaber != oldInhaber)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.KONTO__INHABER, oldInhaber, inhaber));
+      }
+    }
+    return inhaber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Kontakt basicGetInhaber()
   {
     return inhaber;
   }
@@ -258,9 +280,9 @@ public class KontoImpl extends ElementImpl implements Konto
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInhaber(String newInhaber)
+  public void setInhaber(Kontakt newInhaber)
   {
-    String oldInhaber = inhaber;
+    Kontakt oldInhaber = inhaber;
     inhaber = newInhaber;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.KONTO__INHABER, oldInhaber, inhaber));
@@ -281,11 +303,13 @@ public class KontoImpl extends ElementImpl implements Konto
       case FinPackage.KONTO__BLZ:
         return getBlz();
       case FinPackage.KONTO__BANK:
-        return getBank();
+        if (resolve) return getBank();
+        return basicGetBank();
       case FinPackage.KONTO__VERWENDUNG:
         return getVerwendung();
       case FinPackage.KONTO__INHABER:
-        return getInhaber();
+        if (resolve) return getInhaber();
+        return basicGetInhaber();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -307,13 +331,13 @@ public class KontoImpl extends ElementImpl implements Konto
         setBlz((Integer)newValue);
         return;
       case FinPackage.KONTO__BANK:
-        setBank((String)newValue);
+        setBank((Kontakt)newValue);
         return;
       case FinPackage.KONTO__VERWENDUNG:
         setVerwendung((String)newValue);
         return;
       case FinPackage.KONTO__INHABER:
-        setInhaber((String)newValue);
+        setInhaber((Kontakt)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -336,13 +360,13 @@ public class KontoImpl extends ElementImpl implements Konto
         setBlz(BLZ_EDEFAULT);
         return;
       case FinPackage.KONTO__BANK:
-        setBank(BANK_EDEFAULT);
+        setBank((Kontakt)null);
         return;
       case FinPackage.KONTO__VERWENDUNG:
         setVerwendung(VERWENDUNG_EDEFAULT);
         return;
       case FinPackage.KONTO__INHABER:
-        setInhaber(INHABER_EDEFAULT);
+        setInhaber((Kontakt)null);
         return;
     }
     super.eUnset(featureID);
@@ -363,11 +387,11 @@ public class KontoImpl extends ElementImpl implements Konto
       case FinPackage.KONTO__BLZ:
         return blz != BLZ_EDEFAULT;
       case FinPackage.KONTO__BANK:
-        return BANK_EDEFAULT == null ? bank != null : !BANK_EDEFAULT.equals(bank);
+        return bank != null;
       case FinPackage.KONTO__VERWENDUNG:
         return VERWENDUNG_EDEFAULT == null ? verwendung != null : !VERWENDUNG_EDEFAULT.equals(verwendung);
       case FinPackage.KONTO__INHABER:
-        return INHABER_EDEFAULT == null ? inhaber != null : !INHABER_EDEFAULT.equals(inhaber);
+        return inhaber != null;
     }
     return super.eIsSet(featureID);
   }
@@ -387,12 +411,8 @@ public class KontoImpl extends ElementImpl implements Konto
     result.append(ktoNr);
     result.append(", blz: ");
     result.append(blz);
-    result.append(", bank: ");
-    result.append(bank);
     result.append(", verwendung: ");
     result.append(verwendung);
-    result.append(", inhaber: ");
-    result.append(inhaber);
     result.append(')');
     return result.toString();
   }

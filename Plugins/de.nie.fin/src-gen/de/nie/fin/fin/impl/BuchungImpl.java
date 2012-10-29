@@ -4,16 +4,25 @@ package de.nie.fin.fin.impl;
 
 import de.nie.fin.fin.Buchung;
 import de.nie.fin.fin.Buchungsintervall;
-import de.nie.fin.fin.Empfaenger;
 import de.nie.fin.fin.FinPackage;
+import de.nie.fin.fin.Intervall;
+import de.nie.fin.fin.Kategorie;
+import de.nie.fin.fin.Kontakt;
 import de.nie.fin.fin.Konto;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,8 +34,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getKonto <em>Konto</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getBetrag <em>Betrag</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getEmpfaenger <em>Empfaenger</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getEmpfaengerKto <em>Empfaenger Kto</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getVon <em>Von</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getVonKto <em>Von Kto</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getIntervall <em>Intervall</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getBuchInterv <em>Buch Interv</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.BuchungImpl#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,7 +85,17 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * @generated
    * @ordered
    */
-  protected Empfaenger empfaenger;
+  protected Kontakt empfaenger;
+
+  /**
+   * The cached value of the '{@link #getEmpfaengerKto() <em>Empfaenger Kto</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEmpfaengerKto()
+   * @generated
+   * @ordered
+   */
+  protected Konto empfaengerKto;
 
   /**
    * The cached value of the '{@link #getVon() <em>Von</em>}' reference.
@@ -82,17 +105,47 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * @generated
    * @ordered
    */
-  protected Empfaenger von;
+  protected Kontakt von;
 
   /**
-   * The cached value of the '{@link #getIntervall() <em>Intervall</em>}' reference.
+   * The cached value of the '{@link #getVonKto() <em>Von Kto</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVonKto()
+   * @generated
+   * @ordered
+   */
+  protected Konto vonKto;
+
+  /**
+   * The cached value of the '{@link #getIntervall() <em>Intervall</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getIntervall()
    * @generated
    * @ordered
    */
-  protected Buchungsintervall intervall;
+  protected Intervall intervall;
+
+  /**
+   * The cached value of the '{@link #getBuchInterv() <em>Buch Interv</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBuchInterv()
+   * @generated
+   * @ordered
+   */
+  protected Buchungsintervall buchInterv;
+
+  /**
+   * The cached value of the '{@link #getKategorie() <em>Kategorie</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKategorie()
+   * @generated
+   * @ordered
+   */
+  protected EList<Kategorie> kategorie;
 
   /**
    * <!-- begin-user-doc -->
@@ -186,12 +239,12 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Empfaenger getEmpfaenger()
+  public Kontakt getEmpfaenger()
   {
     if (empfaenger != null && empfaenger.eIsProxy())
     {
       InternalEObject oldEmpfaenger = (InternalEObject)empfaenger;
-      empfaenger = (Empfaenger)eResolveProxy(oldEmpfaenger);
+      empfaenger = (Kontakt)eResolveProxy(oldEmpfaenger);
       if (empfaenger != oldEmpfaenger)
       {
         if (eNotificationRequired())
@@ -206,7 +259,7 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Empfaenger basicGetEmpfaenger()
+  public Kontakt basicGetEmpfaenger()
   {
     return empfaenger;
   }
@@ -216,9 +269,9 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmpfaenger(Empfaenger newEmpfaenger)
+  public void setEmpfaenger(Kontakt newEmpfaenger)
   {
-    Empfaenger oldEmpfaenger = empfaenger;
+    Kontakt oldEmpfaenger = empfaenger;
     empfaenger = newEmpfaenger;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__EMPFAENGER, oldEmpfaenger, empfaenger));
@@ -229,12 +282,55 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Empfaenger getVon()
+  public Konto getEmpfaengerKto()
+  {
+    if (empfaengerKto != null && empfaengerKto.eIsProxy())
+    {
+      InternalEObject oldEmpfaengerKto = (InternalEObject)empfaengerKto;
+      empfaengerKto = (Konto)eResolveProxy(oldEmpfaengerKto);
+      if (empfaengerKto != oldEmpfaengerKto)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.BUCHUNG__EMPFAENGER_KTO, oldEmpfaengerKto, empfaengerKto));
+      }
+    }
+    return empfaengerKto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Konto basicGetEmpfaengerKto()
+  {
+    return empfaengerKto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEmpfaengerKto(Konto newEmpfaengerKto)
+  {
+    Konto oldEmpfaengerKto = empfaengerKto;
+    empfaengerKto = newEmpfaengerKto;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__EMPFAENGER_KTO, oldEmpfaengerKto, empfaengerKto));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Kontakt getVon()
   {
     if (von != null && von.eIsProxy())
     {
       InternalEObject oldVon = (InternalEObject)von;
-      von = (Empfaenger)eResolveProxy(oldVon);
+      von = (Kontakt)eResolveProxy(oldVon);
       if (von != oldVon)
       {
         if (eNotificationRequired())
@@ -249,7 +345,7 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Empfaenger basicGetVon()
+  public Kontakt basicGetVon()
   {
     return von;
   }
@@ -259,9 +355,9 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVon(Empfaenger newVon)
+  public void setVon(Kontakt newVon)
   {
-    Empfaenger oldVon = von;
+    Kontakt oldVon = von;
     von = newVon;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__VON, oldVon, von));
@@ -272,19 +368,19 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Buchungsintervall getIntervall()
+  public Konto getVonKto()
   {
-    if (intervall != null && intervall.eIsProxy())
+    if (vonKto != null && vonKto.eIsProxy())
     {
-      InternalEObject oldIntervall = (InternalEObject)intervall;
-      intervall = (Buchungsintervall)eResolveProxy(oldIntervall);
-      if (intervall != oldIntervall)
+      InternalEObject oldVonKto = (InternalEObject)vonKto;
+      vonKto = (Konto)eResolveProxy(oldVonKto);
+      if (vonKto != oldVonKto)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.BUCHUNG__INTERVALL, oldIntervall, intervall));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.BUCHUNG__VON_KTO, oldVonKto, vonKto));
       }
     }
-    return intervall;
+    return vonKto;
   }
 
   /**
@@ -292,7 +388,30 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public Buchungsintervall basicGetIntervall()
+  public Konto basicGetVonKto()
+  {
+    return vonKto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVonKto(Konto newVonKto)
+  {
+    Konto oldVonKto = vonKto;
+    vonKto = newVonKto;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__VON_KTO, oldVonKto, vonKto));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Intervall getIntervall()
   {
     return intervall;
   }
@@ -302,12 +421,110 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntervall(Buchungsintervall newIntervall)
+  public NotificationChain basicSetIntervall(Intervall newIntervall, NotificationChain msgs)
   {
-    Buchungsintervall oldIntervall = intervall;
+    Intervall oldIntervall = intervall;
     intervall = newIntervall;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__INTERVALL, oldIntervall, intervall));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__INTERVALL, oldIntervall, newIntervall);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIntervall(Intervall newIntervall)
+  {
+    if (newIntervall != intervall)
+    {
+      NotificationChain msgs = null;
+      if (intervall != null)
+        msgs = ((InternalEObject)intervall).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FinPackage.BUCHUNG__INTERVALL, null, msgs);
+      if (newIntervall != null)
+        msgs = ((InternalEObject)newIntervall).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FinPackage.BUCHUNG__INTERVALL, null, msgs);
+      msgs = basicSetIntervall(newIntervall, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__INTERVALL, newIntervall, newIntervall));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Buchungsintervall getBuchInterv()
+  {
+    if (buchInterv != null && buchInterv.eIsProxy())
+    {
+      InternalEObject oldBuchInterv = (InternalEObject)buchInterv;
+      buchInterv = (Buchungsintervall)eResolveProxy(oldBuchInterv);
+      if (buchInterv != oldBuchInterv)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinPackage.BUCHUNG__BUCH_INTERV, oldBuchInterv, buchInterv));
+      }
+    }
+    return buchInterv;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Buchungsintervall basicGetBuchInterv()
+  {
+    return buchInterv;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBuchInterv(Buchungsintervall newBuchInterv)
+  {
+    Buchungsintervall oldBuchInterv = buchInterv;
+    buchInterv = newBuchInterv;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.BUCHUNG__BUCH_INTERV, oldBuchInterv, buchInterv));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Kategorie> getKategorie()
+  {
+    if (kategorie == null)
+    {
+      kategorie = new EObjectResolvingEList<Kategorie>(Kategorie.class, this, FinPackage.BUCHUNG__KATEGORIE);
+    }
+    return kategorie;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FinPackage.BUCHUNG__INTERVALL:
+        return basicSetIntervall(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -328,12 +545,22 @@ public class BuchungImpl extends ElementImpl implements Buchung
       case FinPackage.BUCHUNG__EMPFAENGER:
         if (resolve) return getEmpfaenger();
         return basicGetEmpfaenger();
+      case FinPackage.BUCHUNG__EMPFAENGER_KTO:
+        if (resolve) return getEmpfaengerKto();
+        return basicGetEmpfaengerKto();
       case FinPackage.BUCHUNG__VON:
         if (resolve) return getVon();
         return basicGetVon();
+      case FinPackage.BUCHUNG__VON_KTO:
+        if (resolve) return getVonKto();
+        return basicGetVonKto();
       case FinPackage.BUCHUNG__INTERVALL:
-        if (resolve) return getIntervall();
-        return basicGetIntervall();
+        return getIntervall();
+      case FinPackage.BUCHUNG__BUCH_INTERV:
+        if (resolve) return getBuchInterv();
+        return basicGetBuchInterv();
+      case FinPackage.BUCHUNG__KATEGORIE:
+        return getKategorie();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -343,6 +570,7 @@ public class BuchungImpl extends ElementImpl implements Buchung
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -355,13 +583,26 @@ public class BuchungImpl extends ElementImpl implements Buchung
         setBetrag((Integer)newValue);
         return;
       case FinPackage.BUCHUNG__EMPFAENGER:
-        setEmpfaenger((Empfaenger)newValue);
+        setEmpfaenger((Kontakt)newValue);
+        return;
+      case FinPackage.BUCHUNG__EMPFAENGER_KTO:
+        setEmpfaengerKto((Konto)newValue);
         return;
       case FinPackage.BUCHUNG__VON:
-        setVon((Empfaenger)newValue);
+        setVon((Kontakt)newValue);
+        return;
+      case FinPackage.BUCHUNG__VON_KTO:
+        setVonKto((Konto)newValue);
         return;
       case FinPackage.BUCHUNG__INTERVALL:
-        setIntervall((Buchungsintervall)newValue);
+        setIntervall((Intervall)newValue);
+        return;
+      case FinPackage.BUCHUNG__BUCH_INTERV:
+        setBuchInterv((Buchungsintervall)newValue);
+        return;
+      case FinPackage.BUCHUNG__KATEGORIE:
+        getKategorie().clear();
+        getKategorie().addAll((Collection<? extends Kategorie>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -384,13 +625,25 @@ public class BuchungImpl extends ElementImpl implements Buchung
         setBetrag(BETRAG_EDEFAULT);
         return;
       case FinPackage.BUCHUNG__EMPFAENGER:
-        setEmpfaenger((Empfaenger)null);
+        setEmpfaenger((Kontakt)null);
+        return;
+      case FinPackage.BUCHUNG__EMPFAENGER_KTO:
+        setEmpfaengerKto((Konto)null);
         return;
       case FinPackage.BUCHUNG__VON:
-        setVon((Empfaenger)null);
+        setVon((Kontakt)null);
+        return;
+      case FinPackage.BUCHUNG__VON_KTO:
+        setVonKto((Konto)null);
         return;
       case FinPackage.BUCHUNG__INTERVALL:
-        setIntervall((Buchungsintervall)null);
+        setIntervall((Intervall)null);
+        return;
+      case FinPackage.BUCHUNG__BUCH_INTERV:
+        setBuchInterv((Buchungsintervall)null);
+        return;
+      case FinPackage.BUCHUNG__KATEGORIE:
+        getKategorie().clear();
         return;
     }
     super.eUnset(featureID);
@@ -412,10 +665,18 @@ public class BuchungImpl extends ElementImpl implements Buchung
         return betrag != BETRAG_EDEFAULT;
       case FinPackage.BUCHUNG__EMPFAENGER:
         return empfaenger != null;
+      case FinPackage.BUCHUNG__EMPFAENGER_KTO:
+        return empfaengerKto != null;
       case FinPackage.BUCHUNG__VON:
         return von != null;
+      case FinPackage.BUCHUNG__VON_KTO:
+        return vonKto != null;
       case FinPackage.BUCHUNG__INTERVALL:
         return intervall != null;
+      case FinPackage.BUCHUNG__BUCH_INTERV:
+        return buchInterv != null;
+      case FinPackage.BUCHUNG__KATEGORIE:
+        return kategorie != null && !kategorie.isEmpty();
     }
     return super.eIsSet(featureID);
   }

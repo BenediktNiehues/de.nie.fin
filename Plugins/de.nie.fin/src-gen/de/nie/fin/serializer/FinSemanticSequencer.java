@@ -4,12 +4,12 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import de.nie.fin.fin.Buchung;
 import de.nie.fin.fin.Buchungsintervall;
-import de.nie.fin.fin.Empfaenger;
 import de.nie.fin.fin.FinModelFile;
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Import;
 import de.nie.fin.fin.Intervall;
 import de.nie.fin.fin.Kategorie;
+import de.nie.fin.fin.Kontakt;
 import de.nie.fin.fin.Konto;
 import de.nie.fin.services.FinGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -83,13 +83,6 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 					return; 
 				}
 				else break;
-			case FinPackage.EMPFAENGER:
-				if(context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getEmpfaengerRule()) {
-					sequence_Empfaenger(context, (Empfaenger) semanticObject); 
-					return; 
-				}
-				else break;
 			case FinPackage.FIN_MODEL_FILE:
 				if(context == grammarAccess.getFinModelFileRule()) {
 					sequence_FinModelFile(context, (FinModelFile) semanticObject); 
@@ -103,12 +96,7 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case FinPackage.INTERVALL:
-				if(context == grammarAccess.getBuchungRule() ||
-				   context == grammarAccess.getElementRule()) {
-					sequence_Buchung_Intervall(context, (Intervall) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getIntervallRule()) {
+				if(context == grammarAccess.getIntervallRule()) {
 					sequence_Intervall(context, (Intervall) semanticObject); 
 					return; 
 				}
@@ -117,6 +105,13 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 				if(context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getKategorieRule()) {
 					sequence_Kategorie(context, (Kategorie) semanticObject); 
+					return; 
+				}
+				else break;
+			case FinPackage.KONTAKT:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getKontaktRule()) {
+					sequence_Kontakt(context, (Kontakt) semanticObject); 
 					return; 
 				}
 				else break;
@@ -989,18 +984,16 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID konto=[Konto|ID] betrag=INT (empfaenger=[Empfaenger|ID] | von=[Empfaenger|ID]) intervall=[Buchungsintervall|ID])
+	 *     (
+	 *         name=ValidID 
+	 *         konto=[Konto|ID] 
+	 *         betrag=INT 
+	 *         ((empfaenger=[Kontakt|ID] empfaengerKto=[Konto|ID]?) | (von=[Kontakt|ID] vonKto=[Konto|ID]?)) 
+	 *         (intervall=Intervall | buchInterv=[Buchungsintervall|ID]) 
+	 *         (kategorie+=[Kategorie|ID] kategorie+=[Kategorie|ID]*)?
+	 *     )
 	 */
 	protected void sequence_Buchung(EObject context, Buchung semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (tag=TAG monate+=MONAT monate+=MONAT* kategorie+=[Kategorie|ID])
-	 */
-	protected void sequence_Buchung_Intervall(EObject context, Intervall semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1021,15 +1014,6 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 		feeder.accept(grammarAccess.getBuchungsintervallAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getBuchungsintervallAccess().getIntervallIntervallParserRuleCall_3_0(), semanticObject.getIntervall());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ValidID (strasse=STRING plz=STRING ort=STRING bemerkung=STRING)?)
-	 */
-	protected void sequence_Empfaenger(EObject context, Empfaenger semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1069,9 +1053,25 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID beschreibung=STRING?)
+	 *     name=ValidID
 	 */
 	protected void sequence_Kategorie(EObject context, Kategorie semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.ELEMENT__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getKategorieAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ValidID ((konten+=[Konto|ID] konten+=[Konto|ID]*)? strasse=STRING plz=INT ort=STRING bemerkung=STRING?)?)
+	 */
+	protected void sequence_Kontakt(EObject context, Kontakt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1082,9 +1082,9 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	 *         name=ValidID 
 	 *         ktoNr=INT 
 	 *         blz=INT 
-	 *         bank=STRING 
+	 *         bank=[Kontakt|ID] 
 	 *         verwendung=STRING 
-	 *         inhaber=STRING
+	 *         inhaber=[Kontakt|ID]
 	 *     )
 	 */
 	protected void sequence_Konto(EObject context, Konto semanticObject) {
@@ -1107,9 +1107,9 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 		feeder.accept(grammarAccess.getKontoAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getKontoAccess().getKtoNrINTTerminalRuleCall_4_0(), semanticObject.getKtoNr());
 		feeder.accept(grammarAccess.getKontoAccess().getBlzINTTerminalRuleCall_6_0(), semanticObject.getBlz());
-		feeder.accept(grammarAccess.getKontoAccess().getBankSTRINGTerminalRuleCall_8_0(), semanticObject.getBank());
+		feeder.accept(grammarAccess.getKontoAccess().getBankKontaktIDTerminalRuleCall_8_0_1(), semanticObject.getBank());
 		feeder.accept(grammarAccess.getKontoAccess().getVerwendungSTRINGTerminalRuleCall_10_0(), semanticObject.getVerwendung());
-		feeder.accept(grammarAccess.getKontoAccess().getInhaberSTRINGTerminalRuleCall_12_0(), semanticObject.getInhaber());
+		feeder.accept(grammarAccess.getKontoAccess().getInhaberKontaktIDTerminalRuleCall_12_0_1(), semanticObject.getInhaber());
 		feeder.finish();
 	}
 }

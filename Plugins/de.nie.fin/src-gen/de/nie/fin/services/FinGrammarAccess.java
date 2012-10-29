@@ -65,6 +65,39 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getElementsElementParserRuleCall_2_0() { return cElementsElementParserRuleCall_2_0; }
 	}
 
+	public class ElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Element");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cKontoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cBuchungParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cKontaktParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cBuchungsintervallParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cKategorieParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		
+		//Element:
+		//
+		//	Konto | Buchung | Kontakt | Buchungsintervall | Kategorie;
+		public ParserRule getRule() { return rule; }
+
+		//Konto | Buchung | Kontakt | Buchungsintervall | Kategorie
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Konto
+		public RuleCall getKontoParserRuleCall_0() { return cKontoParserRuleCall_0; }
+
+		//Buchung
+		public RuleCall getBuchungParserRuleCall_1() { return cBuchungParserRuleCall_1; }
+
+		//Kontakt
+		public RuleCall getKontaktParserRuleCall_2() { return cKontaktParserRuleCall_2; }
+
+		//Buchungsintervall
+		public RuleCall getBuchungsintervallParserRuleCall_3() { return cBuchungsintervallParserRuleCall_3; }
+
+		//Kategorie
+		public RuleCall getKategorieParserRuleCall_4() { return cKategorieParserRuleCall_4; }
+	}
+
 	public class ImportElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -90,39 +123,6 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getImportedNamespaceQualifiedNameParserRuleCall_1_0() { return cImportedNamespaceQualifiedNameParserRuleCall_1_0; }
 	}
 
-	public class ElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Element");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cKontoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cBuchungParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cEmpfaengerParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cBuchungsintervallParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cKategorieParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		
-		//Element:
-		//
-		//	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie;
-		public ParserRule getRule() { return rule; }
-
-		//Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//Konto
-		public RuleCall getKontoParserRuleCall_0() { return cKontoParserRuleCall_0; }
-
-		//Buchung
-		public RuleCall getBuchungParserRuleCall_1() { return cBuchungParserRuleCall_1; }
-
-		//Empfaenger
-		public RuleCall getEmpfaengerParserRuleCall_2() { return cEmpfaengerParserRuleCall_2; }
-
-		//Buchungsintervall
-		public RuleCall getBuchungsintervallParserRuleCall_3() { return cBuchungsintervallParserRuleCall_3; }
-
-		//Kategorie
-		public RuleCall getKategorieParserRuleCall_4() { return cKategorieParserRuleCall_4; }
-	}
-
 	public class KontoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Konto");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -138,25 +138,27 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBlzINTTerminalRuleCall_6_0 = (RuleCall)cBlzAssignment_6.eContents().get(0);
 		private final Keyword cBankKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cBankAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cBankSTRINGTerminalRuleCall_8_0 = (RuleCall)cBankAssignment_8.eContents().get(0);
+		private final CrossReference cBankKontaktCrossReference_8_0 = (CrossReference)cBankAssignment_8.eContents().get(0);
+		private final RuleCall cBankKontaktIDTerminalRuleCall_8_0_1 = (RuleCall)cBankKontaktCrossReference_8_0.eContents().get(1);
 		private final Keyword cVerwendungKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Assignment cVerwendungAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cVerwendungSTRINGTerminalRuleCall_10_0 = (RuleCall)cVerwendungAssignment_10.eContents().get(0);
 		private final Keyword cInhaberKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cInhaberAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cInhaberSTRINGTerminalRuleCall_12_0 = (RuleCall)cInhaberAssignment_12.eContents().get(0);
+		private final CrossReference cInhaberKontaktCrossReference_12_0 = (CrossReference)cInhaberAssignment_12.eContents().get(0);
+		private final RuleCall cInhaberKontaktIDTerminalRuleCall_12_0_1 = (RuleCall)cInhaberKontaktCrossReference_12_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//Konto:
 		//
-		//	"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=STRING "Verwendung" verwendung=STRING "Inhaber"
+		//	"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=[Kontakt] "Verwendung" verwendung=STRING
 		//
-		//	inhaber=STRING "}";
+		//	"Inhaber" inhaber=[Kontakt] "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=STRING "Verwendung" verwendung=STRING "Inhaber"
+		//"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=[Kontakt] "Verwendung" verwendung=STRING "Inhaber"
 		//
-		//inhaber=STRING "}"
+		//inhaber=[Kontakt] "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Konto"
@@ -192,11 +194,14 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		//"Bank"
 		public Keyword getBankKeyword_7() { return cBankKeyword_7; }
 
-		//bank=STRING
+		//bank=[Kontakt]
 		public Assignment getBankAssignment_8() { return cBankAssignment_8; }
 
-		//STRING
-		public RuleCall getBankSTRINGTerminalRuleCall_8_0() { return cBankSTRINGTerminalRuleCall_8_0; }
+		//[Kontakt]
+		public CrossReference getBankKontaktCrossReference_8_0() { return cBankKontaktCrossReference_8_0; }
+
+		//ID
+		public RuleCall getBankKontaktIDTerminalRuleCall_8_0_1() { return cBankKontaktIDTerminalRuleCall_8_0_1; }
 
 		//"Verwendung"
 		public Keyword getVerwendungKeyword_9() { return cVerwendungKeyword_9; }
@@ -210,11 +215,14 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		//"Inhaber"
 		public Keyword getInhaberKeyword_11() { return cInhaberKeyword_11; }
 
-		//inhaber=STRING
+		//inhaber=[Kontakt]
 		public Assignment getInhaberAssignment_12() { return cInhaberAssignment_12; }
 
-		//STRING
-		public RuleCall getInhaberSTRINGTerminalRuleCall_12_0() { return cInhaberSTRINGTerminalRuleCall_12_0; }
+		//[Kontakt]
+		public CrossReference getInhaberKontaktCrossReference_12_0() { return cInhaberKontaktCrossReference_12_0; }
+
+		//ID
+		public RuleCall getInhaberKontaktIDTerminalRuleCall_12_0_1() { return cInhaberKontaktIDTerminalRuleCall_12_0_1; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
@@ -268,19 +276,20 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTagAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTagTAGTerminalRuleCall_1_0 = (RuleCall)cTagAssignment_1.eContents().get(0);
 		private final Keyword cDerMonateKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cMonateAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cMonateMONATTerminalRuleCall_3_0 = (RuleCall)cMonateAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cMonateAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cMonateMONATTerminalRuleCall_4_1_0 = (RuleCall)cMonateAssignment_4_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cMonateAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cMonateMONATEnumRuleCall_3_0_0 = (RuleCall)cMonateAssignment_3_0.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cMonateAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cMonateMONATEnumRuleCall_3_1_1_0 = (RuleCall)cMonateAssignment_3_1_1.eContents().get(0);
 		
 		//Intervall:
 		//
-		//	"Zum" tag=TAG "der Monate" monate+=MONAT ("," monate+=MONAT)*;
+		//	"Zum" tag=TAG "der Monate" (monate+=MONAT ("," monate+=MONAT)*);
 		public ParserRule getRule() { return rule; }
 
-		//"Zum" tag=TAG "der Monate" monate+=MONAT ("," monate+=MONAT)*
+		//"Zum" tag=TAG "der Monate" (monate+=MONAT ("," monate+=MONAT)*)
 		public Group getGroup() { return cGroup; }
 
 		//"Zum"
@@ -295,23 +304,26 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		//"der Monate"
 		public Keyword getDerMonateKeyword_2() { return cDerMonateKeyword_2; }
 
+		//monate+=MONAT ("," monate+=MONAT)*
+		public Group getGroup_3() { return cGroup_3; }
+
 		//monate+=MONAT
-		public Assignment getMonateAssignment_3() { return cMonateAssignment_3; }
+		public Assignment getMonateAssignment_3_0() { return cMonateAssignment_3_0; }
 
 		//MONAT
-		public RuleCall getMonateMONATTerminalRuleCall_3_0() { return cMonateMONATTerminalRuleCall_3_0; }
+		public RuleCall getMonateMONATEnumRuleCall_3_0_0() { return cMonateMONATEnumRuleCall_3_0_0; }
 
 		//("," monate+=MONAT)*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3_1() { return cGroup_3_1; }
 
 		//","
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
 
 		//monate+=MONAT
-		public Assignment getMonateAssignment_4_1() { return cMonateAssignment_4_1; }
+		public Assignment getMonateAssignment_3_1_1() { return cMonateAssignment_3_1_1; }
 
 		//MONAT
-		public RuleCall getMonateMONATTerminalRuleCall_4_1_0() { return cMonateMONATTerminalRuleCall_4_1_0; }
+		public RuleCall getMonateMONATEnumRuleCall_3_1_1_0() { return cMonateMONATEnumRuleCall_3_1_1_0; }
 	}
 
 	public class KategorieElements extends AbstractParserRuleElementFinder {
@@ -320,18 +332,13 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cKategorieKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cBeschreibungAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cBeschreibungSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cBeschreibungAssignment_2_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//Kategorie:
 		//
-		//	"Kategorie" name=ValidID ("{" beschreibung=STRING "}")?;
+		//	"Kategorie" name=ValidID;
 		public ParserRule getRule() { return rule; }
 
-		//"Kategorie" name=ValidID ("{" beschreibung=STRING "}")?
+		//"Kategorie" name=ValidID
 		public Group getGroup() { return cGroup; }
 
 		//"Kategorie"
@@ -342,214 +349,85 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ValidID
 		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
-
-		//("{" beschreibung=STRING "}")?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
-
-		//beschreibung=STRING
-		public Assignment getBeschreibungAssignment_2_1() { return cBeschreibungAssignment_2_1; }
-
-		//STRING
-		public RuleCall getBeschreibungSTRINGTerminalRuleCall_2_1_0() { return cBeschreibungSTRINGTerminalRuleCall_2_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
 	public class BuchungElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Buchung");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cBuchungKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNameValidIDParserRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Keyword cKontoKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
-		private final Assignment cKontoAssignment_0_4 = (Assignment)cGroup_0.eContents().get(4);
-		private final CrossReference cKontoKontoCrossReference_0_4_0 = (CrossReference)cKontoAssignment_0_4.eContents().get(0);
-		private final RuleCall cKontoKontoIDTerminalRuleCall_0_4_0_1 = (RuleCall)cKontoKontoCrossReference_0_4_0.eContents().get(1);
-		private final Keyword cBetragKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
-		private final Assignment cBetragAssignment_0_6 = (Assignment)cGroup_0.eContents().get(6);
-		private final RuleCall cBetragINTTerminalRuleCall_0_6_0 = (RuleCall)cBetragAssignment_0_6.eContents().get(0);
-		private final Alternatives cAlternatives_0_7 = (Alternatives)cGroup_0.eContents().get(7);
-		private final Group cGroup_0_7_0 = (Group)cAlternatives_0_7.eContents().get(0);
-		private final Keyword cEmpf‰ngerKeyword_0_7_0_0 = (Keyword)cGroup_0_7_0.eContents().get(0);
-		private final Assignment cEmpfaengerAssignment_0_7_0_1 = (Assignment)cGroup_0_7_0.eContents().get(1);
-		private final CrossReference cEmpfaengerEmpfaengerCrossReference_0_7_0_1_0 = (CrossReference)cEmpfaengerAssignment_0_7_0_1.eContents().get(0);
-		private final RuleCall cEmpfaengerEmpfaengerIDTerminalRuleCall_0_7_0_1_0_1 = (RuleCall)cEmpfaengerEmpfaengerCrossReference_0_7_0_1_0.eContents().get(1);
-		private final Group cGroup_0_7_1 = (Group)cAlternatives_0_7.eContents().get(1);
-		private final Keyword cVonKeyword_0_7_1_0 = (Keyword)cGroup_0_7_1.eContents().get(0);
-		private final Assignment cVonAssignment_0_7_1_1 = (Assignment)cGroup_0_7_1.eContents().get(1);
-		private final CrossReference cVonEmpfaengerCrossReference_0_7_1_1_0 = (CrossReference)cVonAssignment_0_7_1_1.eContents().get(0);
-		private final RuleCall cVonEmpfaengerIDTerminalRuleCall_0_7_1_1_0_1 = (RuleCall)cVonEmpfaengerCrossReference_0_7_1_1_0.eContents().get(1);
-		private final Keyword cIntervallKeyword_0_8 = (Keyword)cGroup_0.eContents().get(8);
-		private final Assignment cIntervallAssignment_0_9 = (Assignment)cGroup_0.eContents().get(9);
-		private final CrossReference cIntervallBuchungsintervallCrossReference_0_9_0 = (CrossReference)cIntervallAssignment_0_9.eContents().get(0);
-		private final RuleCall cIntervallBuchungsintervallIDTerminalRuleCall_0_9_0_1 = (RuleCall)cIntervallBuchungsintervallCrossReference_0_9_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cIntervallParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cKategorieKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cKategorieAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final CrossReference cKategorieKategorieCrossReference_1_2_0 = (CrossReference)cKategorieAssignment_1_2.eContents().get(0);
-		private final RuleCall cKategorieKategorieIDTerminalRuleCall_1_2_0_1 = (RuleCall)cKategorieKategorieCrossReference_1_2_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBuchungKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cKontoKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cKontoAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cKontoKontoCrossReference_4_0 = (CrossReference)cKontoAssignment_4.eContents().get(0);
+		private final RuleCall cKontoKontoIDTerminalRuleCall_4_0_1 = (RuleCall)cKontoKontoCrossReference_4_0.eContents().get(1);
+		private final Keyword cBetragKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBetragAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBetragINTTerminalRuleCall_6_0 = (RuleCall)cBetragAssignment_6.eContents().get(0);
+		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
+		private final Group cGroup_7_0 = (Group)cAlternatives_7.eContents().get(0);
+		private final Keyword cEmpf‰ngerKeyword_7_0_0 = (Keyword)cGroup_7_0.eContents().get(0);
+		private final Assignment cEmpfaengerAssignment_7_0_1 = (Assignment)cGroup_7_0.eContents().get(1);
+		private final CrossReference cEmpfaengerKontaktCrossReference_7_0_1_0 = (CrossReference)cEmpfaengerAssignment_7_0_1.eContents().get(0);
+		private final RuleCall cEmpfaengerKontaktIDTerminalRuleCall_7_0_1_0_1 = (RuleCall)cEmpfaengerKontaktCrossReference_7_0_1_0.eContents().get(1);
+		private final Group cGroup_7_0_2 = (Group)cGroup_7_0.eContents().get(2);
+		private final Keyword cEmpf‰ngerKontoKeyword_7_0_2_0 = (Keyword)cGroup_7_0_2.eContents().get(0);
+		private final Assignment cEmpfaengerKtoAssignment_7_0_2_1 = (Assignment)cGroup_7_0_2.eContents().get(1);
+		private final CrossReference cEmpfaengerKtoKontoCrossReference_7_0_2_1_0 = (CrossReference)cEmpfaengerKtoAssignment_7_0_2_1.eContents().get(0);
+		private final RuleCall cEmpfaengerKtoKontoIDTerminalRuleCall_7_0_2_1_0_1 = (RuleCall)cEmpfaengerKtoKontoCrossReference_7_0_2_1_0.eContents().get(1);
+		private final Group cGroup_7_1 = (Group)cAlternatives_7.eContents().get(1);
+		private final Keyword cVonKeyword_7_1_0 = (Keyword)cGroup_7_1.eContents().get(0);
+		private final Assignment cVonAssignment_7_1_1 = (Assignment)cGroup_7_1.eContents().get(1);
+		private final CrossReference cVonKontaktCrossReference_7_1_1_0 = (CrossReference)cVonAssignment_7_1_1.eContents().get(0);
+		private final RuleCall cVonKontaktIDTerminalRuleCall_7_1_1_0_1 = (RuleCall)cVonKontaktCrossReference_7_1_1_0.eContents().get(1);
+		private final Group cGroup_7_1_2 = (Group)cGroup_7_1.eContents().get(2);
+		private final Keyword cKontoKeyword_7_1_2_0 = (Keyword)cGroup_7_1_2.eContents().get(0);
+		private final Assignment cVonKtoAssignment_7_1_2_1 = (Assignment)cGroup_7_1_2.eContents().get(1);
+		private final CrossReference cVonKtoKontoCrossReference_7_1_2_1_0 = (CrossReference)cVonKtoAssignment_7_1_2_1.eContents().get(0);
+		private final RuleCall cVonKtoKontoIDTerminalRuleCall_7_1_2_1_0_1 = (RuleCall)cVonKtoKontoCrossReference_7_1_2_1_0.eContents().get(1);
+		private final Alternatives cAlternatives_8 = (Alternatives)cGroup.eContents().get(8);
+		private final Group cGroup_8_0 = (Group)cAlternatives_8.eContents().get(0);
+		private final Keyword cIntervallKeyword_8_0_0 = (Keyword)cGroup_8_0.eContents().get(0);
+		private final Assignment cIntervallAssignment_8_0_1 = (Assignment)cGroup_8_0.eContents().get(1);
+		private final RuleCall cIntervallIntervallParserRuleCall_8_0_1_0 = (RuleCall)cIntervallAssignment_8_0_1.eContents().get(0);
+		private final Group cGroup_8_1 = (Group)cAlternatives_8.eContents().get(1);
+		private final Keyword cIntervallKeyword_8_1_0 = (Keyword)cGroup_8_1.eContents().get(0);
+		private final Assignment cBuchIntervAssignment_8_1_1 = (Assignment)cGroup_8_1.eContents().get(1);
+		private final CrossReference cBuchIntervBuchungsintervallCrossReference_8_1_1_0 = (CrossReference)cBuchIntervAssignment_8_1_1.eContents().get(0);
+		private final RuleCall cBuchIntervBuchungsintervallIDTerminalRuleCall_8_1_1_0_1 = (RuleCall)cBuchIntervBuchungsintervallCrossReference_8_1_1_0.eContents().get(1);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cKategorieKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cKategorieAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final CrossReference cKategorieKategorieCrossReference_9_1_0 = (CrossReference)cKategorieAssignment_9_1.eContents().get(0);
+		private final RuleCall cKategorieKategorieIDTerminalRuleCall_9_1_0_1 = (RuleCall)cKategorieKategorieCrossReference_9_1_0.eContents().get(1);
+		private final Group cGroup_9_2 = (Group)cGroup_9.eContents().get(2);
+		private final Keyword cCommaKeyword_9_2_0 = (Keyword)cGroup_9_2.eContents().get(0);
+		private final Assignment cKategorieAssignment_9_2_1 = (Assignment)cGroup_9_2.eContents().get(1);
+		private final CrossReference cKategorieKategorieCrossReference_9_2_1_0 = (CrossReference)cKategorieAssignment_9_2_1.eContents().get(0);
+		private final RuleCall cKategorieKategorieIDTerminalRuleCall_9_2_1_0_1 = (RuleCall)cKategorieKategorieCrossReference_9_2_1_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Buchung:
 		//
-		//	"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Empfaenger] | "von"
+		//	"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Kontakt]
 		//
-		//	von=[Empfaenger]) "Intervall" intervall=[Buchungsintervall] | Intervall "Kategorie" kategorie+=[Kategorie] "}";
+		//	("Empf‰ngerKonto" empfaengerKto=[Konto])? | "von" von=[Kontakt] ("Konto" vonKto=[Konto])?) ("Intervall"
+		//
+		//	intervall=Intervall | "Intervall" buchInterv=[Buchungsintervall]) ("Kategorie" kategorie+=[Kategorie] (","
+		//
+		//	kategorie+=[Kategorie])*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Empfaenger] | "von"
+		//"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Kontakt] ("Empf‰ngerKonto"
 		//
-		//von=[Empfaenger]) "Intervall" intervall=[Buchungsintervall] | Intervall "Kategorie" kategorie+=[Kategorie] "}"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Empfaenger] | "von"
+		//empfaengerKto=[Konto])? | "von" von=[Kontakt] ("Konto" vonKto=[Konto])?) ("Intervall" intervall=Intervall |
 		//
-		//von=[Empfaenger]) "Intervall" intervall=[Buchungsintervall]
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"Buchung"
-		public Keyword getBuchungKeyword_0_0() { return cBuchungKeyword_0_0; }
-
-		//name=ValidID
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
-
-		//ValidID
-		public RuleCall getNameValidIDParserRuleCall_0_1_0() { return cNameValidIDParserRuleCall_0_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_2() { return cLeftCurlyBracketKeyword_0_2; }
-
-		//"Konto"
-		public Keyword getKontoKeyword_0_3() { return cKontoKeyword_0_3; }
-
-		//konto=[Konto]
-		public Assignment getKontoAssignment_0_4() { return cKontoAssignment_0_4; }
-
-		//[Konto]
-		public CrossReference getKontoKontoCrossReference_0_4_0() { return cKontoKontoCrossReference_0_4_0; }
-
-		//ID
-		public RuleCall getKontoKontoIDTerminalRuleCall_0_4_0_1() { return cKontoKontoIDTerminalRuleCall_0_4_0_1; }
-
-		//"Betrag"
-		public Keyword getBetragKeyword_0_5() { return cBetragKeyword_0_5; }
-
-		//betrag=INT
-		public Assignment getBetragAssignment_0_6() { return cBetragAssignment_0_6; }
-
-		//INT
-		public RuleCall getBetragINTTerminalRuleCall_0_6_0() { return cBetragINTTerminalRuleCall_0_6_0; }
-
-		//"Empf‰nger" empfaenger=[Empfaenger] | "von" von=[Empfaenger]
-		public Alternatives getAlternatives_0_7() { return cAlternatives_0_7; }
-
-		//"Empf‰nger" empfaenger=[Empfaenger]
-		public Group getGroup_0_7_0() { return cGroup_0_7_0; }
-
-		//"Empf‰nger"
-		public Keyword getEmpf‰ngerKeyword_0_7_0_0() { return cEmpf‰ngerKeyword_0_7_0_0; }
-
-		//empfaenger=[Empfaenger]
-		public Assignment getEmpfaengerAssignment_0_7_0_1() { return cEmpfaengerAssignment_0_7_0_1; }
-
-		//[Empfaenger]
-		public CrossReference getEmpfaengerEmpfaengerCrossReference_0_7_0_1_0() { return cEmpfaengerEmpfaengerCrossReference_0_7_0_1_0; }
-
-		//ID
-		public RuleCall getEmpfaengerEmpfaengerIDTerminalRuleCall_0_7_0_1_0_1() { return cEmpfaengerEmpfaengerIDTerminalRuleCall_0_7_0_1_0_1; }
-
-		//"von" von=[Empfaenger]
-		public Group getGroup_0_7_1() { return cGroup_0_7_1; }
-
-		//"von"
-		public Keyword getVonKeyword_0_7_1_0() { return cVonKeyword_0_7_1_0; }
-
-		//von=[Empfaenger]
-		public Assignment getVonAssignment_0_7_1_1() { return cVonAssignment_0_7_1_1; }
-
-		//[Empfaenger]
-		public CrossReference getVonEmpfaengerCrossReference_0_7_1_1_0() { return cVonEmpfaengerCrossReference_0_7_1_1_0; }
-
-		//ID
-		public RuleCall getVonEmpfaengerIDTerminalRuleCall_0_7_1_1_0_1() { return cVonEmpfaengerIDTerminalRuleCall_0_7_1_1_0_1; }
-
-		//"Intervall"
-		public Keyword getIntervallKeyword_0_8() { return cIntervallKeyword_0_8; }
-
-		//intervall=[Buchungsintervall]
-		public Assignment getIntervallAssignment_0_9() { return cIntervallAssignment_0_9; }
-
-		//[Buchungsintervall]
-		public CrossReference getIntervallBuchungsintervallCrossReference_0_9_0() { return cIntervallBuchungsintervallCrossReference_0_9_0; }
-
-		//ID
-		public RuleCall getIntervallBuchungsintervallIDTerminalRuleCall_0_9_0_1() { return cIntervallBuchungsintervallIDTerminalRuleCall_0_9_0_1; }
-
-		//Intervall "Kategorie" kategorie+=[Kategorie] "}"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//Intervall
-		public RuleCall getIntervallParserRuleCall_1_0() { return cIntervallParserRuleCall_1_0; }
-
-		//"Kategorie"
-		public Keyword getKategorieKeyword_1_1() { return cKategorieKeyword_1_1; }
-
-		//kategorie+=[Kategorie]
-		public Assignment getKategorieAssignment_1_2() { return cKategorieAssignment_1_2; }
-
-		//[Kategorie]
-		public CrossReference getKategorieKategorieCrossReference_1_2_0() { return cKategorieKategorieCrossReference_1_2_0; }
-
-		//ID
-		public RuleCall getKategorieKategorieIDTerminalRuleCall_1_2_0_1() { return cKategorieKategorieIDTerminalRuleCall_1_2_0_1; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
-	}
-
-	public class EmpfaengerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Empfaenger");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEmpf‰ngerKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cStraEKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cStrasseAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cStrasseSTRINGTerminalRuleCall_2_2_0 = (RuleCall)cStrasseAssignment_2_2.eContents().get(0);
-		private final Keyword cPLZKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Assignment cPlzAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
-		private final RuleCall cPlzSTRINGTerminalRuleCall_2_4_0 = (RuleCall)cPlzAssignment_2_4.eContents().get(0);
-		private final Keyword cOrtKeyword_2_5 = (Keyword)cGroup_2.eContents().get(5);
-		private final Assignment cOrtAssignment_2_6 = (Assignment)cGroup_2.eContents().get(6);
-		private final RuleCall cOrtSTRINGTerminalRuleCall_2_6_0 = (RuleCall)cOrtAssignment_2_6.eContents().get(0);
-		private final Keyword cBemerkungKeyword_2_7 = (Keyword)cGroup_2.eContents().get(7);
-		private final Assignment cBemerkungAssignment_2_8 = (Assignment)cGroup_2.eContents().get(8);
-		private final RuleCall cBemerkungSTRINGTerminalRuleCall_2_8_0 = (RuleCall)cBemerkungAssignment_2_8.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_9 = (Keyword)cGroup_2.eContents().get(9);
-		
-		//Empfaenger:
-		//
-		//	"Empf‰nger" name=ValidID ("{" "Straﬂe" strasse=STRING "PLZ" plz=STRING "Ort" ort=STRING "Bemerkung" bemerkung=STRING
-		//
-		//	"}")?;
-		public ParserRule getRule() { return rule; }
-
-		//"Empf‰nger" name=ValidID ("{" "Straﬂe" strasse=STRING "PLZ" plz=STRING "Ort" ort=STRING "Bemerkung" bemerkung=STRING
-		//
-		//"}")?
+		//"Intervall" buchInterv=[Buchungsintervall]) ("Kategorie" kategorie+=[Kategorie] ("," kategorie+=[Kategorie])*)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//"Empf‰nger"
-		public Keyword getEmpf‰ngerKeyword_0() { return cEmpf‰ngerKeyword_0; }
+		//"Buchung"
+		public Keyword getBuchungKeyword_0() { return cBuchungKeyword_0; }
 
 		//name=ValidID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -557,64 +435,539 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		//ValidID
 		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
 
-		//("{" "Straﬂe" strasse=STRING "PLZ" plz=STRING "Ort" ort=STRING "Bemerkung" bemerkung=STRING "}")?
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"Konto"
+		public Keyword getKontoKeyword_3() { return cKontoKeyword_3; }
+
+		//konto=[Konto]
+		public Assignment getKontoAssignment_4() { return cKontoAssignment_4; }
+
+		//[Konto]
+		public CrossReference getKontoKontoCrossReference_4_0() { return cKontoKontoCrossReference_4_0; }
+
+		//ID
+		public RuleCall getKontoKontoIDTerminalRuleCall_4_0_1() { return cKontoKontoIDTerminalRuleCall_4_0_1; }
+
+		//"Betrag"
+		public Keyword getBetragKeyword_5() { return cBetragKeyword_5; }
+
+		//betrag=INT
+		public Assignment getBetragAssignment_6() { return cBetragAssignment_6; }
+
+		//INT
+		public RuleCall getBetragINTTerminalRuleCall_6_0() { return cBetragINTTerminalRuleCall_6_0; }
+
+		//"Empf‰nger" empfaenger=[Kontakt] ("Empf‰ngerKonto" empfaengerKto=[Konto])? | "von" von=[Kontakt] ("Konto"
+		//
+		//vonKto=[Konto])?
+		public Alternatives getAlternatives_7() { return cAlternatives_7; }
+
+		//"Empf‰nger" empfaenger=[Kontakt] ("Empf‰ngerKonto" empfaengerKto=[Konto])?
+		public Group getGroup_7_0() { return cGroup_7_0; }
+
+		//"Empf‰nger"
+		public Keyword getEmpf‰ngerKeyword_7_0_0() { return cEmpf‰ngerKeyword_7_0_0; }
+
+		//empfaenger=[Kontakt]
+		public Assignment getEmpfaengerAssignment_7_0_1() { return cEmpfaengerAssignment_7_0_1; }
+
+		//[Kontakt]
+		public CrossReference getEmpfaengerKontaktCrossReference_7_0_1_0() { return cEmpfaengerKontaktCrossReference_7_0_1_0; }
+
+		//ID
+		public RuleCall getEmpfaengerKontaktIDTerminalRuleCall_7_0_1_0_1() { return cEmpfaengerKontaktIDTerminalRuleCall_7_0_1_0_1; }
+
+		//("Empf‰ngerKonto" empfaengerKto=[Konto])?
+		public Group getGroup_7_0_2() { return cGroup_7_0_2; }
+
+		//"Empf‰ngerKonto"
+		public Keyword getEmpf‰ngerKontoKeyword_7_0_2_0() { return cEmpf‰ngerKontoKeyword_7_0_2_0; }
+
+		//empfaengerKto=[Konto]
+		public Assignment getEmpfaengerKtoAssignment_7_0_2_1() { return cEmpfaengerKtoAssignment_7_0_2_1; }
+
+		//[Konto]
+		public CrossReference getEmpfaengerKtoKontoCrossReference_7_0_2_1_0() { return cEmpfaengerKtoKontoCrossReference_7_0_2_1_0; }
+
+		//ID
+		public RuleCall getEmpfaengerKtoKontoIDTerminalRuleCall_7_0_2_1_0_1() { return cEmpfaengerKtoKontoIDTerminalRuleCall_7_0_2_1_0_1; }
+
+		//"von" von=[Kontakt] ("Konto" vonKto=[Konto])?
+		public Group getGroup_7_1() { return cGroup_7_1; }
+
+		//"von"
+		public Keyword getVonKeyword_7_1_0() { return cVonKeyword_7_1_0; }
+
+		//von=[Kontakt]
+		public Assignment getVonAssignment_7_1_1() { return cVonAssignment_7_1_1; }
+
+		//[Kontakt]
+		public CrossReference getVonKontaktCrossReference_7_1_1_0() { return cVonKontaktCrossReference_7_1_1_0; }
+
+		//ID
+		public RuleCall getVonKontaktIDTerminalRuleCall_7_1_1_0_1() { return cVonKontaktIDTerminalRuleCall_7_1_1_0_1; }
+
+		//("Konto" vonKto=[Konto])?
+		public Group getGroup_7_1_2() { return cGroup_7_1_2; }
+
+		//"Konto"
+		public Keyword getKontoKeyword_7_1_2_0() { return cKontoKeyword_7_1_2_0; }
+
+		//vonKto=[Konto]
+		public Assignment getVonKtoAssignment_7_1_2_1() { return cVonKtoAssignment_7_1_2_1; }
+
+		//[Konto]
+		public CrossReference getVonKtoKontoCrossReference_7_1_2_1_0() { return cVonKtoKontoCrossReference_7_1_2_1_0; }
+
+		//ID
+		public RuleCall getVonKtoKontoIDTerminalRuleCall_7_1_2_1_0_1() { return cVonKtoKontoIDTerminalRuleCall_7_1_2_1_0_1; }
+
+		//"Intervall" intervall=Intervall | "Intervall" buchInterv=[Buchungsintervall]
+		public Alternatives getAlternatives_8() { return cAlternatives_8; }
+
+		//"Intervall" intervall=Intervall
+		public Group getGroup_8_0() { return cGroup_8_0; }
+
+		//"Intervall"
+		public Keyword getIntervallKeyword_8_0_0() { return cIntervallKeyword_8_0_0; }
+
+		//intervall=Intervall
+		public Assignment getIntervallAssignment_8_0_1() { return cIntervallAssignment_8_0_1; }
+
+		//Intervall
+		public RuleCall getIntervallIntervallParserRuleCall_8_0_1_0() { return cIntervallIntervallParserRuleCall_8_0_1_0; }
+
+		//=> "Intervall" buchInterv=[Buchungsintervall]
+		public Group getGroup_8_1() { return cGroup_8_1; }
+
+		//=> "Intervall"
+		public Keyword getIntervallKeyword_8_1_0() { return cIntervallKeyword_8_1_0; }
+
+		//buchInterv=[Buchungsintervall]
+		public Assignment getBuchIntervAssignment_8_1_1() { return cBuchIntervAssignment_8_1_1; }
+
+		//[Buchungsintervall]
+		public CrossReference getBuchIntervBuchungsintervallCrossReference_8_1_1_0() { return cBuchIntervBuchungsintervallCrossReference_8_1_1_0; }
+
+		//ID
+		public RuleCall getBuchIntervBuchungsintervallIDTerminalRuleCall_8_1_1_0_1() { return cBuchIntervBuchungsintervallIDTerminalRuleCall_8_1_1_0_1; }
+
+		//("Kategorie" kategorie+=[Kategorie] ("," kategorie+=[Kategorie])*)?
+		public Group getGroup_9() { return cGroup_9; }
+
+		//"Kategorie"
+		public Keyword getKategorieKeyword_9_0() { return cKategorieKeyword_9_0; }
+
+		//kategorie+=[Kategorie]
+		public Assignment getKategorieAssignment_9_1() { return cKategorieAssignment_9_1; }
+
+		//[Kategorie]
+		public CrossReference getKategorieKategorieCrossReference_9_1_0() { return cKategorieKategorieCrossReference_9_1_0; }
+
+		//ID
+		public RuleCall getKategorieKategorieIDTerminalRuleCall_9_1_0_1() { return cKategorieKategorieIDTerminalRuleCall_9_1_0_1; }
+
+		//("," kategorie+=[Kategorie])*
+		public Group getGroup_9_2() { return cGroup_9_2; }
+
+		//","
+		public Keyword getCommaKeyword_9_2_0() { return cCommaKeyword_9_2_0; }
+
+		//kategorie+=[Kategorie]
+		public Assignment getKategorieAssignment_9_2_1() { return cKategorieAssignment_9_2_1; }
+
+		//[Kategorie]
+		public CrossReference getKategorieKategorieCrossReference_9_2_1_0() { return cKategorieKategorieCrossReference_9_2_1_0; }
+
+		//ID
+		public RuleCall getKategorieKategorieIDTerminalRuleCall_9_2_1_0_1() { return cKategorieKategorieIDTerminalRuleCall_9_2_1_0_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+	}
+
+	public class KontaktElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Kontakt");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cKontaktKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cKontenKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cKontenAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final CrossReference cKontenKontoCrossReference_2_1_1_0 = (CrossReference)cKontenAssignment_2_1_1.eContents().get(0);
+		private final RuleCall cKontenKontoIDTerminalRuleCall_2_1_1_0_1 = (RuleCall)cKontenKontoCrossReference_2_1_1_0.eContents().get(1);
+		private final Group cGroup_2_1_2 = (Group)cGroup_2_1.eContents().get(2);
+		private final Keyword cCommaKeyword_2_1_2_0 = (Keyword)cGroup_2_1_2.eContents().get(0);
+		private final Assignment cKontenAssignment_2_1_2_1 = (Assignment)cGroup_2_1_2.eContents().get(1);
+		private final CrossReference cKontenKontoCrossReference_2_1_2_1_0 = (CrossReference)cKontenAssignment_2_1_2_1.eContents().get(0);
+		private final RuleCall cKontenKontoIDTerminalRuleCall_2_1_2_1_0_1 = (RuleCall)cKontenKontoCrossReference_2_1_2_1_0.eContents().get(1);
+		private final Keyword cStraEKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cStrasseAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cStrasseSTRINGTerminalRuleCall_2_3_0 = (RuleCall)cStrasseAssignment_2_3.eContents().get(0);
+		private final Keyword cPLZKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
+		private final Assignment cPlzAssignment_2_5 = (Assignment)cGroup_2.eContents().get(5);
+		private final RuleCall cPlzINTTerminalRuleCall_2_5_0 = (RuleCall)cPlzAssignment_2_5.eContents().get(0);
+		private final Keyword cOrtKeyword_2_6 = (Keyword)cGroup_2.eContents().get(6);
+		private final Assignment cOrtAssignment_2_7 = (Assignment)cGroup_2.eContents().get(7);
+		private final RuleCall cOrtSTRINGTerminalRuleCall_2_7_0 = (RuleCall)cOrtAssignment_2_7.eContents().get(0);
+		private final Group cGroup_2_8 = (Group)cGroup_2.eContents().get(8);
+		private final Keyword cBemerkungKeyword_2_8_0 = (Keyword)cGroup_2_8.eContents().get(0);
+		private final Assignment cBemerkungAssignment_2_8_1 = (Assignment)cGroup_2_8.eContents().get(1);
+		private final RuleCall cBemerkungSTRINGTerminalRuleCall_2_8_1_0 = (RuleCall)cBemerkungAssignment_2_8_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_9 = (Keyword)cGroup_2.eContents().get(9);
+		
+		//Kontakt:
+		//
+		//	"Kontakt" name=ValidID ("{" ("Konten" konten+=[Konto] ("," konten+=[Konto])*)? "Straﬂe" strasse=STRING "PLZ" plz=INT
+		//
+		//	"Ort" ort=STRING ("Bemerkung" bemerkung=STRING)? "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"Kontakt" name=ValidID ("{" ("Konten" konten+=[Konto] ("," konten+=[Konto])*)? "Straﬂe" strasse=STRING "PLZ" plz=INT
+		//
+		//"Ort" ort=STRING ("Bemerkung" bemerkung=STRING)? "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"Kontakt"
+		public Keyword getKontaktKeyword_0() { return cKontaktKeyword_0; }
+
+		//name=ValidID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ValidID
+		public RuleCall getNameValidIDParserRuleCall_1_0() { return cNameValidIDParserRuleCall_1_0; }
+
+		//("{" ("Konten" konten+=[Konto] ("," konten+=[Konto])*)? "Straﬂe" strasse=STRING "PLZ" plz=INT "Ort" ort=STRING
+		//
+		//("Bemerkung" bemerkung=STRING)? "}")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
+		//("Konten" konten+=[Konto] ("," konten+=[Konto])*)?
+		public Group getGroup_2_1() { return cGroup_2_1; }
+
+		//"Konten"
+		public Keyword getKontenKeyword_2_1_0() { return cKontenKeyword_2_1_0; }
+
+		//konten+=[Konto]
+		public Assignment getKontenAssignment_2_1_1() { return cKontenAssignment_2_1_1; }
+
+		//[Konto]
+		public CrossReference getKontenKontoCrossReference_2_1_1_0() { return cKontenKontoCrossReference_2_1_1_0; }
+
+		//ID
+		public RuleCall getKontenKontoIDTerminalRuleCall_2_1_1_0_1() { return cKontenKontoIDTerminalRuleCall_2_1_1_0_1; }
+
+		//("," konten+=[Konto])*
+		public Group getGroup_2_1_2() { return cGroup_2_1_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_1_2_0() { return cCommaKeyword_2_1_2_0; }
+
+		//konten+=[Konto]
+		public Assignment getKontenAssignment_2_1_2_1() { return cKontenAssignment_2_1_2_1; }
+
+		//[Konto]
+		public CrossReference getKontenKontoCrossReference_2_1_2_1_0() { return cKontenKontoCrossReference_2_1_2_1_0; }
+
+		//ID
+		public RuleCall getKontenKontoIDTerminalRuleCall_2_1_2_1_0_1() { return cKontenKontoIDTerminalRuleCall_2_1_2_1_0_1; }
+
 		//"Straﬂe"
-		public Keyword getStraEKeyword_2_1() { return cStraEKeyword_2_1; }
+		public Keyword getStraEKeyword_2_2() { return cStraEKeyword_2_2; }
 
 		//strasse=STRING
-		public Assignment getStrasseAssignment_2_2() { return cStrasseAssignment_2_2; }
+		public Assignment getStrasseAssignment_2_3() { return cStrasseAssignment_2_3; }
 
 		//STRING
-		public RuleCall getStrasseSTRINGTerminalRuleCall_2_2_0() { return cStrasseSTRINGTerminalRuleCall_2_2_0; }
+		public RuleCall getStrasseSTRINGTerminalRuleCall_2_3_0() { return cStrasseSTRINGTerminalRuleCall_2_3_0; }
 
 		//"PLZ"
-		public Keyword getPLZKeyword_2_3() { return cPLZKeyword_2_3; }
+		public Keyword getPLZKeyword_2_4() { return cPLZKeyword_2_4; }
 
-		//plz=STRING
-		public Assignment getPlzAssignment_2_4() { return cPlzAssignment_2_4; }
+		//plz=INT
+		public Assignment getPlzAssignment_2_5() { return cPlzAssignment_2_5; }
 
-		//STRING
-		public RuleCall getPlzSTRINGTerminalRuleCall_2_4_0() { return cPlzSTRINGTerminalRuleCall_2_4_0; }
+		//INT
+		public RuleCall getPlzINTTerminalRuleCall_2_5_0() { return cPlzINTTerminalRuleCall_2_5_0; }
 
 		//"Ort"
-		public Keyword getOrtKeyword_2_5() { return cOrtKeyword_2_5; }
+		public Keyword getOrtKeyword_2_6() { return cOrtKeyword_2_6; }
 
 		//ort=STRING
-		public Assignment getOrtAssignment_2_6() { return cOrtAssignment_2_6; }
+		public Assignment getOrtAssignment_2_7() { return cOrtAssignment_2_7; }
 
 		//STRING
-		public RuleCall getOrtSTRINGTerminalRuleCall_2_6_0() { return cOrtSTRINGTerminalRuleCall_2_6_0; }
+		public RuleCall getOrtSTRINGTerminalRuleCall_2_7_0() { return cOrtSTRINGTerminalRuleCall_2_7_0; }
+
+		//("Bemerkung" bemerkung=STRING)?
+		public Group getGroup_2_8() { return cGroup_2_8; }
 
 		//"Bemerkung"
-		public Keyword getBemerkungKeyword_2_7() { return cBemerkungKeyword_2_7; }
+		public Keyword getBemerkungKeyword_2_8_0() { return cBemerkungKeyword_2_8_0; }
 
 		//bemerkung=STRING
-		public Assignment getBemerkungAssignment_2_8() { return cBemerkungAssignment_2_8; }
+		public Assignment getBemerkungAssignment_2_8_1() { return cBemerkungAssignment_2_8_1; }
 
 		//STRING
-		public RuleCall getBemerkungSTRINGTerminalRuleCall_2_8_0() { return cBemerkungSTRINGTerminalRuleCall_2_8_0; }
+		public RuleCall getBemerkungSTRINGTerminalRuleCall_2_8_1_0() { return cBemerkungSTRINGTerminalRuleCall_2_8_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_9() { return cRightCurlyBracketKeyword_2_9; }
 	}
 	
 	
+	public class MONATElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MONAT");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cALLEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cALLEMonatlichKeyword_0_0 = (Keyword)cALLEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cALLEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cALLEAsteriskKeyword_1_0 = (Keyword)cALLEEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cJANUAREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cJANUARJanuarKeyword_2_0 = (Keyword)cJANUAREnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cJANUAREnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cJANUARJanKeyword_3_0 = (Keyword)cJANUAREnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cFEBRUAREnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cFEBRUARFebruarKeyword_4_0 = (Keyword)cFEBRUAREnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cFEBRUAREnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cFEBRUARFebKeyword_5_0 = (Keyword)cFEBRUAREnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cMAERZEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cMAERZM‰rzKeyword_6_0 = (Keyword)cMAERZEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cMAERZEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cMAERZMarKeyword_7_0 = (Keyword)cMAERZEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cAPRILEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cAPRILAprilKeyword_8_0 = (Keyword)cAPRILEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cAPRILEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cAPRILAprKeyword_9_0 = (Keyword)cAPRILEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cMAIEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cMAIMaiKeyword_10_0 = (Keyword)cMAIEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cMAIEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cMAIMayKeyword_11_0 = (Keyword)cMAIEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cJUNIEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
+		private final Keyword cJUNIJuniKeyword_12_0 = (Keyword)cJUNIEnumLiteralDeclaration_12.eContents().get(0);
+		private final EnumLiteralDeclaration cJUNIEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
+		private final Keyword cJUNIJunKeyword_13_0 = (Keyword)cJUNIEnumLiteralDeclaration_13.eContents().get(0);
+		private final EnumLiteralDeclaration cJULIEnumLiteralDeclaration_14 = (EnumLiteralDeclaration)cAlternatives.eContents().get(14);
+		private final Keyword cJULIJuliKeyword_14_0 = (Keyword)cJULIEnumLiteralDeclaration_14.eContents().get(0);
+		private final EnumLiteralDeclaration cJULIEnumLiteralDeclaration_15 = (EnumLiteralDeclaration)cAlternatives.eContents().get(15);
+		private final Keyword cJULIJulKeyword_15_0 = (Keyword)cJULIEnumLiteralDeclaration_15.eContents().get(0);
+		private final EnumLiteralDeclaration cAUGUSTEnumLiteralDeclaration_16 = (EnumLiteralDeclaration)cAlternatives.eContents().get(16);
+		private final Keyword cAUGUSTAugustKeyword_16_0 = (Keyword)cAUGUSTEnumLiteralDeclaration_16.eContents().get(0);
+		private final EnumLiteralDeclaration cAUGUSTEnumLiteralDeclaration_17 = (EnumLiteralDeclaration)cAlternatives.eContents().get(17);
+		private final Keyword cAUGUSTAugKeyword_17_0 = (Keyword)cAUGUSTEnumLiteralDeclaration_17.eContents().get(0);
+		private final EnumLiteralDeclaration cSEPTEMBEREnumLiteralDeclaration_18 = (EnumLiteralDeclaration)cAlternatives.eContents().get(18);
+		private final Keyword cSEPTEMBERSeptemberKeyword_18_0 = (Keyword)cSEPTEMBEREnumLiteralDeclaration_18.eContents().get(0);
+		private final EnumLiteralDeclaration cSEPTEMBEREnumLiteralDeclaration_19 = (EnumLiteralDeclaration)cAlternatives.eContents().get(19);
+		private final Keyword cSEPTEMBERSepKeyword_19_0 = (Keyword)cSEPTEMBEREnumLiteralDeclaration_19.eContents().get(0);
+		private final EnumLiteralDeclaration cOKTOBEREnumLiteralDeclaration_20 = (EnumLiteralDeclaration)cAlternatives.eContents().get(20);
+		private final Keyword cOKTOBEROktoberKeyword_20_0 = (Keyword)cOKTOBEREnumLiteralDeclaration_20.eContents().get(0);
+		private final EnumLiteralDeclaration cOKTOBEREnumLiteralDeclaration_21 = (EnumLiteralDeclaration)cAlternatives.eContents().get(21);
+		private final Keyword cOKTOBEROktKeyword_21_0 = (Keyword)cOKTOBEREnumLiteralDeclaration_21.eContents().get(0);
+		private final EnumLiteralDeclaration cNOVEMBEREnumLiteralDeclaration_22 = (EnumLiteralDeclaration)cAlternatives.eContents().get(22);
+		private final Keyword cNOVEMBERNovemberKeyword_22_0 = (Keyword)cNOVEMBEREnumLiteralDeclaration_22.eContents().get(0);
+		private final EnumLiteralDeclaration cNOVEMBEREnumLiteralDeclaration_23 = (EnumLiteralDeclaration)cAlternatives.eContents().get(23);
+		private final Keyword cNOVEMBERNovKeyword_23_0 = (Keyword)cNOVEMBEREnumLiteralDeclaration_23.eContents().get(0);
+		private final EnumLiteralDeclaration cDEZEMBEREnumLiteralDeclaration_24 = (EnumLiteralDeclaration)cAlternatives.eContents().get(24);
+		private final Keyword cDEZEMBERDezemberKeyword_24_0 = (Keyword)cDEZEMBEREnumLiteralDeclaration_24.eContents().get(0);
+		private final EnumLiteralDeclaration cDEZEMBEREnumLiteralDeclaration_25 = (EnumLiteralDeclaration)cAlternatives.eContents().get(25);
+		private final Keyword cDEZEMBERDezKeyword_25_0 = (Keyword)cDEZEMBEREnumLiteralDeclaration_25.eContents().get(0);
+		
+		//enum MONAT:
+		//
+		//	ALLE="monatlich" | ALLE="*" | JANUAR="Januar" | JANUAR="Jan" | FEBRUAR="Februar" | FEBRUAR="Feb" | MAERZ="M‰rz" |
+		//
+		//	MAERZ="Mar" | APRIL="April" | APRIL="Apr" | MAI="Mai" | MAI="May" | JUNI="Juni" | JUNI="Jun" | JULI="Juli" |
+		//
+		//	JULI="Jul" | AUGUST="August" | AUGUST="Aug" | SEPTEMBER="September" | SEPTEMBER="Sep" | OKTOBER="Oktober" |
+		//
+		//	OKTOBER="Okt" | NOVEMBER="November" | NOVEMBER="Nov" | DEZEMBER="Dezember" | DEZEMBER="Dez";
+		public EnumRule getRule() { return rule; }
+
+		//ALLE="monatlich" | ALLE="*" | JANUAR="Januar" | JANUAR="Jan" | FEBRUAR="Februar" | FEBRUAR="Feb" | MAERZ="M‰rz" |
+		//
+		//MAERZ="Mar" | APRIL="April" | APRIL="Apr" | MAI="Mai" | MAI="May" | JUNI="Juni" | JUNI="Jun" | JULI="Juli" |
+		//
+		//JULI="Jul" | AUGUST="August" | AUGUST="Aug" | SEPTEMBER="September" | SEPTEMBER="Sep" | OKTOBER="Oktober" |
+		//
+		//OKTOBER="Okt" | NOVEMBER="November" | NOVEMBER="Nov" | DEZEMBER="Dezember" | DEZEMBER="Dez"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ALLE="monatlich"
+		public EnumLiteralDeclaration getALLEEnumLiteralDeclaration_0() { return cALLEEnumLiteralDeclaration_0; }
+
+		//"monatlich"
+		public Keyword getALLEMonatlichKeyword_0_0() { return cALLEMonatlichKeyword_0_0; }
+
+		//ALLE="*"
+		public EnumLiteralDeclaration getALLEEnumLiteralDeclaration_1() { return cALLEEnumLiteralDeclaration_1; }
+
+		//"*"
+		public Keyword getALLEAsteriskKeyword_1_0() { return cALLEAsteriskKeyword_1_0; }
+
+		//JANUAR="Januar"
+		public EnumLiteralDeclaration getJANUAREnumLiteralDeclaration_2() { return cJANUAREnumLiteralDeclaration_2; }
+
+		//"Januar"
+		public Keyword getJANUARJanuarKeyword_2_0() { return cJANUARJanuarKeyword_2_0; }
+
+		//JANUAR="Jan"
+		public EnumLiteralDeclaration getJANUAREnumLiteralDeclaration_3() { return cJANUAREnumLiteralDeclaration_3; }
+
+		//"Jan"
+		public Keyword getJANUARJanKeyword_3_0() { return cJANUARJanKeyword_3_0; }
+
+		//FEBRUAR="Februar"
+		public EnumLiteralDeclaration getFEBRUAREnumLiteralDeclaration_4() { return cFEBRUAREnumLiteralDeclaration_4; }
+
+		//"Februar"
+		public Keyword getFEBRUARFebruarKeyword_4_0() { return cFEBRUARFebruarKeyword_4_0; }
+
+		//FEBRUAR="Feb"
+		public EnumLiteralDeclaration getFEBRUAREnumLiteralDeclaration_5() { return cFEBRUAREnumLiteralDeclaration_5; }
+
+		//"Feb"
+		public Keyword getFEBRUARFebKeyword_5_0() { return cFEBRUARFebKeyword_5_0; }
+
+		//MAERZ="M‰rz"
+		public EnumLiteralDeclaration getMAERZEnumLiteralDeclaration_6() { return cMAERZEnumLiteralDeclaration_6; }
+
+		//"M‰rz"
+		public Keyword getMAERZM‰rzKeyword_6_0() { return cMAERZM‰rzKeyword_6_0; }
+
+		//MAERZ="Mar"
+		public EnumLiteralDeclaration getMAERZEnumLiteralDeclaration_7() { return cMAERZEnumLiteralDeclaration_7; }
+
+		//"Mar"
+		public Keyword getMAERZMarKeyword_7_0() { return cMAERZMarKeyword_7_0; }
+
+		//APRIL="April"
+		public EnumLiteralDeclaration getAPRILEnumLiteralDeclaration_8() { return cAPRILEnumLiteralDeclaration_8; }
+
+		//"April"
+		public Keyword getAPRILAprilKeyword_8_0() { return cAPRILAprilKeyword_8_0; }
+
+		//APRIL="Apr"
+		public EnumLiteralDeclaration getAPRILEnumLiteralDeclaration_9() { return cAPRILEnumLiteralDeclaration_9; }
+
+		//"Apr"
+		public Keyword getAPRILAprKeyword_9_0() { return cAPRILAprKeyword_9_0; }
+
+		//MAI="Mai"
+		public EnumLiteralDeclaration getMAIEnumLiteralDeclaration_10() { return cMAIEnumLiteralDeclaration_10; }
+
+		//"Mai"
+		public Keyword getMAIMaiKeyword_10_0() { return cMAIMaiKeyword_10_0; }
+
+		//MAI="May"
+		public EnumLiteralDeclaration getMAIEnumLiteralDeclaration_11() { return cMAIEnumLiteralDeclaration_11; }
+
+		//"May"
+		public Keyword getMAIMayKeyword_11_0() { return cMAIMayKeyword_11_0; }
+
+		//JUNI="Juni"
+		public EnumLiteralDeclaration getJUNIEnumLiteralDeclaration_12() { return cJUNIEnumLiteralDeclaration_12; }
+
+		//"Juni"
+		public Keyword getJUNIJuniKeyword_12_0() { return cJUNIJuniKeyword_12_0; }
+
+		//JUNI="Jun"
+		public EnumLiteralDeclaration getJUNIEnumLiteralDeclaration_13() { return cJUNIEnumLiteralDeclaration_13; }
+
+		//"Jun"
+		public Keyword getJUNIJunKeyword_13_0() { return cJUNIJunKeyword_13_0; }
+
+		//JULI="Juli"
+		public EnumLiteralDeclaration getJULIEnumLiteralDeclaration_14() { return cJULIEnumLiteralDeclaration_14; }
+
+		//"Juli"
+		public Keyword getJULIJuliKeyword_14_0() { return cJULIJuliKeyword_14_0; }
+
+		//JULI="Jul"
+		public EnumLiteralDeclaration getJULIEnumLiteralDeclaration_15() { return cJULIEnumLiteralDeclaration_15; }
+
+		//"Jul"
+		public Keyword getJULIJulKeyword_15_0() { return cJULIJulKeyword_15_0; }
+
+		//AUGUST="August"
+		public EnumLiteralDeclaration getAUGUSTEnumLiteralDeclaration_16() { return cAUGUSTEnumLiteralDeclaration_16; }
+
+		//"August"
+		public Keyword getAUGUSTAugustKeyword_16_0() { return cAUGUSTAugustKeyword_16_0; }
+
+		//AUGUST="Aug"
+		public EnumLiteralDeclaration getAUGUSTEnumLiteralDeclaration_17() { return cAUGUSTEnumLiteralDeclaration_17; }
+
+		//"Aug"
+		public Keyword getAUGUSTAugKeyword_17_0() { return cAUGUSTAugKeyword_17_0; }
+
+		//SEPTEMBER="September"
+		public EnumLiteralDeclaration getSEPTEMBEREnumLiteralDeclaration_18() { return cSEPTEMBEREnumLiteralDeclaration_18; }
+
+		//"September"
+		public Keyword getSEPTEMBERSeptemberKeyword_18_0() { return cSEPTEMBERSeptemberKeyword_18_0; }
+
+		//SEPTEMBER="Sep"
+		public EnumLiteralDeclaration getSEPTEMBEREnumLiteralDeclaration_19() { return cSEPTEMBEREnumLiteralDeclaration_19; }
+
+		//"Sep"
+		public Keyword getSEPTEMBERSepKeyword_19_0() { return cSEPTEMBERSepKeyword_19_0; }
+
+		//OKTOBER="Oktober"
+		public EnumLiteralDeclaration getOKTOBEREnumLiteralDeclaration_20() { return cOKTOBEREnumLiteralDeclaration_20; }
+
+		//"Oktober"
+		public Keyword getOKTOBEROktoberKeyword_20_0() { return cOKTOBEROktoberKeyword_20_0; }
+
+		//OKTOBER="Okt"
+		public EnumLiteralDeclaration getOKTOBEREnumLiteralDeclaration_21() { return cOKTOBEREnumLiteralDeclaration_21; }
+
+		//"Okt"
+		public Keyword getOKTOBEROktKeyword_21_0() { return cOKTOBEROktKeyword_21_0; }
+
+		//NOVEMBER="November"
+		public EnumLiteralDeclaration getNOVEMBEREnumLiteralDeclaration_22() { return cNOVEMBEREnumLiteralDeclaration_22; }
+
+		//"November"
+		public Keyword getNOVEMBERNovemberKeyword_22_0() { return cNOVEMBERNovemberKeyword_22_0; }
+
+		//NOVEMBER="Nov"
+		public EnumLiteralDeclaration getNOVEMBEREnumLiteralDeclaration_23() { return cNOVEMBEREnumLiteralDeclaration_23; }
+
+		//"Nov"
+		public Keyword getNOVEMBERNovKeyword_23_0() { return cNOVEMBERNovKeyword_23_0; }
+
+		//DEZEMBER="Dezember"
+		public EnumLiteralDeclaration getDEZEMBEREnumLiteralDeclaration_24() { return cDEZEMBEREnumLiteralDeclaration_24; }
+
+		//"Dezember"
+		public Keyword getDEZEMBERDezemberKeyword_24_0() { return cDEZEMBERDezemberKeyword_24_0; }
+
+		//DEZEMBER="Dez"
+		public EnumLiteralDeclaration getDEZEMBEREnumLiteralDeclaration_25() { return cDEZEMBEREnumLiteralDeclaration_25; }
+
+		//"Dez"
+		public Keyword getDEZEMBERDezKeyword_25_0() { return cDEZEMBERDezKeyword_25_0; }
+	}
+	
 	private FinModelFileElements pFinModelFile;
-	private ImportElements pImport;
 	private ElementElements pElement;
+	private ImportElements pImport;
 	private KontoElements pKonto;
 	private TerminalRule tTAG;
-	private TerminalRule tMONAT;
+	private MONATElements unknownRuleMONAT;
 	private BuchungsintervallElements pBuchungsintervall;
 	private IntervallElements pIntervall;
 	private KategorieElements pKategorie;
 	private BuchungElements pBuchung;
-	private EmpfaengerElements pEmpfaenger;
+	private KontaktElements pKontakt;
 	
 	private final Grammar grammar;
 
@@ -665,6 +1018,17 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		return getFinModelFileAccess().getRule();
 	}
 
+	//Element:
+	//
+	//	Konto | Buchung | Kontakt | Buchungsintervall | Kategorie;
+	public ElementElements getElementAccess() {
+		return (pElement != null) ? pElement : (pElement = new ElementElements());
+	}
+	
+	public ParserRule getElementRule() {
+		return getElementAccess().getRule();
+	}
+
 	//Import:
 	//
 	//	"import" importedNamespace=QualifiedName;
@@ -676,22 +1040,11 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		return getImportAccess().getRule();
 	}
 
-	//Element:
-	//
-	//	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie;
-	public ElementElements getElementAccess() {
-		return (pElement != null) ? pElement : (pElement = new ElementElements());
-	}
-	
-	public ParserRule getElementRule() {
-		return getElementAccess().getRule();
-	}
-
 	//Konto:
 	//
-	//	"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=STRING "Verwendung" verwendung=STRING "Inhaber"
+	//	"Konto" name=ValidID "{" "KtoNr" ktoNr=INT "Blz" blz=INT "Bank" bank=[Kontakt] "Verwendung" verwendung=STRING
 	//
-	//	inhaber=STRING "}";
+	//	"Inhaber" inhaber=[Kontakt] "}";
 	public KontoElements getKontoAccess() {
 		return (pKonto != null) ? pKonto : (pKonto = new KontoElements());
 	}
@@ -702,21 +1055,31 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 
 	//terminal TAG:
 	//
-	//	"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "13" | "14" | "15" | "16" | "17" | "18" |
+	//	"1." | "2." | "3." | "4." | "5." | "6." | "7." | "8." | "9." | "10." | "11." | "12." | "13." | "14." | "15." | "16."
 	//
-	//	"19" | "20" | "21" | "22" | "23" | "24" | "25" | "26" | "27" | "28" | "29" | "30" | "31";
+	//	| "17." | "18." | "19." | "20." | "21." | "22." | "23." | "24." | "25." | "26." | "27." | "28." | "29." | "30." |
+	//
+	//	"31.";
 	public TerminalRule getTAGRule() {
 		return (tTAG != null) ? tTAG : (tTAG = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "TAG"));
 	} 
 
-	//terminal MONAT:
+	//enum MONAT:
 	//
-	//	"Januar" | "Februar" | "M‰rz" | "April" | "Mai" | "Juni" | "Juli" | "August" | "September" | "Oktober" | "November" |
+	//	ALLE="monatlich" | ALLE="*" | JANUAR="Januar" | JANUAR="Jan" | FEBRUAR="Februar" | FEBRUAR="Feb" | MAERZ="M‰rz" |
 	//
-	//	"Dezember";
-	public TerminalRule getMONATRule() {
-		return (tMONAT != null) ? tMONAT : (tMONAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "MONAT"));
-	} 
+	//	MAERZ="Mar" | APRIL="April" | APRIL="Apr" | MAI="Mai" | MAI="May" | JUNI="Juni" | JUNI="Jun" | JULI="Juli" |
+	//
+	//	JULI="Jul" | AUGUST="August" | AUGUST="Aug" | SEPTEMBER="September" | SEPTEMBER="Sep" | OKTOBER="Oktober" |
+	//
+	//	OKTOBER="Okt" | NOVEMBER="November" | NOVEMBER="Nov" | DEZEMBER="Dezember" | DEZEMBER="Dez";
+	public MONATElements getMONATAccess() {
+		return (unknownRuleMONAT != null) ? unknownRuleMONAT : (unknownRuleMONAT = new MONATElements());
+	}
+	
+	public EnumRule getMONATRule() {
+		return getMONATAccess().getRule();
+	}
 
 	//Buchungsintervall:
 	//
@@ -731,7 +1094,7 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Intervall:
 	//
-	//	"Zum" tag=TAG "der Monate" monate+=MONAT ("," monate+=MONAT)*;
+	//	"Zum" tag=TAG "der Monate" (monate+=MONAT ("," monate+=MONAT)*);
 	public IntervallElements getIntervallAccess() {
 		return (pIntervall != null) ? pIntervall : (pIntervall = new IntervallElements());
 	}
@@ -742,7 +1105,7 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Kategorie:
 	//
-	//	"Kategorie" name=ValidID ("{" beschreibung=STRING "}")?;
+	//	"Kategorie" name=ValidID;
 	public KategorieElements getKategorieAccess() {
 		return (pKategorie != null) ? pKategorie : (pKategorie = new KategorieElements());
 	}
@@ -753,9 +1116,13 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Buchung:
 	//
-	//	"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Empfaenger] | "von"
+	//	"Buchung" name=ValidID "{" "Konto" konto=[Konto] "Betrag" betrag=INT ("Empf‰nger" empfaenger=[Kontakt]
 	//
-	//	von=[Empfaenger]) "Intervall" intervall=[Buchungsintervall] | Intervall "Kategorie" kategorie+=[Kategorie] "}";
+	//	("Empf‰ngerKonto" empfaengerKto=[Konto])? | "von" von=[Kontakt] ("Konto" vonKto=[Konto])?) ("Intervall"
+	//
+	//	intervall=Intervall | "Intervall" buchInterv=[Buchungsintervall]) ("Kategorie" kategorie+=[Kategorie] (","
+	//
+	//	kategorie+=[Kategorie])*)? "}";
 	public BuchungElements getBuchungAccess() {
 		return (pBuchung != null) ? pBuchung : (pBuchung = new BuchungElements());
 	}
@@ -764,17 +1131,17 @@ public class FinGrammarAccess extends AbstractGrammarElementFinder {
 		return getBuchungAccess().getRule();
 	}
 
-	//Empfaenger:
+	//Kontakt:
 	//
-	//	"Empf‰nger" name=ValidID ("{" "Straﬂe" strasse=STRING "PLZ" plz=STRING "Ort" ort=STRING "Bemerkung" bemerkung=STRING
+	//	"Kontakt" name=ValidID ("{" ("Konten" konten+=[Konto] ("," konten+=[Konto])*)? "Straﬂe" strasse=STRING "PLZ" plz=INT
 	//
-	//	"}")?;
-	public EmpfaengerElements getEmpfaengerAccess() {
-		return (pEmpfaenger != null) ? pEmpfaenger : (pEmpfaenger = new EmpfaengerElements());
+	//	"Ort" ort=STRING ("Bemerkung" bemerkung=STRING)? "}")?;
+	public KontaktElements getKontaktAccess() {
+		return (pKontakt != null) ? pKontakt : (pKontakt = new KontaktElements());
 	}
 	
-	public ParserRule getEmpfaengerRule() {
-		return getEmpfaengerAccess().getRule();
+	public ParserRule getKontaktRule() {
+		return getKontaktAccess().getRule();
 	}
 
 	//XExpression:

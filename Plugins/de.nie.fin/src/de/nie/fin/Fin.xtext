@@ -1,5 +1,8 @@
 grammar de.nie.fin.Fin with org.eclipse.xtext.xbase.Xbase
 
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
 generate fin "http://www.nie.de/fin/Fin"
 
 FinModelFile:
@@ -8,23 +11,24 @@ FinModelFile:
 	imports+=Import*
 	
 	elements+=Element*
-	
 	;
+	
+Element:
+	Konto|Buchung|Kontakt|Buchungsintervall|Kategorie
+;
 	
 Import:
 	'import' importedNamespace=QualifiedName
 ;
 
-Element:
-	Konto | Buchung | Empfaenger | Buchungsintervall | Kategorie ;
 
 Konto:
 	'Konto' name=ValidID '{'
 		'KtoNr' ktoNr=INT
 		'Blz' blz=INT
-		'Bank' bank=STRING
+		'Bank' bank=[Kontakt]
 		'Verwendung' verwendung=STRING
-		'Inhaber' inhaber=STRING
+		'Inhaber' inhaber=[Kontakt]
 	'}'
 	
 ;
@@ -32,44 +36,60 @@ Konto:
 
 
 terminal TAG:
-	'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31'
+	'1.'|'2.'|'3.'|'4.'|'5.'|'6.'|'7.'|'8.'|'9.'|'10.'|'11.'|'12.'|'13.'|'14.'|'15.'|'16.'|'17.'|'18.'|'19.'|'20.'|'21.'|'22.'|'23.'|'24.'|'25.'|'26.'|'27.'|'28.'|'29.'|'30.'|'31.'
 ;
 
-terminal MONAT:
-	'Januar'| 'Februar'| 'M‰rz'| 'April'| 'Mai'| 'Juni'| 'Juli'| 'August'| 'September'| 'Oktober'| 'November'| 'Dezember'
+
+enum MONAT:
+	ALLE='monatlich'|ALLE='*'|
+	JANUAR='Januar'|JANUAR='Jan'|
+	FEBRUAR='Februar'|FEBRUAR='Feb'|
+	MAERZ='M‰rz'|MAERZ='Mar'|
+	APRIL='April'|APRIL='Apr'|
+	MAI='Mai'|MAI='May'|
+	JUNI='Juni'|JUNI='Jun'|
+	JULI='Juli'|JULI='Jul'|
+	AUGUST='August'|AUGUST='Aug'|
+	SEPTEMBER='September'|SEPTEMBER='Sep'|
+	OKTOBER='Oktober'|OKTOBER='Okt'|
+	NOVEMBER='November'|NOVEMBER='Nov'|
+	DEZEMBER='Dezember'|DEZEMBER='Dez'
 ;
 
 Buchungsintervall:
-	'Buchungsintervall' name=ValidID '{'
+	'Buchungsintervall' name=ValidID'{'
 		intervall = Intervall
 	'}'
 ;
 
 Intervall:
-	'Zum' tag=TAG 'der Monate' monate+= MONAT (',' monate+=MONAT)*
+	'Zum' tag=TAG 'der Monate' (monate+= MONAT (',' monate+=MONAT)*)
 ;
 
-Kategorie:
-	"Kategorie" name=ValidID ('{'
-		beschreibung=STRING	
-	'}')?
-;
+Kategorie: 
+	"Kategorie" name=ValidID
+	;
 
 Buchung:
 	'Buchung' name=ValidID '{'
 		'Konto' konto=[Konto]
 		'Betrag' betrag=INT
-		('Empf‰nger' empfaenger=[Empfaenger] | "von" von=[Empfaenger])
-		'Intervall' intervall=[Buchungsintervall]|Intervall
-		'Kategorie' kategorie+=[Kategorie]
+		('Empf‰nger' empfaenger=[Kontakt] 
+		 ('Empf‰ngerKonto' empfaengerKto=[Konto])?
+		 |'von' von=[Kontakt]
+		 ('Konto' vonKto=[Konto])?
+		)
+		(('Intervall' intervall = Intervall)|(=>'Intervall' buchInterv = [Buchungsintervall]))
+		('Kategorie' kategorie+=([Kategorie]) (',' kategorie+=[Kategorie])* )?
 	'}'
 ;
 
-Empfaenger:
-	'Empf‰nger' name=ValidID ('{'
+Kontakt:
+	'Kontakt' name=ValidID ('{'
+		('Konten' konten+=[Konto] (',' konten+=[Konto])*)?
 		'Straﬂe' strasse=STRING
-		'PLZ' plz = STRING
+		'PLZ' plz = INT
 		'Ort' ort = STRING
-		'Bemerkung' bemerkung=STRING
+		('Bemerkung' bemerkung=STRING)?
 	'}')?
 ;

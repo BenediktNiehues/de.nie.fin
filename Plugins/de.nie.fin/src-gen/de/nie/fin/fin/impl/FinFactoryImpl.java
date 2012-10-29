@@ -5,6 +5,7 @@ package de.nie.fin.fin.impl;
 import de.nie.fin.fin.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -65,16 +66,50 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
     switch (eClass.getClassifierID())
     {
       case FinPackage.FIN_MODEL_FILE: return createFinModelFile();
-      case FinPackage.IMPORT: return createImport();
       case FinPackage.ELEMENT: return createElement();
+      case FinPackage.IMPORT: return createImport();
       case FinPackage.KONTO: return createKonto();
       case FinPackage.BUCHUNGSINTERVALL: return createBuchungsintervall();
       case FinPackage.INTERVALL: return createIntervall();
       case FinPackage.KATEGORIE: return createKategorie();
       case FinPackage.BUCHUNG: return createBuchung();
-      case FinPackage.EMPFAENGER: return createEmpfaenger();
+      case FinPackage.KONTAKT: return createKontakt();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object createFromString(EDataType eDataType, String initialValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case FinPackage.MONAT:
+        return createMONATFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String convertToString(EDataType eDataType, Object instanceValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case FinPackage.MONAT:
+        return convertMONATToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -94,10 +129,10 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Import createImport()
+  public Element createElement()
   {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
+    ElementImpl element = new ElementImpl();
+    return element;
   }
 
   /**
@@ -105,10 +140,10 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Element createElement()
+  public Import createImport()
   {
-    ElementImpl element = new ElementImpl();
-    return element;
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**
@@ -171,10 +206,32 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Empfaenger createEmpfaenger()
+  public Kontakt createKontakt()
   {
-    EmpfaengerImpl empfaenger = new EmpfaengerImpl();
-    return empfaenger;
+    KontaktImpl kontakt = new KontaktImpl();
+    return kontakt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MONAT createMONATFromString(EDataType eDataType, String initialValue)
+  {
+    MONAT result = MONAT.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertMONATToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

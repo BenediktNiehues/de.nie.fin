@@ -32,15 +32,6 @@ public interface FinFactory extends EFactory
   FinModelFile createFinModelFile();
 
   /**
-   * Returns a new object of class '<em>Import</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Import</em>'.
-   * @generated
-   */
-  Import createImport();
-
-  /**
    * Returns a new object of class '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -48,6 +39,15 @@ public interface FinFactory extends EFactory
    * @generated
    */
   Element createElement();
+
+  /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  Import createImport();
 
   /**
    * Returns a new object of class '<em>Konto</em>'.
@@ -95,13 +95,13 @@ public interface FinFactory extends EFactory
   Buchung createBuchung();
 
   /**
-   * Returns a new object of class '<em>Empfaenger</em>'.
+   * Returns a new object of class '<em>Kontakt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Empfaenger</em>'.
+   * @return a new object of class '<em>Kontakt</em>'.
    * @generated
    */
-  Empfaenger createEmpfaenger();
+  Kontakt createKontakt();
 
   /**
    * Returns the package supported by this factory.

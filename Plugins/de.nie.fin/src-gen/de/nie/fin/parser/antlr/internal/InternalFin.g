@@ -24,6 +24,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -142,6 +143,76 @@ ruleFinModelFile returns [EObject current=null]
 
 
 
+// Entry rule entryRuleElement
+entryRuleElement returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getElementRule()); }
+	 iv_ruleElement=ruleElement 
+	 { $current=$iv_ruleElement.current; } 
+	 EOF 
+;
+
+// Rule Element
+ruleElement returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getElementAccess().getKontoParserRuleCall_0()); 
+    }
+    this_Konto_0=ruleKonto
+    { 
+        $current = $this_Konto_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getElementAccess().getBuchungParserRuleCall_1()); 
+    }
+    this_Buchung_1=ruleBuchung
+    { 
+        $current = $this_Buchung_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getElementAccess().getKontaktParserRuleCall_2()); 
+    }
+    this_Kontakt_2=ruleKontakt
+    { 
+        $current = $this_Kontakt_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getElementAccess().getBuchungsintervallParserRuleCall_3()); 
+    }
+    this_Buchungsintervall_3=ruleBuchungsintervall
+    { 
+        $current = $this_Buchungsintervall_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getElementAccess().getKategorieParserRuleCall_4()); 
+    }
+    this_Kategorie_4=ruleKategorie
+    { 
+        $current = $this_Kategorie_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
 // Entry rule entryRuleImport
 entryRuleImport returns [EObject current=null] 
 	:
@@ -179,76 +250,6 @@ ruleImport returns [EObject current=null]
 
 )
 ))
-;
-
-
-
-
-
-// Entry rule entryRuleElement
-entryRuleElement returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getElementRule()); }
-	 iv_ruleElement=ruleElement 
-	 { $current=$iv_ruleElement.current; } 
-	 EOF 
-;
-
-// Rule Element
-ruleElement returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getElementAccess().getKontoParserRuleCall_0()); 
-    }
-    this_Konto_0=ruleKonto
-    { 
-        $current = $this_Konto_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getElementAccess().getBuchungParserRuleCall_1()); 
-    }
-    this_Buchung_1=ruleBuchung
-    { 
-        $current = $this_Buchung_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getElementAccess().getEmpfaengerParserRuleCall_2()); 
-    }
-    this_Empfaenger_2=ruleEmpfaenger
-    { 
-        $current = $this_Empfaenger_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getElementAccess().getBuchungsintervallParserRuleCall_3()); 
-    }
-    this_Buchungsintervall_3=ruleBuchungsintervall
-    { 
-        $current = $this_Buchungsintervall_3.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getElementAccess().getKategorieParserRuleCall_4()); 
-    }
-    this_Kategorie_4=ruleKategorie
-    { 
-        $current = $this_Kategorie_4.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
 ;
 
 
@@ -345,20 +346,15 @@ ruleKonto returns [EObject current=null]
     }
 (
 (
-		lv_bank_8_0=RULE_STRING
 		{
-			newLeafNode(lv_bank_8_0, grammarAccess.getKontoAccess().getBankSTRINGTerminalRuleCall_8_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getKontoRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"bank",
-        		lv_bank_8_0, 
-        		"STRING");
-	    }
+        }
+	otherlv_8=RULE_ID
+	{
+		newLeafNode(otherlv_8, grammarAccess.getKontoAccess().getBankKontaktCrossReference_8_0()); 
+	}
 
 )
 )	otherlv_9='Verwendung' 
@@ -389,20 +385,15 @@ ruleKonto returns [EObject current=null]
     }
 (
 (
-		lv_inhaber_12_0=RULE_STRING
 		{
-			newLeafNode(lv_inhaber_12_0, grammarAccess.getKontoAccess().getInhaberSTRINGTerminalRuleCall_12_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getKontoRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"inhaber",
-        		lv_inhaber_12_0, 
-        		"STRING");
-	    }
+        }
+	otherlv_12=RULE_ID
+	{
+		newLeafNode(otherlv_12, grammarAccess.getKontoAccess().getInhaberKontaktCrossReference_12_0()); 
+	}
 
 )
 )	otherlv_13='}' 
@@ -525,47 +516,47 @@ ruleIntervall returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getIntervallAccess().getDerMonateKeyword_2());
     }
+((
 (
-(
-		lv_monate_3_0=RULE_MONAT
-		{
-			newLeafNode(lv_monate_3_0, grammarAccess.getIntervallAccess().getMonateMONATTerminalRuleCall_3_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getIntervallAccess().getMonateMONATEnumRuleCall_3_0_0()); 
+	    }
+		lv_monate_3_0=ruleMONAT		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getIntervallRule());
+	            $current = createModelElementForParent(grammarAccess.getIntervallRule());
 	        }
-       		addWithLastConsumed(
+       		add(
        			$current, 
        			"monate",
         		lv_monate_3_0, 
         		"MONAT");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
 )(	otherlv_4=',' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getIntervallAccess().getCommaKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getIntervallAccess().getCommaKeyword_3_1_0());
     }
 (
 (
-		lv_monate_5_0=RULE_MONAT
-		{
-			newLeafNode(lv_monate_5_0, grammarAccess.getIntervallAccess().getMonateMONATTerminalRuleCall_4_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getIntervallAccess().getMonateMONATEnumRuleCall_3_1_1_0()); 
+	    }
+		lv_monate_5_0=ruleMONAT		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getIntervallRule());
+	            $current = createModelElementForParent(grammarAccess.getIntervallRule());
 	        }
-       		addWithLastConsumed(
+       		add(
        			$current, 
        			"monate",
         		lv_monate_5_0, 
         		"MONAT");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*)
+))*))
 ;
 
 
@@ -608,33 +599,7 @@ ruleKategorie returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_2='{' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getKategorieAccess().getLeftCurlyBracketKeyword_2_0());
-    }
-(
-(
-		lv_beschreibung_3_0=RULE_STRING
-		{
-			newLeafNode(lv_beschreibung_3_0, grammarAccess.getKategorieAccess().getBeschreibungSTRINGTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getKategorieRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"beschreibung",
-        		lv_beschreibung_3_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_4='}' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getKategorieAccess().getRightCurlyBracketKeyword_2_2());
-    }
-)?)
+))
 ;
 
 
@@ -655,14 +620,14 @@ ruleBuchung returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((	otherlv_0='Buchung' 
+(	otherlv_0='Buchung' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getBuchungAccess().getBuchungKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getBuchungAccess().getBuchungKeyword_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBuchungAccess().getNameValidIDParserRuleCall_0_1_0()); 
+	        newCompositeNode(grammarAccess.getBuchungAccess().getNameValidIDParserRuleCall_1_0()); 
 	    }
 		lv_name_1_0=ruleValidID		{
 	        if ($current==null) {
@@ -679,11 +644,11 @@ ruleBuchung returns [EObject current=null]
 )
 )	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getBuchungAccess().getLeftCurlyBracketKeyword_0_2());
+    	newLeafNode(otherlv_2, grammarAccess.getBuchungAccess().getLeftCurlyBracketKeyword_2());
     }
 	otherlv_3='Konto' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getBuchungAccess().getKontoKeyword_0_3());
+    	newLeafNode(otherlv_3, grammarAccess.getBuchungAccess().getKontoKeyword_3());
     }
 (
 (
@@ -694,19 +659,19 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getBuchungAccess().getKontoKontoCrossReference_0_4_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getBuchungAccess().getKontoKontoCrossReference_4_0()); 
 	}
 
 )
 )	otherlv_5='Betrag' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getBuchungAccess().getBetragKeyword_0_5());
+    	newLeafNode(otherlv_5, grammarAccess.getBuchungAccess().getBetragKeyword_5());
     }
 (
 (
 		lv_betrag_6_0=RULE_INT
 		{
-			newLeafNode(lv_betrag_6_0, grammarAccess.getBuchungAccess().getBetragINTTerminalRuleCall_0_6_0()); 
+			newLeafNode(lv_betrag_6_0, grammarAccess.getBuchungAccess().getBetragINTTerminalRuleCall_6_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -722,7 +687,7 @@ ruleBuchung returns [EObject current=null]
 )
 )((	otherlv_7='Empf\u00E4nger' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getBuchungAccess().getEmpfängerKeyword_0_7_0_0());
+    	newLeafNode(otherlv_7, grammarAccess.getBuchungAccess().getEmpfängerKeyword_7_0_0());
     }
 (
 (
@@ -733,14 +698,13 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_8=RULE_ID
 	{
-		newLeafNode(otherlv_8, grammarAccess.getBuchungAccess().getEmpfaengerEmpfaengerCrossReference_0_7_0_1_0()); 
+		newLeafNode(otherlv_8, grammarAccess.getBuchungAccess().getEmpfaengerKontaktCrossReference_7_0_1_0()); 
 	}
 
 )
-))
-    |(	otherlv_9='von' 
+)(	otherlv_9='Empf\u00E4ngerKonto' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getBuchungAccess().getVonKeyword_0_7_1_0());
+    	newLeafNode(otherlv_9, grammarAccess.getBuchungAccess().getEmpfängerKontoKeyword_7_0_2_0());
     }
 (
 (
@@ -751,13 +715,14 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_10=RULE_ID
 	{
-		newLeafNode(otherlv_10, grammarAccess.getBuchungAccess().getVonEmpfaengerCrossReference_0_7_1_1_0()); 
+		newLeafNode(otherlv_10, grammarAccess.getBuchungAccess().getEmpfaengerKtoKontoCrossReference_7_0_2_1_0()); 
 	}
 
 )
-)))	otherlv_11='Intervall' 
+))?)
+    |(	otherlv_11='von' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getBuchungAccess().getIntervallKeyword_0_8());
+    	newLeafNode(otherlv_11, grammarAccess.getBuchungAccess().getVonKeyword_7_1_0());
     }
 (
 (
@@ -768,23 +733,13 @@ ruleBuchung returns [EObject current=null]
         }
 	otherlv_12=RULE_ID
 	{
-		newLeafNode(otherlv_12, grammarAccess.getBuchungAccess().getIntervallBuchungsintervallCrossReference_0_9_0()); 
+		newLeafNode(otherlv_12, grammarAccess.getBuchungAccess().getVonKontaktCrossReference_7_1_1_0()); 
 	}
 
 )
-))
-    |(
-    { 
-        newCompositeNode(grammarAccess.getBuchungAccess().getIntervallParserRuleCall_1_0()); 
-    }
-    this_Intervall_13=ruleIntervall
-    { 
-        $current = $this_Intervall_13.current; 
-        afterParserOrEnumRuleCall();
-    }
-	otherlv_14='Kategorie' 
+)(	otherlv_13='Konto' 
     {
-    	newLeafNode(otherlv_14, grammarAccess.getBuchungAccess().getKategorieKeyword_1_1());
+    	newLeafNode(otherlv_13, grammarAccess.getBuchungAccess().getKontoKeyword_7_1_2_0());
     }
 (
 (
@@ -793,49 +748,124 @@ ruleBuchung returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getBuchungRule());
 	        }
         }
-	otherlv_15=RULE_ID
+	otherlv_14=RULE_ID
 	{
-		newLeafNode(otherlv_15, grammarAccess.getBuchungAccess().getKategorieKategorieCrossReference_1_2_0()); 
+		newLeafNode(otherlv_14, grammarAccess.getBuchungAccess().getVonKtoKontoCrossReference_7_1_2_1_0()); 
 	}
 
 )
-)	otherlv_16='}' 
+))?))((	otherlv_15='Intervall' 
     {
-    	newLeafNode(otherlv_16, grammarAccess.getBuchungAccess().getRightCurlyBracketKeyword_1_3());
-    }
-))
-;
-
-
-
-
-
-// Entry rule entryRuleEmpfaenger
-entryRuleEmpfaenger returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getEmpfaengerRule()); }
-	 iv_ruleEmpfaenger=ruleEmpfaenger 
-	 { $current=$iv_ruleEmpfaenger.current; } 
-	 EOF 
-;
-
-// Rule Empfaenger
-ruleEmpfaenger returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='Empf\u00E4nger' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getEmpfaengerAccess().getEmpfängerKeyword_0());
+    	newLeafNode(otherlv_15, grammarAccess.getBuchungAccess().getIntervallKeyword_8_0_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEmpfaengerAccess().getNameValidIDParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getBuchungAccess().getIntervallIntervallParserRuleCall_8_0_1_0()); 
+	    }
+		lv_intervall_16_0=ruleIntervall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBuchungRule());
+	        }
+       		set(
+       			$current, 
+       			"intervall",
+        		lv_intervall_16_0, 
+        		"Intervall");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+    |(((	'Intervall' 
+)=>	otherlv_17='Intervall' 
+    {
+    	newLeafNode(otherlv_17, grammarAccess.getBuchungAccess().getIntervallKeyword_8_1_0());
+    }
+)(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBuchungRule());
+	        }
+        }
+	otherlv_18=RULE_ID
+	{
+		newLeafNode(otherlv_18, grammarAccess.getBuchungAccess().getBuchIntervBuchungsintervallCrossReference_8_1_1_0()); 
+	}
+
+)
+)))(	otherlv_19='Kategorie' 
+    {
+    	newLeafNode(otherlv_19, grammarAccess.getBuchungAccess().getKategorieKeyword_9_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBuchungRule());
+	        }
+        }
+	otherlv_20=RULE_ID
+	{
+		newLeafNode(otherlv_20, grammarAccess.getBuchungAccess().getKategorieKategorieCrossReference_9_1_0()); 
+	}
+
+)
+)(	otherlv_21=',' 
+    {
+    	newLeafNode(otherlv_21, grammarAccess.getBuchungAccess().getCommaKeyword_9_2_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBuchungRule());
+	        }
+        }
+	otherlv_22=RULE_ID
+	{
+		newLeafNode(otherlv_22, grammarAccess.getBuchungAccess().getKategorieKategorieCrossReference_9_2_1_0()); 
+	}
+
+)
+))*)?	otherlv_23='}' 
+    {
+    	newLeafNode(otherlv_23, grammarAccess.getBuchungAccess().getRightCurlyBracketKeyword_10());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleKontakt
+entryRuleKontakt returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getKontaktRule()); }
+	 iv_ruleKontakt=ruleKontakt 
+	 { $current=$iv_ruleKontakt.current; } 
+	 EOF 
+;
+
+// Rule Kontakt
+ruleKontakt returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Kontakt' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getKontaktAccess().getKontaktKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getKontaktAccess().getNameValidIDParserRuleCall_1_0()); 
 	    }
 		lv_name_1_0=ruleValidID		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getEmpfaengerRule());
+	            $current = createModelElementForParent(grammarAccess.getKontaktRule());
 	        }
        		set(
        			$current, 
@@ -848,99 +878,133 @@ ruleEmpfaenger returns [EObject current=null]
 )
 )(	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getEmpfaengerAccess().getLeftCurlyBracketKeyword_2_0());
+    	newLeafNode(otherlv_2, grammarAccess.getKontaktAccess().getLeftCurlyBracketKeyword_2_0());
     }
-	otherlv_3='Stra\u00DFe' 
+(	otherlv_3='Konten' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getEmpfaengerAccess().getStraEKeyword_2_1());
+    	newLeafNode(otherlv_3, grammarAccess.getKontaktAccess().getKontenKeyword_2_1_0());
     }
 (
 (
-		lv_strasse_4_0=RULE_STRING
 		{
-			newLeafNode(lv_strasse_4_0, grammarAccess.getEmpfaengerAccess().getStrasseSTRINGTerminalRuleCall_2_2_0()); 
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getKontaktRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getKontaktAccess().getKontenKontoCrossReference_2_1_1_0()); 
+	}
+
+)
+)(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getKontaktAccess().getCommaKeyword_2_1_2_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getKontaktRule());
+	        }
+        }
+	otherlv_6=RULE_ID
+	{
+		newLeafNode(otherlv_6, grammarAccess.getKontaktAccess().getKontenKontoCrossReference_2_1_2_1_0()); 
+	}
+
+)
+))*)?	otherlv_7='Stra\u00DFe' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getKontaktAccess().getStraEKeyword_2_2());
+    }
+(
+(
+		lv_strasse_8_0=RULE_STRING
+		{
+			newLeafNode(lv_strasse_8_0, grammarAccess.getKontaktAccess().getStrasseSTRINGTerminalRuleCall_2_3_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEmpfaengerRule());
+	            $current = createModelElement(grammarAccess.getKontaktRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"strasse",
-        		lv_strasse_4_0, 
+        		lv_strasse_8_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_5='PLZ' 
+)	otherlv_9='PLZ' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getEmpfaengerAccess().getPLZKeyword_2_3());
+    	newLeafNode(otherlv_9, grammarAccess.getKontaktAccess().getPLZKeyword_2_4());
     }
 (
 (
-		lv_plz_6_0=RULE_STRING
+		lv_plz_10_0=RULE_INT
 		{
-			newLeafNode(lv_plz_6_0, grammarAccess.getEmpfaengerAccess().getPlzSTRINGTerminalRuleCall_2_4_0()); 
+			newLeafNode(lv_plz_10_0, grammarAccess.getKontaktAccess().getPlzINTTerminalRuleCall_2_5_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEmpfaengerRule());
+	            $current = createModelElement(grammarAccess.getKontaktRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"plz",
-        		lv_plz_6_0, 
-        		"STRING");
+        		lv_plz_10_0, 
+        		"INT");
 	    }
 
 )
-)	otherlv_7='Ort' 
+)	otherlv_11='Ort' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getEmpfaengerAccess().getOrtKeyword_2_5());
+    	newLeafNode(otherlv_11, grammarAccess.getKontaktAccess().getOrtKeyword_2_6());
     }
 (
 (
-		lv_ort_8_0=RULE_STRING
+		lv_ort_12_0=RULE_STRING
 		{
-			newLeafNode(lv_ort_8_0, grammarAccess.getEmpfaengerAccess().getOrtSTRINGTerminalRuleCall_2_6_0()); 
+			newLeafNode(lv_ort_12_0, grammarAccess.getKontaktAccess().getOrtSTRINGTerminalRuleCall_2_7_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEmpfaengerRule());
+	            $current = createModelElement(grammarAccess.getKontaktRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"ort",
-        		lv_ort_8_0, 
+        		lv_ort_12_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_9='Bemerkung' 
+)(	otherlv_13='Bemerkung' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getEmpfaengerAccess().getBemerkungKeyword_2_7());
+    	newLeafNode(otherlv_13, grammarAccess.getKontaktAccess().getBemerkungKeyword_2_8_0());
     }
 (
 (
-		lv_bemerkung_10_0=RULE_STRING
+		lv_bemerkung_14_0=RULE_STRING
 		{
-			newLeafNode(lv_bemerkung_10_0, grammarAccess.getEmpfaengerAccess().getBemerkungSTRINGTerminalRuleCall_2_8_0()); 
+			newLeafNode(lv_bemerkung_14_0, grammarAccess.getKontaktAccess().getBemerkungSTRINGTerminalRuleCall_2_8_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEmpfaengerRule());
+	            $current = createModelElement(grammarAccess.getKontaktRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"bemerkung",
-        		lv_bemerkung_10_0, 
+        		lv_bemerkung_14_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_11='}' 
+))?	otherlv_15='}' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getEmpfaengerAccess().getRightCurlyBracketKeyword_2_9());
+    	newLeafNode(otherlv_15, grammarAccess.getKontaktAccess().getRightCurlyBracketKeyword_2_9());
     }
 )?)
 ;
@@ -5697,9 +5761,170 @@ ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 
 
 
-RULE_TAG : ('1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31');
+// Rule MONAT
+ruleMONAT returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='monatlich' 
+	{
+        $current = grammarAccess.getMONATAccess().getALLEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getMONATAccess().getALLEEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='*' 
+	{
+        $current = grammarAccess.getMONATAccess().getALLEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getMONATAccess().getALLEEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='Januar' 
+	{
+        $current = grammarAccess.getMONATAccess().getJANUAREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getMONATAccess().getJANUAREnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='Jan' 
+	{
+        $current = grammarAccess.getMONATAccess().getJANUAREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getMONATAccess().getJANUAREnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='Februar' 
+	{
+        $current = grammarAccess.getMONATAccess().getFEBRUAREnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getMONATAccess().getFEBRUAREnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='Feb' 
+	{
+        $current = grammarAccess.getMONATAccess().getFEBRUAREnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getMONATAccess().getFEBRUAREnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='M\u00E4rz' 
+	{
+        $current = grammarAccess.getMONATAccess().getMAERZEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getMONATAccess().getMAERZEnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='Mar' 
+	{
+        $current = grammarAccess.getMONATAccess().getMAERZEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getMONATAccess().getMAERZEnumLiteralDeclaration_7()); 
+    }
+)
+    |(	enumLiteral_8='April' 
+	{
+        $current = grammarAccess.getMONATAccess().getAPRILEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_8, grammarAccess.getMONATAccess().getAPRILEnumLiteralDeclaration_8()); 
+    }
+)
+    |(	enumLiteral_9='Apr' 
+	{
+        $current = grammarAccess.getMONATAccess().getAPRILEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_9, grammarAccess.getMONATAccess().getAPRILEnumLiteralDeclaration_9()); 
+    }
+)
+    |(	enumLiteral_10='Mai' 
+	{
+        $current = grammarAccess.getMONATAccess().getMAIEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_10, grammarAccess.getMONATAccess().getMAIEnumLiteralDeclaration_10()); 
+    }
+)
+    |(	enumLiteral_11='May' 
+	{
+        $current = grammarAccess.getMONATAccess().getMAIEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_11, grammarAccess.getMONATAccess().getMAIEnumLiteralDeclaration_11()); 
+    }
+)
+    |(	enumLiteral_12='Juni' 
+	{
+        $current = grammarAccess.getMONATAccess().getJUNIEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_12, grammarAccess.getMONATAccess().getJUNIEnumLiteralDeclaration_12()); 
+    }
+)
+    |(	enumLiteral_13='Jun' 
+	{
+        $current = grammarAccess.getMONATAccess().getJUNIEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_13, grammarAccess.getMONATAccess().getJUNIEnumLiteralDeclaration_13()); 
+    }
+)
+    |(	enumLiteral_14='Juli' 
+	{
+        $current = grammarAccess.getMONATAccess().getJULIEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_14, grammarAccess.getMONATAccess().getJULIEnumLiteralDeclaration_14()); 
+    }
+)
+    |(	enumLiteral_15='Jul' 
+	{
+        $current = grammarAccess.getMONATAccess().getJULIEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_15, grammarAccess.getMONATAccess().getJULIEnumLiteralDeclaration_15()); 
+    }
+)
+    |(	enumLiteral_16='August' 
+	{
+        $current = grammarAccess.getMONATAccess().getAUGUSTEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_16, grammarAccess.getMONATAccess().getAUGUSTEnumLiteralDeclaration_16()); 
+    }
+)
+    |(	enumLiteral_17='Aug' 
+	{
+        $current = grammarAccess.getMONATAccess().getAUGUSTEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_17, grammarAccess.getMONATAccess().getAUGUSTEnumLiteralDeclaration_17()); 
+    }
+)
+    |(	enumLiteral_18='September' 
+	{
+        $current = grammarAccess.getMONATAccess().getSEPTEMBEREnumLiteralDeclaration_18().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_18, grammarAccess.getMONATAccess().getSEPTEMBEREnumLiteralDeclaration_18()); 
+    }
+)
+    |(	enumLiteral_19='Sep' 
+	{
+        $current = grammarAccess.getMONATAccess().getSEPTEMBEREnumLiteralDeclaration_19().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_19, grammarAccess.getMONATAccess().getSEPTEMBEREnumLiteralDeclaration_19()); 
+    }
+)
+    |(	enumLiteral_20='Oktober' 
+	{
+        $current = grammarAccess.getMONATAccess().getOKTOBEREnumLiteralDeclaration_20().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_20, grammarAccess.getMONATAccess().getOKTOBEREnumLiteralDeclaration_20()); 
+    }
+)
+    |(	enumLiteral_21='Okt' 
+	{
+        $current = grammarAccess.getMONATAccess().getOKTOBEREnumLiteralDeclaration_21().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_21, grammarAccess.getMONATAccess().getOKTOBEREnumLiteralDeclaration_21()); 
+    }
+)
+    |(	enumLiteral_22='November' 
+	{
+        $current = grammarAccess.getMONATAccess().getNOVEMBEREnumLiteralDeclaration_22().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_22, grammarAccess.getMONATAccess().getNOVEMBEREnumLiteralDeclaration_22()); 
+    }
+)
+    |(	enumLiteral_23='Nov' 
+	{
+        $current = grammarAccess.getMONATAccess().getNOVEMBEREnumLiteralDeclaration_23().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_23, grammarAccess.getMONATAccess().getNOVEMBEREnumLiteralDeclaration_23()); 
+    }
+)
+    |(	enumLiteral_24='Dezember' 
+	{
+        $current = grammarAccess.getMONATAccess().getDEZEMBEREnumLiteralDeclaration_24().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_24, grammarAccess.getMONATAccess().getDEZEMBEREnumLiteralDeclaration_24()); 
+    }
+)
+    |(	enumLiteral_25='Dez' 
+	{
+        $current = grammarAccess.getMONATAccess().getDEZEMBEREnumLiteralDeclaration_25().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_25, grammarAccess.getMONATAccess().getDEZEMBEREnumLiteralDeclaration_25()); 
+    }
+));
 
-RULE_MONAT : ('Januar'|'Februar'|'M\u00E4rz'|'April'|'Mai'|'Juni'|'Juli'|'August'|'September'|'Oktober'|'November'|'Dezember');
+
+
+RULE_TAG : ('1.'|'2.'|'3.'|'4.'|'5.'|'6.'|'7.'|'8.'|'9.'|'10.'|'11.'|'12.'|'13.'|'14.'|'15.'|'16.'|'17.'|'18.'|'19.'|'20.'|'21.'|'22.'|'23.'|'24.'|'25.'|'26.'|'27.'|'28.'|'29.'|'30.'|'31.');
 
 RULE_HEX : ('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F'|'_')+ ('#' (('b'|'B') ('i'|'I')|('l'|'L')))?;
 

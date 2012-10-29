@@ -80,14 +80,14 @@ public class FinAdapterFactory extends AdapterFactoryImpl
         return createFinModelFileAdapter();
       }
       @Override
-      public Adapter caseImport(Import object)
-      {
-        return createImportAdapter();
-      }
-      @Override
       public Adapter caseElement(Element object)
       {
         return createElementAdapter();
+      }
+      @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
       }
       @Override
       public Adapter caseKonto(Konto object)
@@ -115,9 +115,9 @@ public class FinAdapterFactory extends AdapterFactoryImpl
         return createBuchungAdapter();
       }
       @Override
-      public Adapter caseEmpfaenger(Empfaenger object)
+      public Adapter caseKontakt(Kontakt object)
       {
-        return createEmpfaengerAdapter();
+        return createKontaktAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -157,21 +157,6 @@ public class FinAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Import <em>Import</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see de.nie.fin.fin.Import
-   * @generated
-   */
-  public Adapter createImportAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Element <em>Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -182,6 +167,21 @@ public class FinAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.nie.fin.fin.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
   {
     return null;
   }
@@ -262,16 +262,16 @@ public class FinAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Empfaenger <em>Empfaenger</em>}'.
+   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Kontakt <em>Kontakt</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.nie.fin.fin.Empfaenger
+   * @see de.nie.fin.fin.Kontakt
    * @generated
    */
-  public Adapter createEmpfaengerAdapter()
+  public Adapter createKontaktAdapter()
   {
     return null;
   }
