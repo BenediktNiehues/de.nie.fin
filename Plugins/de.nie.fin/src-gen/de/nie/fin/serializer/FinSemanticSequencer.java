@@ -987,9 +987,10 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         name=ValidID 
 	 *         konto=[Konto|ID] 
-	 *         betrag=INT 
+	 *         betrag=DECIMAL 
 	 *         ((empfaenger=[Kontakt|ID] empfaengerKto=[Konto|ID]?) | (von=[Kontakt|ID] vonKto=[Konto|ID]?)) 
-	 *         (intervall=Intervall | buchInterv=[Buchungsintervall|ID]) 
+	 *         (intervall=Intervall | intervallRef=[Buchungsintervall|ID]) 
+	 *         buchungsart=Buchungsart 
 	 *         (kategorie+=[Kategorie|ID] kategorie+=[Kategorie|ID]*)?
 	 *     )
 	 */
@@ -1000,19 +1001,19 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID intervall=Intervall)
+	 *     (intervall=Intervall name=ValidID)
 	 */
 	protected void sequence_Buchungsintervall(EObject context, Buchungsintervall semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__INTERVALL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__INTERVALL));
+			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.BUCHUNGSINTERVALL__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getBuchungsintervallAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getBuchungsintervallAccess().getIntervallIntervallParserRuleCall_3_0(), semanticObject.getIntervall());
+		feeder.accept(grammarAccess.getBuchungsintervallAccess().getIntervallIntervallParserRuleCall_1_0(), semanticObject.getIntervall());
+		feeder.accept(grammarAccess.getBuchungsintervallAccess().getNameValidIDParserRuleCall_3_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -1057,8 +1058,8 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	 */
 	protected void sequence_Kategorie(EObject context, Kategorie semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.ELEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KATEGORIE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KATEGORIE__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1069,7 +1070,14 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ValidID ((konten+=[Konto|ID] konten+=[Konto|ID]*)? strasse=STRING plz=INT ort=STRING bemerkung=STRING?)?)
+	 *     (
+	 *         vorname=ValidID 
+	 *         nachname=ValidID 
+	 *         strasse=STRING 
+	 *         plz=INT 
+	 *         ort=STRING 
+	 *         bemerkung=STRING?
+	 *     )
 	 */
 	protected void sequence_Kontakt(EObject context, Kontakt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1080,36 +1088,15 @@ public class FinSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ValidID 
+	 *         inhaber=[Kontakt|ID] 
 	 *         ktoNr=INT 
 	 *         blz=INT 
 	 *         bank=[Kontakt|ID] 
 	 *         verwendung=STRING 
-	 *         inhaber=[Kontakt|ID]
+	 *         bemerkung=STRING?
 	 *     )
 	 */
 	protected void sequence_Konto(EObject context, Konto semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.ELEMENT__NAME));
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KONTO__KTO_NR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KONTO__KTO_NR));
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KONTO__BLZ) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KONTO__BLZ));
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KONTO__BANK) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KONTO__BANK));
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KONTO__VERWENDUNG) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KONTO__VERWENDUNG));
-			if(transientValues.isValueTransient(semanticObject, FinPackage.Literals.KONTO__INHABER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FinPackage.Literals.KONTO__INHABER));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getKontoAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getKontoAccess().getKtoNrINTTerminalRuleCall_4_0(), semanticObject.getKtoNr());
-		feeder.accept(grammarAccess.getKontoAccess().getBlzINTTerminalRuleCall_6_0(), semanticObject.getBlz());
-		feeder.accept(grammarAccess.getKontoAccess().getBankKontaktIDTerminalRuleCall_8_0_1(), semanticObject.getBank());
-		feeder.accept(grammarAccess.getKontoAccess().getVerwendungSTRINGTerminalRuleCall_10_0(), semanticObject.getVerwendung());
-		feeder.accept(grammarAccess.getKontoAccess().getInhaberKontaktIDTerminalRuleCall_12_0_1(), semanticObject.getInhaber());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

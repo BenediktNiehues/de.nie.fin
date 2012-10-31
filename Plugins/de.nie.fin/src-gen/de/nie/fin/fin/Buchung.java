@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link de.nie.fin.fin.Buchung#getName <em>Name</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getKonto <em>Konto</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getBetrag <em>Betrag</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getEmpfaenger <em>Empfaenger</em>}</li>
@@ -19,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.nie.fin.fin.Buchung#getVon <em>Von</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getVonKto <em>Von Kto</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getIntervall <em>Intervall</em>}</li>
- *   <li>{@link de.nie.fin.fin.Buchung#getBuchInterv <em>Buch Interv</em>}</li>
+ *   <li>{@link de.nie.fin.fin.Buchung#getIntervallRef <em>Intervall Ref</em>}</li>
+ *   <li>{@link de.nie.fin.fin.Buchung#getBuchungsart <em>Buchungsart</em>}</li>
  *   <li>{@link de.nie.fin.fin.Buchung#getKategorie <em>Kategorie</em>}</li>
  * </ul>
  * </p>
@@ -30,6 +32,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Buchung extends Element
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see de.nie.fin.fin.FinPackage#getBuchung_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link de.nie.fin.fin.Buchung#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
   /**
    * Returns the value of the '<em><b>Konto</b></em>' reference.
    * <!-- begin-user-doc -->
@@ -65,12 +93,12 @@ public interface Buchung extends Element
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Betrag</em>' attribute.
-   * @see #setBetrag(int)
+   * @see #setBetrag(String)
    * @see de.nie.fin.fin.FinPackage#getBuchung_Betrag()
    * @model
    * @generated
    */
-  int getBetrag();
+  String getBetrag();
 
   /**
    * Sets the value of the '{@link de.nie.fin.fin.Buchung#getBetrag <em>Betrag</em>}' attribute.
@@ -80,7 +108,7 @@ public interface Buchung extends Element
    * @see #getBetrag()
    * @generated
    */
-  void setBetrag(int value);
+  void setBetrag(String value);
 
   /**
    * Returns the value of the '<em><b>Empfaenger</b></em>' reference.
@@ -213,30 +241,59 @@ public interface Buchung extends Element
   void setIntervall(Intervall value);
 
   /**
-   * Returns the value of the '<em><b>Buch Interv</b></em>' reference.
+   * Returns the value of the '<em><b>Intervall Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Buch Interv</em>' reference isn't clear,
+   * If the meaning of the '<em>Intervall Ref</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Buch Interv</em>' reference.
-   * @see #setBuchInterv(Buchungsintervall)
-   * @see de.nie.fin.fin.FinPackage#getBuchung_BuchInterv()
+   * @return the value of the '<em>Intervall Ref</em>' reference.
+   * @see #setIntervallRef(Buchungsintervall)
+   * @see de.nie.fin.fin.FinPackage#getBuchung_IntervallRef()
    * @model
    * @generated
    */
-  Buchungsintervall getBuchInterv();
+  Buchungsintervall getIntervallRef();
 
   /**
-   * Sets the value of the '{@link de.nie.fin.fin.Buchung#getBuchInterv <em>Buch Interv</em>}' reference.
+   * Sets the value of the '{@link de.nie.fin.fin.Buchung#getIntervallRef <em>Intervall Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Buch Interv</em>' reference.
-   * @see #getBuchInterv()
+   * @param value the new value of the '<em>Intervall Ref</em>' reference.
+   * @see #getIntervallRef()
    * @generated
    */
-  void setBuchInterv(Buchungsintervall value);
+  void setIntervallRef(Buchungsintervall value);
+
+  /**
+   * Returns the value of the '<em><b>Buchungsart</b></em>' attribute.
+   * The literals are from the enumeration {@link de.nie.fin.fin.Buchungsart}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Buchungsart</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Buchungsart</em>' attribute.
+   * @see de.nie.fin.fin.Buchungsart
+   * @see #setBuchungsart(Buchungsart)
+   * @see de.nie.fin.fin.FinPackage#getBuchung_Buchungsart()
+   * @model
+   * @generated
+   */
+  Buchungsart getBuchungsart();
+
+  /**
+   * Sets the value of the '{@link de.nie.fin.fin.Buchung#getBuchungsart <em>Buchungsart</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Buchungsart</em>' attribute.
+   * @see de.nie.fin.fin.Buchungsart
+   * @see #getBuchungsart()
+   * @generated
+   */
+  void setBuchungsart(Buchungsart value);
 
   /**
    * Returns the value of the '<em><b>Kategorie</b></em>' reference list.

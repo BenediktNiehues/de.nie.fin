@@ -59,15 +59,6 @@ public interface FinFactory extends EFactory
   Konto createKonto();
 
   /**
-   * Returns a new object of class '<em>Buchungsintervall</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Buchungsintervall</em>'.
-   * @generated
-   */
-  Buchungsintervall createBuchungsintervall();
-
-  /**
    * Returns a new object of class '<em>Intervall</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -84,6 +75,15 @@ public interface FinFactory extends EFactory
    * @generated
    */
   Kategorie createKategorie();
+
+  /**
+   * Returns a new object of class '<em>Buchungsintervall</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Buchungsintervall</em>'.
+   * @generated
+   */
+  Buchungsintervall createBuchungsintervall();
 
   /**
    * Returns a new object of class '<em>Buchung</em>'.

@@ -95,11 +95,6 @@ public class FinAdapterFactory extends AdapterFactoryImpl
         return createKontoAdapter();
       }
       @Override
-      public Adapter caseBuchungsintervall(Buchungsintervall object)
-      {
-        return createBuchungsintervallAdapter();
-      }
-      @Override
       public Adapter caseIntervall(Intervall object)
       {
         return createIntervallAdapter();
@@ -108,6 +103,11 @@ public class FinAdapterFactory extends AdapterFactoryImpl
       public Adapter caseKategorie(Kategorie object)
       {
         return createKategorieAdapter();
+      }
+      @Override
+      public Adapter caseBuchungsintervall(Buchungsintervall object)
+      {
+        return createBuchungsintervallAdapter();
       }
       @Override
       public Adapter caseBuchung(Buchung object)
@@ -202,21 +202,6 @@ public class FinAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Buchungsintervall <em>Buchungsintervall</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see de.nie.fin.fin.Buchungsintervall
-   * @generated
-   */
-  public Adapter createBuchungsintervallAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Intervall <em>Intervall</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -242,6 +227,21 @@ public class FinAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createKategorieAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.nie.fin.fin.Buchungsintervall <em>Buchungsintervall</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.nie.fin.fin.Buchungsintervall
+   * @generated
+   */
+  public Adapter createBuchungsintervallAdapter()
   {
     return null;
   }

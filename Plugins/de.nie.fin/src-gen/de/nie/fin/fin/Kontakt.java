@@ -2,7 +2,6 @@
  */
 package de.nie.fin.fin;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +11,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.nie.fin.fin.Kontakt#getKonten <em>Konten</em>}</li>
+ *   <li>{@link de.nie.fin.fin.Kontakt#getVorname <em>Vorname</em>}</li>
+ *   <li>{@link de.nie.fin.fin.Kontakt#getNachname <em>Nachname</em>}</li>
  *   <li>{@link de.nie.fin.fin.Kontakt#getStrasse <em>Strasse</em>}</li>
  *   <li>{@link de.nie.fin.fin.Kontakt#getPlz <em>Plz</em>}</li>
  *   <li>{@link de.nie.fin.fin.Kontakt#getOrt <em>Ort</em>}</li>
@@ -27,20 +27,56 @@ import org.eclipse.emf.common.util.EList;
 public interface Kontakt extends Element
 {
   /**
-   * Returns the value of the '<em><b>Konten</b></em>' reference list.
-   * The list contents are of type {@link de.nie.fin.fin.Konto}.
+   * Returns the value of the '<em><b>Vorname</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Konten</em>' reference list isn't clear,
+   * If the meaning of the '<em>Vorname</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Konten</em>' reference list.
-   * @see de.nie.fin.fin.FinPackage#getKontakt_Konten()
+   * @return the value of the '<em>Vorname</em>' attribute.
+   * @see #setVorname(String)
+   * @see de.nie.fin.fin.FinPackage#getKontakt_Vorname()
    * @model
    * @generated
    */
-  EList<Konto> getKonten();
+  String getVorname();
+
+  /**
+   * Sets the value of the '{@link de.nie.fin.fin.Kontakt#getVorname <em>Vorname</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Vorname</em>' attribute.
+   * @see #getVorname()
+   * @generated
+   */
+  void setVorname(String value);
+
+  /**
+   * Returns the value of the '<em><b>Nachname</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Nachname</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Nachname</em>' attribute.
+   * @see #setNachname(String)
+   * @see de.nie.fin.fin.FinPackage#getKontakt_Nachname()
+   * @model
+   * @generated
+   */
+  String getNachname();
+
+  /**
+   * Sets the value of the '{@link de.nie.fin.fin.Kontakt#getNachname <em>Nachname</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Nachname</em>' attribute.
+   * @see #getNachname()
+   * @generated
+   */
+  void setNachname(String value);
 
   /**
    * Returns the value of the '<em><b>Strasse</b></em>' attribute.

@@ -69,9 +69,9 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
       case FinPackage.ELEMENT: return createElement();
       case FinPackage.IMPORT: return createImport();
       case FinPackage.KONTO: return createKonto();
-      case FinPackage.BUCHUNGSINTERVALL: return createBuchungsintervall();
       case FinPackage.INTERVALL: return createIntervall();
       case FinPackage.KATEGORIE: return createKategorie();
+      case FinPackage.BUCHUNGSINTERVALL: return createBuchungsintervall();
       case FinPackage.BUCHUNG: return createBuchung();
       case FinPackage.KONTAKT: return createKontakt();
       default:
@@ -91,6 +91,8 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
     {
       case FinPackage.MONAT:
         return createMONATFromString(eDataType, initialValue);
+      case FinPackage.BUCHUNGSART:
+        return createBuchungsartFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -108,6 +110,8 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
     {
       case FinPackage.MONAT:
         return convertMONATToString(eDataType, instanceValue);
+      case FinPackage.BUCHUNGSART:
+        return convertBuchungsartToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -162,17 +166,6 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Buchungsintervall createBuchungsintervall()
-  {
-    BuchungsintervallImpl buchungsintervall = new BuchungsintervallImpl();
-    return buchungsintervall;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Intervall createIntervall()
   {
     IntervallImpl intervall = new IntervallImpl();
@@ -188,6 +181,17 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
   {
     KategorieImpl kategorie = new KategorieImpl();
     return kategorie;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Buchungsintervall createBuchungsintervall()
+  {
+    BuchungsintervallImpl buchungsintervall = new BuchungsintervallImpl();
+    return buchungsintervall;
   }
 
   /**
@@ -230,6 +234,28 @@ public class FinFactoryImpl extends EFactoryImpl implements FinFactory
    * @generated
    */
   public String convertMONATToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Buchungsart createBuchungsartFromString(EDataType eDataType, String initialValue)
+  {
+    Buchungsart result = Buchungsart.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBuchungsartToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -147,7 +147,27 @@ public enum MONAT implements Enumerator
    * @generated
    * @ordered
    */
-  DEZEMBER(24, "DEZEMBER", "Dezember");
+  DEZEMBER(24, "DEZEMBER", "Dezember"),
+
+  /**
+   * The '<em><b>VIERTELJAEHRLICH</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #VIERTELJAEHRLICH_VALUE
+   * @generated
+   * @ordered
+   */
+  VIERTELJAEHRLICH(26, "VIERTELJAEHRLICH", "viertelj\u00e4hrlich"),
+
+  /**
+   * The '<em><b>HALBJAEHRLICH</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #HALBJAEHRLICH_VALUE
+   * @generated
+   * @ordered
+   */
+  HALBJAEHRLICH(27, "HALBJAEHRLICH", "halbj\u00e4hrlich");
 
   /**
    * The '<em><b>ALLE</b></em>' literal value.
@@ -345,6 +365,36 @@ public enum MONAT implements Enumerator
   public static final int DEZEMBER_VALUE = 24;
 
   /**
+   * The '<em><b>VIERTELJAEHRLICH</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>VIERTELJAEHRLICH</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #VIERTELJAEHRLICH
+   * @model literal="viertelj\344hrlich"
+   * @generated
+   * @ordered
+   */
+  public static final int VIERTELJAEHRLICH_VALUE = 26;
+
+  /**
+   * The '<em><b>HALBJAEHRLICH</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>HALBJAEHRLICH</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #HALBJAEHRLICH
+   * @model literal="halbj\344hrlich"
+   * @generated
+   * @ordered
+   */
+  public static final int HALBJAEHRLICH_VALUE = 27;
+
+  /**
    * An array of all the '<em><b>MONAT</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -366,6 +416,8 @@ public enum MONAT implements Enumerator
       OKTOBER,
       NOVEMBER,
       DEZEMBER,
+      VIERTELJAEHRLICH,
+      HALBJAEHRLICH,
     };
 
   /**
@@ -437,6 +489,8 @@ public enum MONAT implements Enumerator
       case OKTOBER_VALUE: return OKTOBER;
       case NOVEMBER_VALUE: return NOVEMBER;
       case DEZEMBER_VALUE: return DEZEMBER;
+      case VIERTELJAEHRLICH_VALUE: return VIERTELJAEHRLICH;
+      case HALBJAEHRLICH_VALUE: return HALBJAEHRLICH;
     }
     return null;
   }

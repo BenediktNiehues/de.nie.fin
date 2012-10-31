@@ -4,19 +4,12 @@ package de.nie.fin.fin.impl;
 
 import de.nie.fin.fin.FinPackage;
 import de.nie.fin.fin.Kontakt;
-import de.nie.fin.fin.Konto;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +18,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getKonten <em>Konten</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getVorname <em>Vorname</em>}</li>
+ *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getNachname <em>Nachname</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getStrasse <em>Strasse</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getPlz <em>Plz</em>}</li>
  *   <li>{@link de.nie.fin.fin.impl.KontaktImpl#getOrt <em>Ort</em>}</li>
@@ -38,14 +32,44 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 public class KontaktImpl extends ElementImpl implements Kontakt
 {
   /**
-   * The cached value of the '{@link #getKonten() <em>Konten</em>}' reference list.
+   * The default value of the '{@link #getVorname() <em>Vorname</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getKonten()
+   * @see #getVorname()
    * @generated
    * @ordered
    */
-  protected EList<Konto> konten;
+  protected static final String VORNAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getVorname() <em>Vorname</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVorname()
+   * @generated
+   * @ordered
+   */
+  protected String vorname = VORNAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNachname() <em>Nachname</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNachname()
+   * @generated
+   * @ordered
+   */
+  protected static final String NACHNAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNachname() <em>Nachname</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNachname()
+   * @generated
+   * @ordered
+   */
+  protected String nachname = NACHNAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getStrasse() <em>Strasse</em>}' attribute.
@@ -153,13 +177,45 @@ public class KontaktImpl extends ElementImpl implements Kontakt
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Konto> getKonten()
+  public String getVorname()
   {
-    if (konten == null)
-    {
-      konten = new EObjectResolvingEList<Konto>(Konto.class, this, FinPackage.KONTAKT__KONTEN);
-    }
-    return konten;
+    return vorname;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVorname(String newVorname)
+  {
+    String oldVorname = vorname;
+    vorname = newVorname;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.KONTAKT__VORNAME, oldVorname, vorname));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getNachname()
+  {
+    return nachname;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNachname(String newNachname)
+  {
+    String oldNachname = nachname;
+    nachname = newNachname;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FinPackage.KONTAKT__NACHNAME, oldNachname, nachname));
   }
 
   /**
@@ -264,8 +320,10 @@ public class KontaktImpl extends ElementImpl implements Kontakt
   {
     switch (featureID)
     {
-      case FinPackage.KONTAKT__KONTEN:
-        return getKonten();
+      case FinPackage.KONTAKT__VORNAME:
+        return getVorname();
+      case FinPackage.KONTAKT__NACHNAME:
+        return getNachname();
       case FinPackage.KONTAKT__STRASSE:
         return getStrasse();
       case FinPackage.KONTAKT__PLZ:
@@ -283,15 +341,16 @@ public class KontaktImpl extends ElementImpl implements Kontakt
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case FinPackage.KONTAKT__KONTEN:
-        getKonten().clear();
-        getKonten().addAll((Collection<? extends Konto>)newValue);
+      case FinPackage.KONTAKT__VORNAME:
+        setVorname((String)newValue);
+        return;
+      case FinPackage.KONTAKT__NACHNAME:
+        setNachname((String)newValue);
         return;
       case FinPackage.KONTAKT__STRASSE:
         setStrasse((String)newValue);
@@ -319,8 +378,11 @@ public class KontaktImpl extends ElementImpl implements Kontakt
   {
     switch (featureID)
     {
-      case FinPackage.KONTAKT__KONTEN:
-        getKonten().clear();
+      case FinPackage.KONTAKT__VORNAME:
+        setVorname(VORNAME_EDEFAULT);
+        return;
+      case FinPackage.KONTAKT__NACHNAME:
+        setNachname(NACHNAME_EDEFAULT);
         return;
       case FinPackage.KONTAKT__STRASSE:
         setStrasse(STRASSE_EDEFAULT);
@@ -348,8 +410,10 @@ public class KontaktImpl extends ElementImpl implements Kontakt
   {
     switch (featureID)
     {
-      case FinPackage.KONTAKT__KONTEN:
-        return konten != null && !konten.isEmpty();
+      case FinPackage.KONTAKT__VORNAME:
+        return VORNAME_EDEFAULT == null ? vorname != null : !VORNAME_EDEFAULT.equals(vorname);
+      case FinPackage.KONTAKT__NACHNAME:
+        return NACHNAME_EDEFAULT == null ? nachname != null : !NACHNAME_EDEFAULT.equals(nachname);
       case FinPackage.KONTAKT__STRASSE:
         return STRASSE_EDEFAULT == null ? strasse != null : !STRASSE_EDEFAULT.equals(strasse);
       case FinPackage.KONTAKT__PLZ:
@@ -373,7 +437,11 @@ public class KontaktImpl extends ElementImpl implements Kontakt
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (strasse: ");
+    result.append(" (vorname: ");
+    result.append(vorname);
+    result.append(", nachname: ");
+    result.append(nachname);
+    result.append(", strasse: ");
     result.append(strasse);
     result.append(", plz: ");
     result.append(plz);
